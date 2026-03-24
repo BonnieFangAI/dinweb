@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DinWeb — Professionell hemsida från 999 kr</title>
+    <meta name="description" content="Professionella hemsidor för småföretag, föreningar och organisationer. Från 999 kr. Snabb leverans, mobilanpassad, utan dolda avgifter.">
+    <meta property="og:title" content="DinWeb — Din hemsida, din framgång">
+    <meta property="og:description" content="Professionella hemsidor från 999 kr. Snabb leverans för småföretag och föreningar i Sverige.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dinweb.se">
+    <meta name="theme-color" content="#1a1a2e">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FAFBFC;
+            --bg-alt: #F0F2F5;
+            --text: #1a1a2e;
+            --text-light: #5a5a7a;
+            --accent: #2563EB;
+            --accent-hover: #1d4ed8;
+            --accent-light: #EFF6FF;
+            --white: #FFFFFF;
+            --border: #E5E7EB;
+            --success: #10B981;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.08);
+            --radius: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Language Switcher */
+        .lang-bar {
+            background: var(--text);
+            padding: 8px 0;
+            text-align: center;
+            font-size: 13px;
+        }
+        .lang-bar a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            margin: 0 8px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .lang-bar a:hover, .lang-bar a.active {
+            color: #fff;
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+        }
+        .logo span { color: var(--accent); }
+        .nav-cta {
+            background: var(--accent);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover { background: var(--accent-hover); }
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 100px 0 80px;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: var(--accent);
+        }
+        .hero p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 560px;
+            margin: 0 auto 36px;
+            line-height: 1.7;
+        }
+        .hero-cta {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.2s;
+            box-shadow: 0 4px 14px rgba(37,99,235,0.3);
+        }
+        .hero-cta:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(37,99,235,0.35);
+        }
+        .hero-price {
+            margin-top: 16px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Trust Bar */
+        .trust-bar {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            background: var(--white);
+        }
+        .trust-items {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        .trust-item {
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        .trust-item strong {
+            display: block;
+            font-size: 28px;
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        /* Pricing */
+        .pricing {
+            padding: 80px 0;
+        }
+        .section-label {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 12px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: clamp(28px, 3.5vw, 40px);
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.01em;
+        }
+        .section-sub {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto 48px;
+        }
+
+        .price-base {
+            background: var(--white);
+            border: 2px solid var(--accent);
+            border-radius: var(--radius);
+            padding: 40px;
+            max-width: 520px;
+            margin: 0 auto 48px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+        .price-base-tag {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 4px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .price-base h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        .price-amount {
+            font-size: 56px;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1.1;
+        }
+        .price-amount span {
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--text-light);
+        }
+        .price-base-features {
+            list-style: none;
+            margin: 24px 0;
+            text-align: left;
+        }
+        .price-base-features li {
+            padding: 8px 0;
+            font-size: 15px;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .price-base-features li::before {
+            content: "✓";
+            color: var(--success);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        /* Addons Grid */
+        .addons-title {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 32px;
+        }
+        .addons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .addon-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: border-color 0.2s;
+        }
+        .addon-card:hover {
+            border-color: var(--accent);
+        }
+        .addon-info h4 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        .addon-info p {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+        .addon-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--accent);
+            white-space: nowrap;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .step {
+            text-align: center;
+            padding: 32px 20px;
+        }
+        .step-num {
+            width: 48px;
+            height: 48px;
+            background: var(--accent-light);
+            color: var(--accent);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .step h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .step p {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Domain Policy */
+        .domain-section {
+            padding: 60px 0;
+        }
+        .domain-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .domain-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            text-align: center;
+        }
+        .domain-card .icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+        .domain-card h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .domain-card p {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Portfolio */
+        .portfolio {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .portfolio-item {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            transition: all 0.2s;
+        }
+        .portfolio-item:hover {
+            border-color: var(--accent);
+            box-shadow: var(--shadow);
+        }
+        .portfolio-item .tag {
+            display: inline-block;
+            background: var(--accent-light);
+            color: var(--accent);
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+        .portfolio-item h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .portfolio-item p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .cta-box {
+            background: var(--text);
+            color: white;
+            border-radius: 16px;
+            padding: 60px 40px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .cta-box h2 {
+            font-size: clamp(24px, 3vw, 32px);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .cta-box p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 32px;
+            font-size: 16px;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .cta-btn-primary {
+            background: var(--accent);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .cta-btn-primary:hover { background: var(--accent-hover); }
+        .cta-btn-secondary {
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: border-color 0.2s;
+        }
+        .cta-btn-secondary:hover { border-color: white; }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        footer a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+        footer a:hover { color: var(--accent); }
+
+        /* Mobile */
+        @media (max-width: 640px) {
+            .hero { padding: 60px 0 50px; }
+            .trust-items { gap: 24px; }
+            .price-base { padding: 28px 20px; }
+            .cta-box { padding: 40px 24px; }
+            .nav-cta { padding: 8px 16px; font-size: 13px; }
+        }
+
+        /* Language content control */
+        [data-lang] { display: none; }
+        [data-lang="sv"] { display: block; }
+        span[data-lang="sv"], a[data-lang="sv"], 
+        em[data-lang="sv"], strong[data-lang="sv"] { display: inline; }
+    </style>
+</head>
+<body>
+    <!-- Language Bar -->
+    <div class="lang-bar">
+        <a href="#" class="active" onclick="setLang('sv')">Svenska</a>
+        <a href="#" onclick="setLang('en')">English</a>
+        <a href="#" onclick="setLang('zh')">中文</a>
+        <a href="#" onclick="setLang('ar')">العربية</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="logo">Din<span>Web</span></a>
+            <a href="#contact" class="nav-cta">
+                <span data-lang="sv">Kontakta oss</span>
+                <span data-lang="en">Contact us</span>
+                <span data-lang="zh">联系我们</span>
+                <span data-lang="ar">تواصل معنا</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div data-lang="sv">
+                <div class="hero-badge">Hemsidor för alla — från 999 kr</div>
+                <h1>Din professionella<br>hemsida, <em>snabbt</em></h1>
+                <p>Vi bygger moderna, mobilanpassade hemsidor för småföretag, föreningar och organisationer. Inga dolda avgifter. Inga krångliga system.</p>
+            </div>
+            <div data-lang="en">
+                <div class="hero-badge">Websites for everyone — from SEK 999</div>
+                <h1>Your professional<br>website, <em>fast</em></h1>
+                <p>We build modern, mobile-friendly websites for small businesses, associations and organizations. No hidden fees. No complicated systems.</p>
+            </div>
+            <div data-lang="zh">
+                <div class="hero-badge">人人都能拥有专业网站 — 999克朗起</div>
+                <h1>你的专业网站<br><em>快速上线</em></h1>
+                <p>我们为小型企业、协会和组织打造现代化、适配手机的网站。没有隐藏费用，没有复杂系统。</p>
+            </div>
+            <div data-lang="ar">
+                <div class="hero-badge">مواقع للجميع — من 999 كرونة</div>
+                <h1>موقعك المهني<br><em>بسرعة</em></h1>
+                <p>نبني مواقع حديثة ومتوافقة مع الجوال للشركات الصغيرة والجمعيات والمنظمات. بدون رسوم مخفية. بدون أنظمة معقدة.</p>
+            </div>
+            <a href="#contact" class="hero-cta">
+                <span data-lang="sv">Få en offert — gratis</span>
+                <span data-lang="en">Get a quote — free</span>
+                <span data-lang="zh">免费获取报价</span>
+                <span data-lang="ar">احصل على عرض سعر — مجاناً</span>
+            </a>
+            <div class="hero-price">
+                <span data-lang="sv">Ingen förbetalning krävs</span>
+                <span data-lang="en">No upfront payment required</span>
+                <span data-lang="zh">无需预付款</span>
+                <span data-lang="ar">لا يلزم دفع مقدم</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <strong>999 kr</strong>
+                    <span data-lang="sv">Startpris</span>
+                    <span data-lang="en">Starting price</span>
+                    <span data-lang="zh">起步价</span>
+                    <span data-lang="ar">السعر الابتدائي</span>
+                </div>
+                <div class="trust-item">
+                    <strong>24–72h</strong>
+                    <span data-lang="sv">Leveranstid</span>
+                    <span data-lang="en">Delivery time</span>
+                    <span data-lang="zh">交付时间</span>
+                    <span data-lang="ar">وقت التسليم</span>
+                </div>
+                <div class="trust-item">
+                    <strong>4</strong>
+                    <span data-lang="sv">Språk tillgängliga</span>
+                    <span data-lang="en">Languages available</span>
+                    <span data-lang="zh">可选语言</span>
+                    <span data-lang="ar">لغات متاحة</span>
+                </div>
+                <div class="trust-item">
+                    <strong>0 kr</strong>
+                    <span data-lang="sv">Underhållskostnad</span>
+                    <span data-lang="en">Maintenance cost</span>
+                    <span data-lang="zh">维护费用</span>
+                    <span data-lang="ar">تكلفة الصيانة</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-label">
+                <span data-lang="sv">Priser</span>
+                <span data-lang="en">Pricing</span>
+                <span data-lang="zh">价格</span>
+                <span data-lang="ar">الأسعار</span>
+            </div>
+            <h2 class="section-title">
+                <span data-lang="sv">Transparenta priser, inga överraskningar</span>
+                <span data-lang="en">Transparent pricing, no surprises</span>
+                <span data-lang="zh">透明定价，没有意外</span>
+                <span data-lang="ar">أسعار شفافة، بدون مفاجآت</span>
+            </h2>
+            <p class="section-sub">
+                <span data-lang="sv">Börja med grundpaketet och lägg till det du behöver.</span>
+                <span data-lang="en">Start with the base package and add what you need.</span>
+                <span data-lang="zh">从基础包开始，按需添加功能。</span>
+                <span data-lang="ar">ابدأ بالحزمة الأساسية وأضف ما تحتاجه.</span>
+            </p>
+
+            <!-- Base Package -->
+            <div class="price-base">
+                <div class="price-base-tag">
+                    <span data-lang="sv">Grundpaket</span>
+                    <span data-lang="en">Base package</span>
+                    <span data-lang="zh">基础包</span>
+                    <span data-lang="ar">الحزمة الأساسية</span>
+                </div>
+                <div class="price-amount">999 <span>kr</span></div>
+                <ul class="price-base-features">
+                    <li>
+                        <span data-lang="sv">Professionell ensideshemsida</span>
+                        <span data-lang="en">Professional single-page website</span>
+                        <span data-lang="zh">专业单页网站</span>
+                        <span data-lang="ar">موقع صفحة واحدة احترافي</span>
+                    </li>
+                    <li>
+                        <span data-lang="sv">Mobilanpassad design</span>
+                        <span data-lang="en">Mobile-responsive design</span>
+                        <span data-lang="zh">手机端自适应设计</span>
+                        <span data-lang="ar">تصميم متجاوب مع الجوال</span>
+                    </li>
+                    <li>
+                        <span data-lang="sv">Gratis domänregistrering (första året)</span>
+                        <span data-lang="en">Free domain registration (first year)</span>
+                        <span data-lang="zh">免费域名注册（首年）</span>
+                        <span data-lang="ar">تسجيل نطاق مجاني (السنة الأولى)</span>
+                    </li>
+                    <li>
+                        <span data-lang="sv">SSL-certifikat (HTTPS)</span>
+                        <span data-lang="en">SSL certificate (HTTPS)</span>
+                        <span data-lang="zh">SSL安全证书 (HTTPS)</span>
+                        <span data-lang="ar">شهادة SSL (HTTPS)</span>
+                    </li>
+                    <li>
+                        <span data-lang="sv">Gratis hosting — ingen månadskostnad</span>
+                        <span data-lang="en">Free hosting — no monthly cost</span>
+                        <span data-lang="zh">免费托管 — 无月费</span>
+                        <span data-lang="ar">استضافة مجانية — بدون تكلفة شهرية</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Addons -->
+            <h3 class="addons-title">
+                <span data-lang="sv">Tillägg</span>
+                <span data-lang="en">Add-ons</span>
+                <span data-lang="zh">增值服务</span>
+                <span data-lang="ar">الإضافات</span>
+            </h3>
+            <div class="addons-grid">
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4>
+                            <span data-lang="sv">Extra sida</span>
+                            <span data-lang="en">Extra page</span>
+                            <span data-lang="zh">额外页面</span>
+                            <span data-lang="ar">صفحة إضافية</span>
+                        </h4>
+                        <p>
+                            <span data-lang="sv">Om oss, Tjänster, Kontakt…</span>
+                            <span data-lang="en">About, Services, Contact…</span>
+                            <span data-lang="zh">关于我们、服务、联系…</span>
+                            <span data-lang="ar">من نحن، الخدمات، اتصل بنا…</span>
+                        </p>
+                    </div>
+                    <div class="addon-price">+599 kr</div>
+                </div>
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4>
+                            <span data-lang="sv">Extra språk</span>
+                            <span data-lang="en">Extra language</span>
+                            <span data-lang="zh">额外语言</span>
+                            <span data-lang="ar">لغة إضافية</span>
+                        </h4>
+                        <p>
+                            <span data-lang="sv">Svenska, engelska, kinesiska, arabiska</span>
+                            <span data-lang="en">Swedish, English, Chinese, Arabic</span>
+                            <span data-lang="zh">瑞典语、英语、中文、阿拉伯语</span>
+                            <span data-lang="ar">السويدية، الإنجليزية، الصينية، العربية</span>
+                        </p>
+                    </div>
+                    <div class="addon-price">+299 kr</div>
+                </div>
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4>
+                            <span data-lang="sv">Adminpanel</span>
+                            <span data-lang="en">Admin panel</span>
+                            <span data-lang="zh">后台管理</span>
+                            <span data-lang="ar">لوحة التحكم</span>
+                        </h4>
+                        <p>
+                            <span data-lang="sv">Redigera text och bilder själv</span>
+                            <span data-lang="en">Edit text and images yourself</span>
+                            <span data-lang="zh">自己修改文字和图片</span>
+                            <span data-lang="ar">عدّل النصوص والصور بنفسك</span>
+                        </p>
+                    </div>
+                    <div class="addon-price">+999 kr</div>
+                </div>
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4>
+                            <span data-lang="sv">Produkt-/tjänstvisning</span>
+                            <span data-lang="en">Product/service showcase</span>
+                            <span data-lang="zh">产品/服务展示</span>
+                            <span data-lang="ar">عرض المنتجات/الخدمات</span>
+                        </h4>
+                        <p>
+                            <span data-lang="sv">Visa dina produkter eller tjänster</span>
+                            <span data-lang="en">Display your products or services</span>
+                            <span data-lang="zh">展示您的产品或服务</span>
+                            <span data-lang="ar">اعرض منتجاتك أو خدماتك</span>
+                        </p>
+                    </div>
+                    <div class="addon-price">+799 kr</div>
+                </div>
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4>
+                            <span data-lang="sv">Boknings-/kontaktformulär</span>
+                            <span data-lang="en">Booking/contact form</span>
+                            <span data-lang="zh">预约/联系表单</span>
+                            <span data-lang="ar">نموذج حجز/اتصال</span>
+                        </h4>
+                        <p>
+                            <span data-lang="sv">Låt kunder boka eller kontakta dig</span>
+                            <span data-lang="en">Let customers book or reach you</span>
+                            <span data-lang="zh">让客户预约或联系您</span>
+                            <span data-lang="ar">اسمح للعملاء بالحجز أو التواصل</span>
+                        </p>
+                    </div>
+                    <div class="addon-price">+499 kr</div>
+                </div>
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4>
+                            <span data-lang="sv">Karta & vägbeskrivning</span>
+                            <span data-lang="en">Map & directions</span>
+                            <span data-lang="zh">地图导航</span>
+                            <span data-lang="ar">خريطة واتجاهات</span>
+                        </h4>
+                        <p>
+                            <span data-lang="sv">Google Maps-integrering</span>
+                            <span data-lang="en">Google Maps integration</span>
+                            <span data-lang="zh">Google地图集成</span>
+                            <span data-lang="ar">تكامل خرائط جوجل</span>
+                        </p>
+                    </div>
+                    <div class="addon-price">+199 kr</div>
+                </div>
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4>
+                            <span data-lang="sv">SEO-optimering</span>
+                            <span data-lang="en">SEO optimization</span>
+                            <span data-lang="zh">搜索引擎优化</span>
+                            <span data-lang="ar">تحسين محركات البحث</span>
+                        </h4>
+                        <p>
+                            <span data-lang="sv">Syns bättre på Google</span>
+                            <span data-lang="en">Rank higher on Google</span>
+                            <span data-lang="zh">在Google上排名更靠前</span>
+                            <span data-lang="ar">ظهور أفضل في جوجل</span>
+                        </p>
+                    </div>
+                    <div class="addon-price">+499 kr</div>
+                </div>
+                <div class="addon-card">
+                    <div class="addon-info">
+                        <h4>
+                            <span data-lang="sv">Betalning (Stripe/Swish)</span>
+                            <span data-lang="en">Payment (Stripe/Swish)</span>
+                            <span data-lang="zh">支付接入 (Stripe/Swish)</span>
+                            <span data-lang="ar">الدفع (Stripe/Swish)</span>
+                        </h4>
+                        <p>
+                            <span data-lang="sv">Ta betalt direkt på hemsidan</span>
+                            <span data-lang="en">Accept payments on your site</span>
+                            <span data-lang="zh">直接在网站收款</span>
+                            <span data-lang="ar">استقبل المدفوعات على موقعك</span>
+                        </p>
+                    </div>
+                    <div class="addon-price">+1 499 kr</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how">
+        <div class="container">
+            <div class="section-label">
+                <span data-lang="sv">Så fungerar det</span>
+                <span data-lang="en">How it works</span>
+                <span data-lang="zh">服务流程</span>
+                <span data-lang="ar">كيف يعمل</span>
+            </div>
+            <h2 class="section-title">
+                <span data-lang="sv">Tre enkla steg</span>
+                <span data-lang="en">Three simple steps</span>
+                <span data-lang="zh">三步搞定</span>
+                <span data-lang="ar">ثلاث خطوات بسيطة</span>
+            </h2>
+            <p class="section-sub">
+                <span data-lang="sv">Från idé till färdig hemsida på 24–72 timmar.</span>
+                <span data-lang="en">From idea to live website in 24–72 hours.</span>
+                <span data-lang="zh">从想法到网站上线，24-72小时。</span>
+                <span data-lang="ar">من الفكرة إلى موقع جاهز خلال 24-72 ساعة.</span>
+            </p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>
+                        <span data-lang="sv">Berätta vad du behöver</span>
+                        <span data-lang="en">Tell us what you need</span>
+                        <span data-lang="zh">告诉我们需求</span>
+                        <span data-lang="ar">أخبرنا بما تحتاجه</span>
+                    </h3>
+                    <p>
+                        <span data-lang="sv">Skicka ett meddelande med dina önskemål — text, bilder, färger. Vi sköter resten.</span>
+                        <span data-lang="en">Send us a message with your wishes — text, images, colors. We'll handle the rest.</span>
+                        <span data-lang="zh">发送您的需求——文字、图片、配色。其他的交给我们。</span>
+                        <span data-lang="ar">أرسل لنا رسالة بمتطلباتك — النصوص والصور والألوان. نحن نتولى الباقي.</span>
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>
+                        <span data-lang="sv">Granska utkastet</span>
+                        <span data-lang="en">Review the draft</span>
+                        <span data-lang="zh">审核初稿</span>
+                        <span data-lang="ar">راجع المسودة</span>
+                    </h3>
+                    <p>
+                        <span data-lang="sv">Vi skickar en förhandsvisning. Du ger feedback, vi justerar tills du är nöjd.</span>
+                        <span data-lang="en">We send a preview. You give feedback, we adjust until you're happy.</span>
+                        <span data-lang="zh">我们发送预览版，您反馈意见，我们调整到您满意为止。</span>
+                        <span data-lang="ar">نرسل لك معاينة. تعطينا ملاحظاتك، ونعدّل حتى ترضى.</span>
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>
+                        <span data-lang="sv">Publicera & klar</span>
+                        <span data-lang="en">Publish & done</span>
+                        <span data-lang="zh">上线完成</span>
+                        <span data-lang="ar">انشر وانتهى</span>
+                    </h3>
+                    <p>
+                        <span data-lang="sv">Din hemsida går live. Du får inloggning om du valde adminpanel. Klart!</span>
+                        <span data-lang="en">Your site goes live. You get login access if you chose the admin panel. Done!</span>
+                        <span data-lang="zh">网站上线！选了后台管理的客户会收到登录信息。搞定！</span>
+                        <span data-lang="ar">موقعك يصبح حياً. تحصل على بيانات الدخول إذا اخترت لوحة التحكم. انتهى!</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Domain Policy -->
+    <section class="domain-section">
+        <div class="container">
+            <div class="section-label">
+                <span data-lang="sv">Domän</span>
+                <span data-lang="en">Domain</span>
+                <span data-lang="zh">域名</span>
+                <span data-lang="ar">النطاق</span>
+            </div>
+            <h2 class="section-title">
+                <span data-lang="sv">Din domän, dina villkor</span>
+                <span data-lang="en">Your domain, your terms</span>
+                <span data-lang="zh">您的域名，您做主</span>
+                <span data-lang="ar">نطاقك، شروطك</span>
+            </h2>
+            <div class="domain-cards">
+                <div class="domain-card">
+                    <div class="icon">🆕</div>
+                    <h3>
+                        <span data-lang="sv">Behöver ny domän?</span>
+                        <span data-lang="en">Need a new domain?</span>
+                        <span data-lang="zh">需要新域名？</span>
+                        <span data-lang="ar">تحتاج نطاق جديد؟</span>
+                    </h3>
+                    <p>
+                        <span data-lang="sv">Vi registrerar den åt dig — första året gratis. Därefter betalar du förnyelsen direkt till registret.</span>
+                        <span data-lang="en">We register it for you — first year free. After that, you pay renewal directly to the registry.</span>
+                        <span data-lang="zh">我们帮您注册——首年免费。之后续费您直接支付给注册局。</span>
+                        <span data-lang="ar">نسجله لك — السنة الأولى مجاناً. بعدها تدفع التجديد مباشرة للسجل.</span>
+                    </p>
+                </div>
+                <div class="domain-card">
+                    <div class="icon">🔗</div>
+                    <h3>
+                        <span data-lang="sv">Har redan en domän?</span>
+                        <span data-lang="en">Already have a domain?</span>
+                        <span data-lang="zh">已有域名？</span>
+                        <span data-lang="ar">لديك نطاق بالفعل؟</span>
+                    </h3>
+                    <p>
+                        <span data-lang="sv">Perfekt — vi kopplar din befintliga domän till den nya hemsidan.</span>
+                        <span data-lang="en">Perfect — we'll connect your existing domain to the new site.</span>
+                        <span data-lang="zh">没问题——我们把您现有域名接到新网站上。</span>
+                        <span data-lang="ar">ممتاز — نربط نطاقك الحالي بالموقع الجديد.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-label">
+                <span data-lang="sv">Våra arbeten</span>
+                <span data-lang="en">Our work</span>
+                <span data-lang="zh">案例展示</span>
+                <span data-lang="ar">أعمالنا</span>
+            </div>
+            <h2 class="section-title">
+                <span data-lang="sv">Hemsidor vi har byggt</span>
+                <span data-lang="en">Websites we've built</span>
+                <span data-lang="zh">我们做过的网站</span>
+                <span data-lang="ar">مواقع بنيناها</span>
+            </h2>
+            <p class="section-sub">
+                <span data-lang="sv">Från kaféer till internationella organisationer.</span>
+                <span data-lang="en">From cafés to international organizations.</span>
+                <span data-lang="zh">从咖啡馆到国际组织。</span>
+                <span data-lang="ar">من المقاهي إلى المنظمات الدولية.</span>
+            </p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="tag">
+                        <span data-lang="sv">Kafé</span>
+                        <span data-lang="en">Café</span>
+                        <span data-lang="zh">咖啡馆</span>
+                        <span data-lang="ar">مقهى</span>
+                    </div>
+                    <h3>Chocolatetello</h3>
+                    <p>
+                        <span data-lang="sv">Dessert- och kafékoncept i Solna. Tresspråkig hemsida med meny och festbokning.</span>
+                        <span data-lang="en">Dessert café in Solna. Trilingual site with menu and party booking.</span>
+                        <span data-lang="zh">Solna甜品咖啡馆。三语网站，含菜单和派对预订。</span>
+                        <span data-lang="ar">مقهى حلويات في سولنا. موقع ثلاثي اللغات مع قائمة طعام وحجز حفلات.</span>
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="tag">
+                        <span data-lang="sv">Organisation</span>
+                        <span data-lang="en">Organization</span>
+                        <span data-lang="zh">组织</span>
+                        <span data-lang="ar">منظمة</span>
+                    </div>
+                    <h3>Flying Tigers Cultural Association</h3>
+                    <p>
+                        <span data-lang="sv">Internationell kulturförening. Tvåspråkig historisk webbplats.</span>
+                        <span data-lang="en">International cultural association. Bilingual heritage website.</span>
+                        <span data-lang="zh">国际文化协会。双语历史展示网站。</span>
+                        <span data-lang="ar">جمعية ثقافية دولية. موقع تراثي ثنائي اللغة.</span>
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="tag">
+                        <span data-lang="sv">Tempel</span>
+                        <span data-lang="en">Temple</span>
+                        <span data-lang="zh">寺院</span>
+                        <span data-lang="ar">معبد</span>
+                    </div>
+                    <h3>Fo Guang Shan Sverige</h3>
+                    <p>
+                        <span data-lang="sv">Buddhistiskt tempel i Stockholm. Trespråkig webbplats med besöksinformation.</span>
+                        <span data-lang="en">Buddhist temple in Stockholm. Trilingual site with visitor info.</span>
+                        <span data-lang="zh">斯德哥尔摩佛光山。三语网站，含参访信息。</span>
+                        <span data-lang="ar">معبد بوذي في ستوكهولم. موقع ثلاثي اللغات مع معلومات الزيارة.</span>
+                    </p>
+                </div>
+                <div class="portfolio-item">
+                    <div class="tag">
+                        <span data-lang="sv">Evenemang</span>
+                        <span data-lang="en">Event</span>
+                        <span data-lang="zh">活动</span>
+                        <span data-lang="ar">فعالية</span>
+                    </div>
+                    <h3>CKGSB Nordic Module</h3>
+                    <p>
+                        <span data-lang="sv">Exekutivt affärsprogram i Stockholm. Tvåspråkig eventsida.</span>
+                        <span data-lang="en">Executive business program in Stockholm. Bilingual event page.</span>
+                        <span data-lang="zh">长江商学院斯德哥尔摩模块。双语活动页。</span>
+                        <span data-lang="ar">برنامج تنفيذي في ستوكهولم. صفحة فعالية ثنائية اللغة.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <div class="cta-box">
+                <h2>
+                    <span data-lang="sv">Redo att komma igång?</span>
+                    <span data-lang="en">Ready to get started?</span>
+                    <span data-lang="zh">准备好开始了吗？</span>
+                    <span data-lang="ar">مستعد للبدء؟</span>
+                </h2>
+                <p>
+                    <span data-lang="sv">Skicka ett meddelande så återkommer vi inom några timmar med en offert.</span>
+                    <span data-lang="en">Send us a message and we'll get back to you within hours with a quote.</span>
+                    <span data-lang="zh">发送消息，我们几小时内回复报价。</span>
+                    <span data-lang="ar">أرسل لنا رسالة وسنعود إليك خلال ساعات بعرض سعر.</span>
+                </p>
+                <div class="cta-buttons">
+                    <a href="https://t.me/ClawAINordic" class="cta-btn-primary" target="_blank">Telegram</a>
+                    <a href="mailto:info@dinweb.se" class="cta-btn-secondary">
+                        <span data-lang="sv">Skicka e-post</span>
+                        <span data-lang="en">Send email</span>
+                        <span data-lang="zh">发送邮件</span>
+                        <span data-lang="ar">أرسل بريد</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 DinWeb · Stockholm, Sweden · <a href="mailto:info@dinweb.se">info@dinweb.se</a></p>
+        </div>
+    </footer>
+
+    <script>
+        function setLang(lang) {
+            // Update all language elements
+            document.querySelectorAll('[data-lang]').forEach(el => {
+                if (el.tagName === 'SPAN' || el.tagName === 'A' || el.tagName === 'EM' || el.tagName === 'STRONG') {
+                    el.style.display = el.dataset.lang === lang ? 'inline' : 'none';
+                } else {
+                    el.style.display = el.dataset.lang === lang ? 'block' : 'none';
+                }
+            });
+
+            // Update active language link
+            document.querySelectorAll('.lang-bar a').forEach(a => a.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Set text direction for Arabic
+            document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+            // Store preference
+            localStorage.setItem('dinweb-lang', lang);
+        }
+
+        // Load saved language
+        const saved = localStorage.getItem('dinweb-lang');
+        if (saved && saved !== 'sv') {
+            // Simulate click
+            document.querySelectorAll('.lang-bar a').forEach(a => {
+                if (a.textContent.includes(
+                    saved === 'en' ? 'English' : 
+                    saved === 'zh' ? '中文' : 
+                    saved === 'ar' ? 'العربية' : 'Svenska'
+                )) {
+                    a.click();
+                }
+            });
+        }
+    </script>
+</body>
+</html>
