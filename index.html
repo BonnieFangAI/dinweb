@@ -171,17 +171,52 @@
         .step-card h3{font-size:15px;font-weight:600;margin-bottom:6px}
         .step-card p{font-size:13px;color:var(--t2);font-weight:300;line-height:1.65}
 
-        /* ━━━ PORTFOLIO ━━━ */
+        /* ━━━ SHOWCASE ━━━ */
         .port{padding:100px 0}
-        .port-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:780px;margin:0 auto}
-        .pc{background:var(--bg2);border:1px solid var(--b1);border-radius:var(--r2);padding:28px 24px;transition:all .35s var(--ease);position:relative;overflow:hidden}
-        .pc::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--warm));opacity:0;transition:opacity .3s}
-        .pc:hover{border-color:var(--b2);transform:translateY(-3px)}.pc:hover::after{opacity:1}
-        .pc-tag{display:inline-block;font:600 10px/1 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--accent2);background:var(--accent3);padding:4px 10px;border-radius:5px;margin-bottom:12px}
-        .pc h3{font-family:'Playfair Display',serif;font-size:19px;font-weight:400;margin-bottom:6px}
-        .pc p{font-size:13px;color:var(--t2);font-weight:300;line-height:1.6}
-        .pc-link{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:500;color:var(--accent2);text-decoration:none;margin-top:10px;transition:gap .25s}
-        .pc-link:hover{gap:8px}
+        .port-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:820px;margin:0 auto}
+        .mockup{background:var(--bg2);border:1px solid var(--b1);border-radius:var(--r2);overflow:hidden;transition:all .4s var(--ease)}
+        .mockup:hover{border-color:var(--b2);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
+        .mockup-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:var(--bg3);border-bottom:1px solid var(--b1)}
+        .mockup-dot{width:8px;height:8px;border-radius:50%;background:var(--b3)}
+        .mockup-dot:nth-child(1){background:#F87171}
+        .mockup-dot:nth-child(2){background:#FBBF24}
+        .mockup-dot:nth-child(3){background:#34D399}
+        .mockup-url{margin-left:8px;font-size:10px;color:var(--t4);background:var(--bg);padding:3px 10px;border-radius:4px;flex:1;text-align:center;letter-spacing:.02em}
+        .mockup-body{padding:24px 20px;min-height:180px;position:relative}
+        .mockup-info{padding:16px 20px;border-top:1px solid var(--b1);background:var(--bg3)}
+        .mockup-tag{display:inline-block;font:600 10px/1 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--accent2);background:var(--accent3);padding:4px 10px;border-radius:5px;margin-bottom:6px}
+        .mockup-info h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;margin-bottom:3px}
+        .mockup-info p{font-size:12px;color:var(--t3);font-weight:300}
+        /* Mock website content styles */
+        .mock-hero{text-align:center;padding:12px 0 8px}
+        .mock-hero h4{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;margin-bottom:4px;letter-spacing:-.01em}
+        .mock-hero p{font-size:9px;color:var(--t3);margin-bottom:8px}
+        .mock-btn{display:inline-block;font-size:8px;padding:4px 12px;border-radius:100px;background:var(--accent);color:#fff;letter-spacing:.03em}
+        .mock-nav{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid var(--b1);margin-bottom:12px}
+        .mock-nav-logo{font-size:11px;font-weight:700}
+        .mock-nav-links{display:flex;gap:8px}
+        .mock-nav-links span{font-size:8px;color:var(--t4)}
+        .mock-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
+        .mock-card{background:var(--bg3);border-radius:6px;padding:10px 8px;text-align:center}
+        .mock-card-icon{font-size:14px;margin-bottom:3px}
+        .mock-card-text{font-size:7px;color:var(--t3)}
+        .mock-img{background:var(--bg3);border-radius:6px;height:40px;margin-bottom:8px;display:flex;align-items:center;justify-content:center;font-size:18px}
+        .mock-bar{height:6px;background:var(--bg3);border-radius:3px;margin:4px 0}
+        .mock-bar.w60{width:60%}.mock-bar.w80{width:80%}.mock-bar.w40{width:40%}
+        .mock-cols{display:flex;gap:8px;margin-top:10px}
+        .mock-col{flex:1;background:var(--bg3);border-radius:6px;padding:8px;text-align:center}
+        .mock-col-icon{font-size:12px;margin-bottom:2px}
+        .mock-col-t{font-size:7px;color:var(--t3)}
+        .mock-price-tag{display:inline-block;font-size:10px;font-weight:700;color:var(--warm);margin-top:4px}
+        /* Color themes for different mockups */
+        .mock-warm .mock-btn{background:#C9A96E}
+        .mock-warm .mock-nav-logo{color:#C9A96E}
+        .mock-green .mock-btn{background:#34D399}
+        .mock-green .mock-nav-logo{color:#34D399}
+        .mock-blue .mock-btn{background:#60A5FA}
+        .mock-blue .mock-nav-logo{color:#60A5FA}
+        .mock-rose .mock-btn{background:#F472B6}
+        .mock-rose .mock-nav-logo{color:#F472B6}
 
         /* ━━━ TESTIMONIALS ━━━ */
         .testi{padding:80px 0}
@@ -236,6 +271,7 @@
             .met-row{grid-template-columns:repeat(2,1fr)}
             .met{border-bottom:1px solid var(--b1)}.met:nth-child(2){border-right:none}
             .add-grid,.port-grid,.dom-grid{grid-template-columns:1fr}
+            .mockup-body{min-height:160px}
             .base{padding:32px 22px}.base-price{font-size:48px}
             .cta-box{padding:40px 22px}
             .comp-head{font-size:10px;padding:10px 16px}.comp-row{padding:12px 16px;font-size:13px}
@@ -467,17 +503,77 @@
         </div>
     </section>
 
-    <!-- ════ PORTFOLIO ════ -->
+    <!-- ════ SHOWCASE ════ -->
     <section class="port" id="work">
         <div class="w">
-            <div class="ey"><span data-l="sv">Senaste projekten</span><span data-l="en">Recent work</span><span data-l="zh">近期项目</span><span data-l="ar">أعمال حديثة</span></div>
-            <h2 class="st"><span data-l="sv">Riktiga hemsidor. Riktiga kunder.</span><span data-l="en">Real websites. Real clients.</span><span data-l="zh">真实网站，真实客户。</span><span data-l="ar">مواقع حقيقية. عملاء حقيقيون.</span></h2>
-            <p class="ss"><span data-l="sv">Varje hemsida är unik — designad efter kundens behov.</span><span data-l="en">Every site is unique — designed to the client's needs.</span><span data-l="zh">每个网站都独一无二——根据客户需求定制。</span><span data-l="ar">كل موقع فريد — مصمم حسب احتياجات العميل.</span></p>
+            <div class="ey"><span data-l="sv">Exempeldesign</span><span data-l="en">Design examples</span><span data-l="zh">设计示例</span><span data-l="ar">أمثلة التصميم</span></div>
+            <h2 class="st"><span data-l="sv">Hemsidor vi kan bygga åt dig</span><span data-l="en">Websites we can build for you</span><span data-l="zh">我们能为您打造的网站</span><span data-l="ar">مواقع يمكننا بناؤها لك</span></h2>
+            <p class="ss"><span data-l="sv">Varje hemsida är unik — designad efter dina behov och din stil.</span><span data-l="en">Every site is unique — designed for your needs and brand.</span><span data-l="zh">每个网站都独一无二——根据您的需求和风格定制。</span><span data-l="ar">كل موقع فريد — مصمم حسب احتياجاتك وعلامتك.</span></p>
             <div class="port-grid rv">
-                <div class="pc"><div class="pc-tag"><span data-l="sv">Kafé</span><span data-l="en">Café</span><span data-l="zh">咖啡馆</span><span data-l="ar">مقهى</span></div><h3>Chocolatetello</h3><p><span data-l="sv">Dessertkafé i Solna — trespråkig hemsida med meny, festbokning och karta.</span><span data-l="en">Dessert café in Solna — trilingual site with menu, party booking, and map.</span><span data-l="zh">Solna甜品咖啡馆——三语网站。</span><span data-l="ar">مقهى حلويات — موقع ثلاثي اللغات.</span></p><a href="https://bonniefangai.github.io/chocolatetello" target="_blank" class="pc-link"><span data-l="sv">Besök</span><span data-l="en">Visit</span><span data-l="zh">访问</span><span data-l="ar">زيارة</span> →</a></div>
-                <div class="pc"><div class="pc-tag"><span data-l="sv">Kulturförening</span><span data-l="en">Cultural org</span><span data-l="zh">文化协会</span><span data-l="ar">جمعية ثقافية</span></div><h3>Flying Tigers Association</h3><p><span data-l="sv">Internationell kulturförening — tvåspråkig historisk webbplats med tidslinje.</span><span data-l="en">International association — bilingual heritage site with timeline.</span><span data-l="zh">国际文化协会——双语历史网站。</span><span data-l="ar">جمعية دولية — موقع تراثي ثنائي اللغة.</span></p><a href="https://bonniefangai.github.io/flying-tigers" target="_blank" class="pc-link"><span data-l="sv">Besök</span><span data-l="en">Visit</span><span data-l="zh">访问</span><span data-l="ar">زيارة</span> →</a></div>
-                <div class="pc"><div class="pc-tag"><span data-l="sv">Tempel</span><span data-l="en">Temple</span><span data-l="zh">寺院</span><span data-l="ar">معبد</span></div><h3>Fo Guang Shan Sverige</h3><p><span data-l="sv">Buddhistiskt tempel — trespråkig webbplats med besöksinformation.</span><span data-l="en">Buddhist temple — trilingual site with visitor info.</span><span data-l="zh">佛光山瑞典——三语网站。</span><span data-l="ar">معبد بوذي — موقع ثلاثي اللغات.</span></p><a href="https://bonniefangai.github.io/foguangshan-sweden" target="_blank" class="pc-link"><span data-l="sv">Besök</span><span data-l="en">Visit</span><span data-l="zh">访问</span><span data-l="ar">زيارة</span> →</a></div>
-                <div class="pc"><div class="pc-tag"><span data-l="sv">Evenemang</span><span data-l="en">Event</span><span data-l="zh">活动</span><span data-l="ar">فعالية</span></div><h3>CKGSB Nordic Module</h3><p><span data-l="sv">Exekutivt program — tvåspråkig evenemangssida för 45 kinesiska toppchefer.</span><span data-l="en">Executive program — bilingual event page for 45 C-suite executives.</span><span data-l="zh">长江商学院——双语活动页。</span><span data-l="ar">برنامج تنفيذي — صفحة فعالية ثنائية اللغة.</span></p><a href="https://bonniefangai.github.io/ckgsb-nordic" target="_blank" class="pc-link"><span data-l="sv">Besök</span><span data-l="en">Visit</span><span data-l="zh">访问</span><span data-l="ar">زيارة</span> →</a></div>
+                <!-- Mockup 1: Restaurant / Café -->
+                <div class="mockup">
+                    <div class="mockup-bar"><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-url">mittcafe.se</span></div>
+                    <div class="mockup-body mock-warm">
+                        <div class="mock-nav"><span class="mock-nav-logo">☕ Mitt Café</span><div class="mock-nav-links"><span>Meny</span><span>Om oss</span><span>Boka</span></div></div>
+                        <div class="mock-hero">
+                            <div class="mock-img">🥐</div>
+                            <h4>Välkommen till Mitt Café</h4>
+                            <p>Handgjorda bakverk &amp; specialkaffe i hjärtat av Stockholm</p>
+                            <span class="mock-btn">Boka bord</span>
+                        </div>
+                    </div>
+                    <div class="mockup-info"><div class="mockup-tag"><span data-l="sv">Restaurang &amp; kafé</span><span data-l="en">Restaurant &amp; café</span><span data-l="zh">餐厅 &amp; 咖啡馆</span><span data-l="ar">مطعم ومقهى</span></div><h3><span data-l="sv">Meny, karta &amp; bokning</span><span data-l="en">Menu, map &amp; booking</span><span data-l="zh">菜单、地图 &amp; 预约</span><span data-l="ar">قائمة، خريطة وحجز</span></h3><p><span data-l="sv">Från 1 697 kr</span><span data-l="en">From 1,697 kr</span><span data-l="zh">1,697克朗起</span><span data-l="ar">من 1,697 كرونة</span></p></div>
+                </div>
+                <!-- Mockup 2: Business / Consulting -->
+                <div class="mockup">
+                    <div class="mockup-bar"><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-url">nordstrom-consulting.se</span></div>
+                    <div class="mockup-body mock-blue">
+                        <div class="mock-nav"><span class="mock-nav-logo">◆ Nordström</span><div class="mock-nav-links"><span>Tjänster</span><span>Om</span><span>Kontakt</span></div></div>
+                        <div class="mock-hero">
+                            <h4>Strategisk Rådgivning</h4>
+                            <p>Vi hjälper företag att växa — smart och hållbart</p>
+                            <span class="mock-btn">Boka möte</span>
+                        </div>
+                        <div class="mock-grid">
+                            <div class="mock-card"><div class="mock-card-icon">📊</div><div class="mock-card-text">Strategi</div></div>
+                            <div class="mock-card"><div class="mock-card-icon">🚀</div><div class="mock-card-text">Tillväxt</div></div>
+                            <div class="mock-card"><div class="mock-card-icon">🌱</div><div class="mock-card-text">Hållbarhet</div></div>
+                        </div>
+                    </div>
+                    <div class="mockup-info"><div class="mockup-tag"><span data-l="sv">Företag &amp; konsult</span><span data-l="en">Business &amp; consulting</span><span data-l="zh">企业 &amp; 咨询</span><span data-l="ar">أعمال واستشارات</span></div><h3><span data-l="sv">Flersidigt med adminpanel</span><span data-l="en">Multi-page with admin panel</span><span data-l="zh">多页面 + 后台管理</span><span data-l="ar">متعدد الصفحات مع لوحة تحكم</span></h3><p><span data-l="sv">Från 3 196 kr</span><span data-l="en">From 3,196 kr</span><span data-l="zh">3,196克朗起</span><span data-l="ar">من 3,196 كرونة</span></p></div>
+                </div>
+                <!-- Mockup 3: Association / Förening -->
+                <div class="mockup">
+                    <div class="mockup-bar"><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-url">stockholmsforening.se</span></div>
+                    <div class="mockup-body mock-green">
+                        <div class="mock-nav"><span class="mock-nav-logo">🤝 Föreningen</span><div class="mock-nav-links"><span>Om</span><span>Event</span><span>SV</span><span>EN</span></div></div>
+                        <div class="mock-hero">
+                            <h4>Stockholms Kulturförening</h4>
+                            <p>Sammanför människor genom kultur och gemenskap</p>
+                            <span class="mock-btn">Bli medlem</span>
+                        </div>
+                        <div class="mock-cols">
+                            <div class="mock-col"><div class="mock-col-icon">📅</div><div class="mock-col-t">Event</div></div>
+                            <div class="mock-col"><div class="mock-col-icon">📸</div><div class="mock-col-t">Galleri</div></div>
+                            <div class="mock-col"><div class="mock-col-icon">📰</div><div class="mock-col-t">Nyheter</div></div>
+                        </div>
+                    </div>
+                    <div class="mockup-info"><div class="mockup-tag"><span data-l="sv">Förening &amp; organisation</span><span data-l="en">Association &amp; org</span><span data-l="zh">协会 &amp; 组织</span><span data-l="ar">جمعية ومنظمة</span></div><h3><span data-l="sv">Tvåspråkig med kalender</span><span data-l="en">Bilingual with calendar</span><span data-l="zh">双语 + 日历</span><span data-l="ar">ثنائي اللغة مع تقويم</span></h3><p><span data-l="sv">Från 2 496 kr</span><span data-l="en">From 2,496 kr</span><span data-l="zh">2,496克朗起</span><span data-l="ar">من 2,496 كرونة</span></p></div>
+                </div>
+                <!-- Mockup 4: Salon / Service -->
+                <div class="mockup">
+                    <div class="mockup-bar"><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-url">glow-studio.se</span></div>
+                    <div class="mockup-body mock-rose">
+                        <div class="mock-nav"><span class="mock-nav-logo">✨ Glow Studio</span><div class="mock-nav-links"><span>Behandlingar</span><span>Priser</span><span>Boka</span></div></div>
+                        <div class="mock-hero">
+                            <div class="mock-img">💆‍♀️</div>
+                            <h4>Din skönhetsupplevelse</h4>
+                            <p>Ansiktsbehandlingar, naglar &amp; hårvård i Sundbyberg</p>
+                            <span class="mock-btn">Boka online</span>
+                        </div>
+                    </div>
+                    <div class="mockup-info"><div class="mockup-tag"><span data-l="sv">Salong &amp; service</span><span data-l="en">Salon &amp; service</span><span data-l="zh">美容 &amp; 服务</span><span data-l="ar">صالون وخدمات</span></div><h3><span data-l="sv">Prislista &amp; bokningsformulär</span><span data-l="en">Price list &amp; booking form</span><span data-l="zh">价格表 &amp; 预约表单</span><span data-l="ar">قائمة أسعار ونموذج حجز</span></h3><p><span data-l="sv">Från 2 296 kr</span><span data-l="en">From 2,296 kr</span><span data-l="zh">2,296克朗起</span><span data-l="ar">من 2,296 كرونة</span></p></div>
+                </div>
             </div>
         </div>
     </section>
