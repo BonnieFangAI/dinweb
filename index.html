@@ -9,20 +9,17 @@
     <meta property="og:description" content="Moderna hemsidor för småföretag och föreningar. 72h leverans, 4 språk, 0 kr/mån.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dinweb.se">
-    <meta name="theme-color" content="#09090B">
+    <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg:#09090B;--bg2:#0F0F13;--bg3:#16161D;--bg4:#1C1C26;
-            --text:#F4F4F6;--t2:#A1A1AA;--t3:#71717A;--t4:#52525B;
-            --accent:#8B5CF6;--accent2:#A78BFA;--accent3:rgba(139,92,246,.10);--accent4:rgba(139,92,246,.20);
-            --warm:#E2B75B;--warm2:rgba(226,183,91,.10);--warm3:rgba(226,183,91,.06);
-            --green:#34D399;--green2:rgba(52,211,153,.10);
-            --red:#F87171;
-            --b1:rgba(255,255,255,.04);--b2:rgba(255,255,255,.07);--b3:rgba(255,255,255,.10);
-            --r:14px;--r2:20px;--r3:28px;
+            --bg:#FAFAF9;--white:#FFFFFF;--dark:#111111;--dark2:#1A1A1A;--dark3:#222222;
+            --text:#1A1A1A;--t2:#555555;--t3:#888888;--t4:#AAAAAA;--t5:#CCCCCC;
+            --accent:#2D2D2D;--line:#E8E8E6;--line2:#F0F0EE;
+            --warm:#C9956B;--warm2:#E8D5C0;--warm-bg:#FBF7F3;
+            --r:12px;--r2:16px;--r3:24px;
             --ease:cubic-bezier(.25,.46,.45,.94);
         }
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -32,231 +29,240 @@
         [dir="rtl"] .addon,[dir="rtl"] .comp-row,[dir="rtl"] .price-features li{flex-direction:row-reverse}
         [dir="rtl"] .step-card,[dir="rtl"] .faq-q{text-align:right}
 
-        /* Ambient */
-        .amb{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
-        .orb{position:absolute;border-radius:50%;filter:blur(140px);opacity:.5}
-        .orb:nth-child(1){width:700px;height:700px;background:rgba(139,92,246,.06);top:-15%;left:5%;animation:d1 28s ease-in-out infinite alternate}
-        .orb:nth-child(2){width:500px;height:500px;background:rgba(226,183,91,.04);top:35%;right:-8%;animation:d2 32s ease-in-out infinite alternate}
-        .orb:nth-child(3){width:450px;height:450px;background:rgba(139,92,246,.03);bottom:5%;left:25%;animation:d3 24s ease-in-out infinite alternate}
-        @keyframes d1{to{transform:translate(50px,70px)}}
-        @keyframes d2{to{transform:translate(-70px,-50px)}}
-        @keyframes d3{to{transform:translate(-40px,60px)}}
-
         /* Lang bar */
-        .lb{display:flex;justify-content:center;gap:4px;padding:10px 24px;background:rgba(9,9,11,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--b1);position:relative;z-index:200}
-        .lb button{background:none;border:1px solid transparent;color:var(--t4);font:500 11px/1 'Inter',sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:100px;cursor:pointer;transition:all .25s var(--ease)}
+        .lb{display:flex;justify-content:center;gap:4px;padding:10px 24px;background:var(--white);border-bottom:1px solid var(--line2)}
+        .lb button{background:none;border:1px solid transparent;color:var(--t4);font:500 11px/1 'Inter',sans-serif;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;cursor:pointer;transition:all .25s var(--ease)}
         .lb button:hover{color:var(--t2)}
-        .lb button.on{color:var(--text);border-color:var(--b3);background:var(--bg3)}
+        .lb button.on{color:var(--text);border-color:var(--line);background:var(--bg)}
 
         /* Nav */
-        .nav{position:sticky;top:0;z-index:100;padding:0 40px;background:rgba(9,9,11,.75);backdrop-filter:blur(40px) saturate(180%);border-bottom:1px solid var(--b1)}
+        .nav{position:sticky;top:0;z-index:100;padding:0 40px;background:rgba(255,255,255,.92);backdrop-filter:blur(40px) saturate(180%);border-bottom:1px solid var(--line2)}
         .nav-in{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
         .logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:500;color:var(--text);text-decoration:none}
-        .logo b{background:linear-gradient(135deg,var(--accent2),var(--warm));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;font-weight:600}
-        .nav-c{font:600 12px/1 'Inter',sans-serif;color:var(--bg);background:var(--text);padding:9px 22px;border-radius:100px;text-decoration:none;transition:all .25s;letter-spacing:.01em}
-        .nav-c:hover{opacity:.9;transform:translateY(-1px)}
+        .logo b{font-weight:600}
+        .nav-c{font:500 13px/1 'Inter',sans-serif;color:var(--white);background:var(--dark);padding:9px 22px;border-radius:100px;text-decoration:none;transition:all .25s;letter-spacing:.01em}
+        .nav-c:hover{opacity:.85;transform:translateY(-1px)}
 
         .w{max-width:1100px;margin:0 auto;padding:0 40px}
         @media(max-width:768px){.w,.nav{padding-left:20px;padding-right:20px}}
 
         /* Section headings */
-        .ey{font:600 11px/1 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--accent2);text-align:center;margin-bottom:14px}
-        .st{font-family:'Playfair Display',serif;font-size:clamp(28px,4.2vw,46px);font-weight:400;text-align:center;letter-spacing:-.02em;line-height:1.15;margin-bottom:14px}
-        .ss{font-size:15px;font-weight:300;color:var(--t2);text-align:center;max-width:460px;margin:0 auto 52px;line-height:1.7}
+        .ey{font:500 11px/1 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--t3);text-align:center;margin-bottom:14px}
+        .st{font-family:'Playfair Display',serif;font-size:clamp(28px,4.2vw,44px);font-weight:400;text-align:center;letter-spacing:-.02em;line-height:1.15;margin-bottom:14px;color:var(--text)}
+        .ss{font-size:15px;font-weight:300;color:var(--t2);text-align:center;max-width:440px;margin:0 auto 52px;line-height:1.7}
 
-        /* ━━━ HERO ━━━ */
-        .hero{padding:100px 0 80px;text-align:center;position:relative}
-        .hero::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:50%;height:1px;background:linear-gradient(90deg,transparent,var(--b2),transparent)}
-        .hero-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 16px 6px 12px;border:1px solid var(--warm2);border-radius:100px;background:var(--warm3);font:500 11px/1 'Inter',sans-serif;letter-spacing:.06em;color:var(--warm);margin-bottom:32px}
+        /* Hero */
+        .hero{padding:100px 0 80px;text-align:center;position:relative;background:var(--white)}
+        .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--line)}
+        .hero-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 16px 6px 12px;border:1px solid var(--line);border-radius:100px;font:500 11px/1 'Inter',sans-serif;letter-spacing:.06em;color:var(--t2);margin-bottom:32px}
         .hero-dot{width:6px;height:6px;border-radius:50%;background:var(--warm);animation:blink 2.5s ease infinite}
-        @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-        .hero h1{font-family:'Playfair Display',serif;font-size:clamp(38px,6vw,72px);font-weight:400;line-height:1.08;letter-spacing:-.03em;margin-bottom:24px}
-        .hero h1 i{font-style:italic;background:linear-gradient(135deg,var(--accent2),var(--warm));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .hero-p{font-size:clamp(15px,1.8vw,17px);font-weight:300;color:var(--t2);max-width:480px;margin:0 auto 40px;line-height:1.75}
+        @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+        .hero h1{font-family:'Playfair Display',serif;font-size:clamp(38px,6vw,68px);font-weight:400;line-height:1.08;letter-spacing:-.03em;margin-bottom:24px;color:var(--text)}
+        .hero h1 i{font-style:italic;color:var(--warm)}
+        .hero-p{font-size:clamp(15px,1.8vw,17px);font-weight:300;color:var(--t2);max-width:460px;margin:0 auto 40px;line-height:1.75}
         .hero-acts{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
         .btn{display:inline-flex;align-items:center;gap:7px;font:500 14px/1 'Inter',sans-serif;padding:14px 28px;border-radius:100px;text-decoration:none;transition:all .3s var(--ease);cursor:pointer;border:none}
-        .btn-f{background:linear-gradient(135deg,var(--accent),#9F7AEA);color:#fff;box-shadow:0 4px 20px rgba(139,92,246,.25)}
-        .btn-f:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(139,92,246,.3)}
-        .btn-o{border:1px solid var(--b3);color:var(--t2);background:transparent}
+        .btn-f{background:var(--dark);color:var(--white)}
+        .btn-f:hover{background:var(--dark2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.12)}
+        .btn-o{border:1px solid var(--line);color:var(--t2);background:transparent}
         .btn-o:hover{border-color:var(--t4);color:var(--text)}
         .hero-sub{margin-top:18px;font-size:13px;color:var(--t3)}
 
-        /* ━━━ PAIN SECTION ━━━ */
-        .pain{padding:80px 0 0}
-        .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:820px;margin:0 auto}
-        .pain-card{background:var(--bg2);border:1px solid var(--b1);border-radius:var(--r);padding:28px 24px;transition:all .3s var(--ease)}
-        .pain-card:hover{border-color:var(--b2);transform:translateY(-2px)}
-        .pain-icon{font-size:24px;margin-bottom:14px}
-        .pain-card h3{font-size:14px;font-weight:600;margin-bottom:6px}
-        .pain-card p{font-size:13px;color:var(--t3);font-weight:300;line-height:1.6}
+        /* Pain Section */
+        .pain{padding:80px 0 0;background:var(--white)}
+        .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;max-width:820px;margin:0 auto;background:var(--line);border:1px solid var(--line);border-radius:var(--r2);overflow:hidden}
+        .pain-card{background:var(--white);padding:32px 28px;transition:background .3s var(--ease)}
+        .pain-card:hover{background:var(--bg)}
+        .pain-card h3{font-size:14px;font-weight:600;margin-bottom:8px;color:var(--text)}
+        .pain-card p{font-size:13px;color:var(--t3);font-weight:300;line-height:1.65}
 
-        /* ━━━ COMPARISON ━━━ */
-        .comp{padding:100px 0 80px}
-        .comp-box{max-width:640px;margin:0 auto;background:var(--bg2);border:1px solid var(--b2);border-radius:var(--r2);overflow:hidden}
-        .comp-head{display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--bg3);padding:14px 24px;font:600 12px/1 'Inter',sans-serif;letter-spacing:.05em;text-transform:uppercase;color:var(--t3);border-bottom:1px solid var(--b1)}
-        .comp-row{display:flex;align-items:center;padding:16px 24px;border-bottom:1px solid var(--b1);font-size:14px}
+        /* Comparison */
+        .comp{padding:100px 0 80px;background:var(--white)}
+        .comp-box{max-width:600px;margin:0 auto;border:1px solid var(--line);border-radius:var(--r2);overflow:hidden}
+        .comp-head{display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--bg);padding:14px 24px;font:600 11px/1 'Inter',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--t3);border-bottom:1px solid var(--line)}
+        .comp-row{display:flex;align-items:center;padding:16px 24px;border-bottom:1px solid var(--line2);font-size:14px;background:var(--white)}
         .comp-row:last-child{border-bottom:none}
         .comp-row>*{flex:1}
-        .comp-them{color:var(--t3);text-decoration:line-through;font-weight:300}
-        .comp-us{color:var(--green);font-weight:600}
+        .comp-them{color:var(--t4);text-decoration:line-through;font-weight:300;text-align:center}
+        .comp-us{color:var(--text);font-weight:600;text-align:right}
         .comp-label{color:var(--t2);font-weight:400}
-        .comp-note{text-align:center;margin-top:16px;font-size:13px;color:var(--t3);font-weight:300}
+        .comp-note{text-align:center;margin-top:16px;font-size:12px;color:var(--t4);font-weight:300}
 
-        /* ━━━ METRICS ━━━ */
-        .metrics{padding:40px 0 80px}
-        .met-row{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--b1);border-radius:var(--r2);overflow:hidden;background:var(--bg2)}
-        .met{padding:32px 16px;text-align:center;border-right:1px solid var(--b1)}
+        /* Metrics */
+        .metrics{padding:40px 0 80px;background:var(--white)}
+        .met-row{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--r2);overflow:hidden}
+        .met{padding:32px 16px;text-align:center;border-right:1px solid var(--line);background:var(--white)}
         .met:last-child{border-right:none}
-        .met-v{font-family:'Playfair Display',serif;font-size:32px;letter-spacing:-.02em;margin-bottom:3px}
+        .met-v{font-family:'Playfair Display',serif;font-size:32px;letter-spacing:-.02em;margin-bottom:3px;color:var(--text)}
         .met-l{font-size:11px;color:var(--t4);font-weight:500;letter-spacing:.04em;text-transform:uppercase}
 
-        /* ━━━ PRICING ━━━ */
-        .pricing{padding:80px 0}
-        .base{max-width:500px;margin:0 auto 64px;background:var(--bg2);border:1px solid var(--b2);border-radius:var(--r3);padding:48px 40px;text-align:center;position:relative;overflow:hidden}
-        .base::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),var(--warm),transparent)}
-        .base-ey{font:600 11px/1 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--accent2);margin-bottom:20px}
-        .base-price{font-family:'Playfair Display',serif;font-size:64px;letter-spacing:-.03em;line-height:1}
-        .base-price .cur{font-family:'Inter',sans-serif;font-size:20px;font-weight:300;color:var(--t2);vertical-align:super}
+        /* Pricing */
+        .pricing{padding:80px 0;background:var(--bg)}
+        .base{max-width:480px;margin:0 auto 64px;background:var(--white);border:1px solid var(--line);border-radius:var(--r3);padding:48px 40px;text-align:center;position:relative}
+        .base-ey{font:500 11px/1 'Inter',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--t3);margin-bottom:20px}
+        .base-price{font-family:'Playfair Display',serif;font-size:64px;letter-spacing:-.03em;line-height:1;color:var(--text)}
+        .base-price .cur{font-family:'Inter',sans-serif;font-size:20px;font-weight:300;color:var(--t3);vertical-align:super}
         .base-note{font-size:13px;color:var(--t4);margin:6px 0 32px}
         .price-features{list-style:none;text-align:left}
-        .price-features li{display:flex;align-items:center;gap:12px;padding:12px 0;font-size:14px;color:var(--t2);border-bottom:1px solid var(--b1)}
+        .price-features li{display:flex;align-items:center;gap:12px;padding:12px 0;font-size:14px;color:var(--t2);border-bottom:1px solid var(--line2)}
         .price-features li:last-child{border-bottom:none}
-        .ck{width:18px;height:18px;border-radius:50%;background:var(--accent3);border:1px solid var(--accent4);flex-shrink:0;display:flex;align-items:center;justify-content:center}
+        .ck{width:18px;height:18px;border-radius:50%;background:var(--bg);border:1px solid var(--line);flex-shrink:0;display:flex;align-items:center;justify-content:center}
         .ck svg{width:10px;height:10px}
 
-        .add-label{font:600 12px/1 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--t4);text-align:center;margin-bottom:24px}
-        .add-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:720px;margin:0 auto}
-        .addon{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:var(--bg2);border:1px solid var(--b1);border-radius:var(--r);transition:all .25s var(--ease)}
-        .addon:hover{border-color:var(--b2);background:var(--bg3)}
-        .addon-n{font-size:14px;font-weight:500;margin-bottom:1px}
+        .add-label{font:500 11px/1 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--t4);text-align:center;margin-bottom:24px}
+        .add-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;max-width:700px;margin:0 auto}
+        .addon{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;background:var(--white);border:1px solid var(--line);border-radius:var(--r);transition:all .25s var(--ease)}
+        .addon:hover{border-color:var(--t5);box-shadow:0 2px 12px rgba(0,0,0,.04)}
+        .addon-n{font-size:14px;font-weight:500;margin-bottom:1px;color:var(--text)}
         .addon-d{font-size:12px;color:var(--t4)}
-        .addon-p{font-family:'Playfair Display',serif;font-size:17px;color:var(--accent2);white-space:nowrap;flex-shrink:0;margin-left:14px}
+        .addon-p{font-family:'Playfair Display',serif;font-size:17px;color:var(--text);white-space:nowrap;flex-shrink:0;margin-left:14px}
 
         /* Calculator */
         .calc{margin-top:56px;max-width:520px;margin-left:auto;margin-right:auto}
         .calc-t{font-family:'Playfair Display',serif;font-size:22px;text-align:center;margin-bottom:6px}
         .calc-s{text-align:center;font-size:13px;color:var(--t4);margin-bottom:28px}
-        .calc-box{background:var(--bg2);border:1px solid var(--b2);border-radius:var(--r2);padding:32px}
-        .cr{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--b1);font-size:13px}
+        .calc-box{background:var(--white);border:1px solid var(--line);border-radius:var(--r2);padding:32px}
+        .cr{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line2);font-size:13px}
         .cr:last-of-type{border-bottom:none}
         .cr label{display:flex;align-items:center;gap:9px;color:var(--t2);cursor:pointer;flex:1}
         .cr label:hover{color:var(--text)}
-        .cr input[type="checkbox"]{appearance:none;-webkit-appearance:none;width:16px;height:16px;border:1px solid var(--b3);border-radius:4px;background:var(--bg3);cursor:pointer;transition:all .2s;flex-shrink:0}
-        .cr input[type="checkbox"]:checked{background:var(--accent);border-color:var(--accent);background-image:url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
-        .cr select{background:var(--bg3);border:1px solid var(--b3);color:var(--text);font:400 12px 'Inter',sans-serif;padding:5px 8px;border-radius:6px;cursor:pointer;min-width:44px;text-align:center}
-        .cr select:focus{outline:none;border-color:var(--accent)}
+        .cr input[type="checkbox"]{appearance:none;-webkit-appearance:none;width:16px;height:16px;border:1px solid var(--line);border-radius:4px;background:var(--white);cursor:pointer;transition:all .2s;flex-shrink:0}
+        .cr input[type="checkbox"]:checked{background:var(--dark);border-color:var(--dark);background-image:url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='white' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
+        .cr select{background:var(--bg);border:1px solid var(--line);color:var(--text);font:400 12px 'Inter',sans-serif;padding:5px 8px;border-radius:6px;cursor:pointer;min-width:44px;text-align:center}
+        .cr select:focus{outline:none;border-color:var(--t3)}
         .cr-p{color:var(--t4);font-size:12px;white-space:nowrap;min-width:64px;text-align:right}
-        .calc-total{margin-top:16px;padding-top:16px;border-top:1px solid var(--b2);display:flex;align-items:baseline;justify-content:space-between}
+        .calc-total{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);display:flex;align-items:baseline;justify-content:space-between}
         .calc-tl{font-size:14px;color:var(--t2);font-weight:500}
-        .calc-tv{font-family:'Playfair Display',serif;font-size:32px;letter-spacing:-.02em}
-        .calc-tv .sm{font-family:'Inter',sans-serif;font-size:14px;font-weight:300;color:var(--t2)}
+        .calc-tv{font-family:'Playfair Display',serif;font-size:32px;letter-spacing:-.02em;color:var(--text)}
+        .calc-tv .sm{font-family:'Inter',sans-serif;font-size:14px;font-weight:300;color:var(--t3)}
         .calc-btn{margin-top:20px}
         .calc-btn .btn{width:100%;justify-content:center}
 
-        /* ━━━ WHY US ━━━ */
-        .why{padding:100px 0}
-        .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:860px;margin:0 auto}
-        .why-card{background:var(--bg2);border:1px solid var(--b1);border-radius:var(--r);padding:32px 24px;text-align:center;transition:all .3s var(--ease)}
-        .why-card:hover{border-color:var(--b2);transform:translateY(-3px)}
-        .why-icon{font-size:28px;margin-bottom:14px}
+        /* Why Us */
+        .why{padding:100px 0;background:var(--white)}
+        .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;max-width:860px;margin:0 auto;background:var(--line);border:1px solid var(--line);border-radius:var(--r2);overflow:hidden}
+        .why-card{background:var(--white);padding:36px 28px;text-align:center;transition:background .3s var(--ease)}
+        .why-card:hover{background:var(--bg)}
+        .why-icon{width:40px;height:40px;border-radius:10px;background:var(--bg);border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;margin-bottom:16px}
+        .why-icon svg{width:18px;height:18px;stroke:var(--text);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
         .why-card h3{font-size:15px;font-weight:600;margin-bottom:8px}
         .why-card p{font-size:13px;color:var(--t2);font-weight:300;line-height:1.65}
 
-        /* ━━━ PROCESS ━━━ */
-        .process{padding:80px 0}
-        .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:860px;margin:0 auto}
-        .step-card{background:var(--bg2);border:1px solid var(--b1);border-radius:var(--r2);padding:32px 24px;transition:all .3s var(--ease)}
-        .step-card:hover{border-color:var(--b2);transform:translateY(-3px)}
-        .step-n{font-family:'Playfair Display',serif;font-size:38px;color:var(--b3);margin-bottom:16px;line-height:1}
+        /* Process */
+        .process{padding:80px 0;background:var(--bg)}
+        .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:860px;margin:0 auto}
+        .step-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r2);padding:36px 28px;transition:all .3s var(--ease)}
+        .step-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.06);transform:translateY(-3px)}
+        .step-n{font-family:'Playfair Display',serif;font-size:42px;color:var(--line);margin-bottom:16px;line-height:1}
         .step-card h3{font-size:15px;font-weight:600;margin-bottom:6px}
         .step-card p{font-size:13px;color:var(--t2);font-weight:300;line-height:1.65}
 
-        /* ━━━ SHOWCASE ━━━ */
-        .port{padding:100px 0}
-        .port-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:820px;margin:0 auto}
-        .mockup{background:var(--bg2);border:1px solid var(--b1);border-radius:var(--r2);overflow:hidden;transition:all .4s var(--ease)}
-        .mockup:hover{border-color:var(--b2);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
-        .mockup-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:var(--bg3);border-bottom:1px solid var(--b1)}
-        .mockup-dot{width:8px;height:8px;border-radius:50%;background:var(--b3)}
-        .mockup-dot:nth-child(1){background:#F87171}
-        .mockup-dot:nth-child(2){background:#FBBF24}
-        .mockup-dot:nth-child(3){background:#34D399}
-        .mockup-url{margin-left:8px;font-size:10px;color:var(--t4);background:var(--bg);padding:3px 10px;border-radius:4px;flex:1;text-align:center;letter-spacing:.02em}
-        .mockup-body{padding:24px 20px;min-height:180px;position:relative}
-        .mockup-info{padding:16px 20px;border-top:1px solid var(--b1);background:var(--bg3)}
-        .mockup-tag{display:inline-block;font:600 10px/1 'Inter',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--accent2);background:var(--accent3);padding:4px 10px;border-radius:5px;margin-bottom:6px}
-        .mockup-info h3{font-family:'Playfair Display',serif;font-size:17px;font-weight:400;margin-bottom:3px}
-        .mockup-info p{font-size:12px;color:var(--t3);font-weight:300}
-        /* Mock website content styles */
-        .mock-hero{text-align:center;padding:12px 0 8px}
-        .mock-hero h4{font-family:'Playfair Display',serif;font-size:16px;font-weight:400;margin-bottom:4px;letter-spacing:-.01em}
-        .mock-hero p{font-size:9px;color:var(--t3);margin-bottom:8px}
-        .mock-btn{display:inline-block;font-size:8px;padding:4px 12px;border-radius:100px;background:var(--accent);color:#fff;letter-spacing:.03em}
-        .mock-nav{display:flex;justify-content:space-between;align-items:center;padding-bottom:10px;border-bottom:1px solid var(--b1);margin-bottom:12px}
-        .mock-nav-logo{font-size:11px;font-weight:700}
-        .mock-nav-links{display:flex;gap:8px}
-        .mock-nav-links span{font-size:8px;color:var(--t4)}
-        .mock-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:10px}
-        .mock-card{background:var(--bg3);border-radius:6px;padding:10px 8px;text-align:center}
-        .mock-card-icon{font-size:14px;margin-bottom:3px}
-        .mock-card-text{font-size:7px;color:var(--t3)}
-        .mock-img{background:var(--bg3);border-radius:6px;height:40px;margin-bottom:8px;display:flex;align-items:center;justify-content:center;font-size:18px}
-        .mock-bar{height:6px;background:var(--bg3);border-radius:3px;margin:4px 0}
-        .mock-bar.w60{width:60%}.mock-bar.w80{width:80%}.mock-bar.w40{width:40%}
-        .mock-cols{display:flex;gap:8px;margin-top:10px}
-        .mock-col{flex:1;background:var(--bg3);border-radius:6px;padding:8px;text-align:center}
-        .mock-col-icon{font-size:12px;margin-bottom:2px}
-        .mock-col-t{font-size:7px;color:var(--t3)}
-        .mock-price-tag{display:inline-block;font-size:10px;font-weight:700;color:var(--warm);margin-top:4px}
-        /* Color themes for different mockups */
-        .mock-warm .mock-btn{background:#C9A96E}
-        .mock-warm .mock-nav-logo{color:#C9A96E}
-        .mock-green .mock-btn{background:#34D399}
-        .mock-green .mock-nav-logo{color:#34D399}
-        .mock-blue .mock-btn{background:#60A5FA}
-        .mock-blue .mock-nav-logo{color:#60A5FA}
-        .mock-rose .mock-btn{background:#F472B6}
-        .mock-rose .mock-nav-logo{color:#F472B6}
+        /* Showcase — the key redesign */
+        .port{padding:100px 0;background:var(--white)}
+        .port-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:900px;margin:0 auto}
+        .showcase{border-radius:var(--r3);overflow:hidden;transition:all .4s var(--ease);position:relative}
+        .showcase:hover{transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,.1)}
+        .sc-body{padding:40px 32px 32px;min-height:260px;position:relative}
+        .sc-tag{display:inline-block;font:500 10px/1 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:20px}
+        .sc-mockup{border-radius:var(--r);overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08);background:#fff}
+        .sc-bar{display:flex;align-items:center;gap:5px;padding:8px 12px;border-bottom:1px solid rgba(0,0,0,.06)}
+        .sc-dot{width:7px;height:7px;border-radius:50%}
+        .sc-url{margin-left:6px;font-size:10px;color:rgba(0,0,0,.35);background:rgba(0,0,0,.04);padding:2px 10px;border-radius:3px;flex:1;text-align:center;letter-spacing:.02em}
+        .sc-screen{padding:16px 14px;min-height:120px}
+        .sc-screen h4{font-family:'Playfair Display',serif;font-size:14px;font-weight:400;margin-bottom:4px}
+        .sc-screen p{font-size:9px;opacity:.5;margin-bottom:8px}
+        .sc-screen .sc-btn{display:inline-block;font-size:8px;padding:4px 12px;border-radius:100px;color:#fff;letter-spacing:.03em}
+        .sc-info{padding:20px 32px 28px;background:inherit}
+        .sc-info h3{font-family:'Playfair Display',serif;font-size:18px;font-weight:400;margin-bottom:4px}
+        .sc-info p{font-size:13px;opacity:.6;font-weight:300}
+        .sc-cols{display:flex;gap:6px;margin-top:8px}
+        .sc-col{flex:1;padding:8px;border-radius:6px;text-align:center}
+        .sc-col-t{font-size:7px;font-weight:500;text-transform:uppercase;letter-spacing:.04em}
 
-        /* ━━━ TESTIMONIALS ━━━ */
-        .testi{padding:80px 0}
-        .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:860px;margin:0 auto}
-        .testi-card{background:var(--bg2);border:1px solid var(--b1);border-radius:var(--r);padding:28px 24px;transition:all .3s var(--ease)}
-        .testi-card:hover{border-color:var(--b2)}
-        .testi-stars{color:var(--warm);font-size:14px;letter-spacing:2px;margin-bottom:12px}
-        .testi-card blockquote{font-size:14px;font-weight:300;color:var(--t2);line-height:1.65;font-style:italic;margin-bottom:14px}
+        /* Card 1: Café — warm cream */
+        .sc-cafe{background:#F7F1EB}
+        .sc-cafe .sc-tag{background:#E8D5C0;color:#8B6B47}
+        .sc-cafe .sc-screen{color:#5C4A35}
+        .sc-cafe .sc-btn{background:#8B6B47}
+        .sc-cafe .sc-dot:nth-child(1){background:#D4A574}.sc-cafe .sc-dot:nth-child(2){background:#E8D5C0}.sc-cafe .sc-dot:nth-child(3){background:#F0E6D9}
+        .sc-cafe .sc-info{color:#5C4A35}
+        .sc-cafe .sc-col{background:#EDE4D9}
+        .sc-cafe .sc-col-t{color:#8B6B47}
+
+        /* Card 2: Business — cool slate */
+        .sc-biz{background:#F0F2F5}
+        .sc-biz .sc-tag{background:#D8DEE8;color:#4A5568}
+        .sc-biz .sc-screen{color:#2D3748}
+        .sc-biz .sc-btn{background:#4A5568}
+        .sc-biz .sc-dot:nth-child(1){background:#7B8BA3}.sc-biz .sc-dot:nth-child(2){background:#B8C4D4}.sc-biz .sc-dot:nth-child(3){background:#D8DEE8}
+        .sc-biz .sc-info{color:#2D3748}
+        .sc-biz .sc-col{background:#DDE3EC}
+        .sc-biz .sc-col-t{color:#4A5568}
+
+        /* Card 3: Association — sage green */
+        .sc-org{background:#F0F4F0}
+        .sc-org .sc-tag{background:#C8D8C4;color:#4A6741}
+        .sc-org .sc-screen{color:#2D4229}
+        .sc-org .sc-btn{background:#4A6741}
+        .sc-org .sc-dot:nth-child(1){background:#7BA36E}.sc-org .sc-dot:nth-child(2){background:#B0CCA8}.sc-org .sc-dot:nth-child(3){background:#D0E0CC}
+        .sc-org .sc-info{color:#2D4229}
+        .sc-org .sc-col{background:#D5E4D2}
+        .sc-org .sc-col-t{color:#4A6741}
+
+        /* Card 4: Salon — blush rose */
+        .sc-salon{background:#F9F0F2}
+        .sc-salon .sc-tag{background:#EEDCE0;color:#8B5A6A}
+        .sc-salon .sc-screen{color:#5C3A48}
+        .sc-salon .sc-btn{background:#8B5A6A}
+        .sc-salon .sc-dot:nth-child(1){background:#C48A9A}.sc-salon .sc-dot:nth-child(2){background:#E0BCC6}.sc-salon .sc-dot:nth-child(3){background:#EEDCE0}
+        .sc-salon .sc-info{color:#5C3A48}
+        .sc-salon .sc-col{background:#EBCFD7}
+        .sc-salon .sc-col-t{color:#8B5A6A}
+
+        /* Testimonials */
+        .testi{padding:80px 0;background:var(--bg)}
+        .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:860px;margin:0 auto}
+        .testi-card{background:var(--white);border:1px solid var(--line);border-radius:var(--r2);padding:32px 28px;transition:all .3s var(--ease)}
+        .testi-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.05)}
+        .testi-stars{color:var(--warm);font-size:13px;letter-spacing:2px;margin-bottom:14px}
+        .testi-card blockquote{font-size:14px;font-weight:300;color:var(--t2);line-height:1.65;font-style:italic;margin-bottom:16px}
         .testi-who{font-size:12px;font-weight:500;color:var(--t3)}
 
-        /* ━━━ FAQ ━━━ */
-        .faq{padding:80px 0}
+        /* FAQ */
+        .faq{padding:80px 0;background:var(--white)}
         .faq-list{max-width:600px;margin:0 auto}
-        .faq-item{border-bottom:1px solid var(--b1)}
+        .faq-item{border-bottom:1px solid var(--line)}
         .faq-q{display:flex;align-items:center;justify-content:space-between;width:100%;padding:20px 0;background:none;border:none;color:var(--text);font:500 14px/1.5 'Inter',sans-serif;cursor:pointer;text-align:left;transition:color .2s}
-        .faq-q:hover{color:var(--accent2)}
+        .faq-q:hover{color:var(--warm)}
         .faq-q span:last-child{font-size:16px;color:var(--t4);transition:transform .3s;flex-shrink:0;margin-left:14px}
         .faq-item.open .faq-q span:last-child{transform:rotate(45deg)}
         .faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease),padding .3s}
         .faq-item.open .faq-a{max-height:200px;padding-bottom:18px}
         .faq-a p{font-size:14px;color:var(--t2);font-weight:300;line-height:1.7}
 
-        /* ━━━ DOMAIN ━━━ */
-        .domain{padding:60px 0}
-        .dom-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;max-width:600px;margin:0 auto}
-        .dom-card{background:var(--bg2);border:1px solid var(--b1);border-radius:var(--r2);padding:28px 24px;text-align:center;transition:all .3s var(--ease)}
-        .dom-card:hover{border-color:var(--b2)}
-        .dom-icon{width:40px;height:40px;border-radius:10px;background:var(--accent3);display:inline-flex;align-items:center;justify-content:center;font-size:17px;margin-bottom:14px}
+        /* Domain */
+        .domain{padding:60px 0;background:var(--white)}
+        .dom-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:560px;margin:0 auto}
+        .dom-card{background:var(--bg);border:1px solid var(--line);border-radius:var(--r2);padding:28px 24px;text-align:center;transition:all .3s var(--ease)}
+        .dom-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.04)}
+        .dom-icon{width:40px;height:40px;border-radius:10px;background:var(--white);border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;margin-bottom:14px}
+        .dom-icon svg{width:18px;height:18px;stroke:var(--text);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
         .dom-card h3{font-size:15px;font-weight:600;margin-bottom:6px}
         .dom-card p{font-size:13px;color:var(--t2);font-weight:300;line-height:1.6}
 
-        /* ━━━ CTA ━━━ */
-        .cta{padding:80px 0 100px}
-        .cta-box{max-width:640px;margin:0 auto;background:var(--bg2);border:1px solid var(--b2);border-radius:var(--r3);padding:64px 48px;text-align:center;position:relative;overflow:hidden}
-        .cta-box::before{content:'';position:absolute;top:-50%;left:-15%;width:130%;height:130%;background:radial-gradient(ellipse,var(--accent3),transparent 60%);pointer-events:none}
-        .cta-box h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3.2vw,34px);font-weight:400;margin-bottom:12px;position:relative}
-        .cta-box p{color:var(--t2);font-size:15px;font-weight:300;margin-bottom:32px;position:relative;line-height:1.7}
+        /* CTA — dark section for contrast */
+        .cta{padding:80px 0 100px;background:var(--bg)}
+        .cta-box{max-width:640px;margin:0 auto;background:var(--dark);border-radius:var(--r3);padding:64px 48px;text-align:center;position:relative;overflow:hidden}
+        .cta-box::before{content:'';position:absolute;top:-50%;left:30%;width:40%;height:200%;background:radial-gradient(ellipse,rgba(201,149,107,.08),transparent 60%);pointer-events:none}
+        .cta-box h2{font-family:'Playfair Display',serif;font-size:clamp(24px,3.2vw,34px);font-weight:400;margin-bottom:12px;position:relative;color:var(--white)}
+        .cta-box p{color:rgba(255,255,255,.55);font-size:15px;font-weight:300;margin-bottom:32px;position:relative;line-height:1.7}
         .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;position:relative}
+        .cta-btns .btn-f{background:var(--white);color:var(--dark)}
+        .cta-btns .btn-f:hover{background:#F5F5F5;box-shadow:0 8px 24px rgba(255,255,255,.1)}
+        .cta-btns .btn-o{border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.6)}
+        .cta-btns .btn-o:hover{border-color:rgba(255,255,255,.4);color:var(--white)}
 
-        footer{padding:32px 0;border-top:1px solid var(--b1);text-align:center}
+        footer{padding:32px 0;border-top:1px solid var(--line);text-align:center;background:var(--bg)}
         footer p{font-size:12px;color:var(--t4);font-weight:300}
         footer a{color:var(--t4);text-decoration:none}footer a:hover{color:var(--t2)}
 
@@ -267,14 +273,16 @@
         /* Responsive */
         @media(max-width:768px){
             .hero{padding:64px 0 56px}
-            .pain-grid,.why-grid,.steps,.testi-grid{grid-template-columns:1fr}
+            .pain-grid,.why-grid{grid-template-columns:1fr}
+            .steps,.testi-grid{grid-template-columns:1fr}
             .met-row{grid-template-columns:repeat(2,1fr)}
-            .met{border-bottom:1px solid var(--b1)}.met:nth-child(2){border-right:none}
+            .met{border-bottom:1px solid var(--line)}.met:nth-child(2){border-right:none}
             .add-grid,.port-grid,.dom-grid{grid-template-columns:1fr}
-            .mockup-body{min-height:160px}
             .base{padding:32px 22px}.base-price{font-size:48px}
             .cta-box{padding:40px 22px}
             .comp-head{font-size:10px;padding:10px 16px}.comp-row{padding:12px 16px;font-size:13px}
+            .sc-body{padding:28px 24px 24px}
+            .sc-info{padding:16px 24px 24px}
         }
 
         /* Language */
@@ -285,8 +293,6 @@
     </style>
 </head>
 <body>
-    <div class="amb"><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
-
     <!-- Lang -->
     <div class="lb">
         <button class="on" onclick="L('sv',this)">Svenska</button>
@@ -301,7 +307,7 @@
         <a href="#contact" class="nav-c"><span data-l="sv">Begär offert</span><span data-l="en">Get a quote</span><span data-l="zh">获取报价</span><span data-l="ar">اطلب عرض سعر</span></a>
     </div></nav>
 
-    <!-- ════ HERO ════ -->
+    <!-- Hero -->
     <section class="hero">
         <div class="w">
             <div data-l="sv">
@@ -332,23 +338,20 @@
         </div>
     </section>
 
-    <!-- ════ PAIN POINTS ════ -->
+    <!-- Pain Points -->
     <section class="pain">
         <div class="w">
             <div class="ey"><span data-l="sv">Känns det bekant?</span><span data-l="en">Sound familiar?</span><span data-l="zh">听起来熟悉吗？</span><span data-l="ar">يبدو مألوفاً؟</span></div>
             <div class="pain-grid rv">
                 <div class="pain-card">
-                    <div class="pain-icon">😩</div>
                     <h3><span data-l="sv">"Vi har ingen hemsida"</span><span data-l="en">"We don't have a website"</span><span data-l="zh">"我们没有网站"</span><span data-l="ar">"ليس لدينا موقع"</span></h3>
                     <p><span data-l="sv">Kunder googlar dig — och hittar ingenting. Varje dag utan hemsida är förlorade kunder.</span><span data-l="en">Customers Google you — and find nothing. Every day without a website is lost business.</span><span data-l="zh">客户搜索你——什么都找不到。没有网站的每一天都在流失客户。</span><span data-l="ar">العملاء يبحثون عنك — ولا يجدون شيئاً. كل يوم بدون موقع هو عملاء ضائعون.</span></p>
                 </div>
                 <div class="pain-card">
-                    <div class="pain-icon">💸</div>
                     <h3><span data-l="sv">"Det är för dyrt"</span><span data-l="en">"It's too expensive"</span><span data-l="zh">"太贵了"</span><span data-l="ar">"إنه مكلف جداً"</span></h3>
                     <p><span data-l="sv">Webbbyråer offererar 15 000–30 000 kr. Dessutom vill de ha 500+ kr/mån i underhåll. Det behövs inte.</span><span data-l="en">Agencies quote SEK 15,000–30,000. Plus SEK 500+/month for maintenance. It doesn't have to be that way.</span><span data-l="zh">建站公司报价15,000-30,000克朗，还要每月500+克朗维护费。其实根本不需要这么贵。</span><span data-l="ar">الوكالات تطلب 15,000-30,000 كرونة. بالإضافة إلى 500+ كرونة/شهر صيانة. لا يجب أن يكون كذلك.</span></p>
                 </div>
                 <div class="pain-card">
-                    <div class="pain-icon">⏳</div>
                     <h3><span data-l="sv">"Det tar för lång tid"</span><span data-l="en">"It takes too long"</span><span data-l="zh">"太慢了"</span><span data-l="ar">"يستغرق وقتاً طويلاً"</span></h3>
                     <p><span data-l="sv">2–4 veckors leveranstid? Du behöver din hemsida nu, inte nästa månad.</span><span data-l="en">2–4 weeks delivery? You need your site now, not next month.</span><span data-l="zh">交付周期2-4周？你需要的是现在就上线，不是下个月。</span><span data-l="ar">تسليم خلال 2-4 أسابيع؟ أنت تحتاج موقعك الآن، ليس الشهر القادم.</span></p>
                 </div>
@@ -356,7 +359,7 @@
         </div>
     </section>
 
-    <!-- ════ COMPARISON ════ -->
+    <!-- Comparison -->
     <section class="comp">
         <div class="w">
             <div class="ey"><span data-l="sv">Jämförelse</span><span data-l="en">Comparison</span><span data-l="zh">对比</span><span data-l="ar">مقارنة</span></div>
@@ -370,35 +373,35 @@
                 </div>
                 <div class="comp-row">
                     <span class="comp-label"><span data-l="sv">Startkostnad</span><span data-l="en">Starting price</span><span data-l="zh">起步价</span><span data-l="ar">السعر الابتدائي</span></span>
-                    <span class="comp-them" style="text-align:center">7 000–30 000 kr</span>
-                    <span class="comp-us" style="text-align:right">999 kr</span>
+                    <span class="comp-them">7 000–30 000 kr</span>
+                    <span class="comp-us">999 kr</span>
                 </div>
                 <div class="comp-row">
                     <span class="comp-label"><span data-l="sv">Månadskostnad</span><span data-l="en">Monthly cost</span><span data-l="zh">月费</span><span data-l="ar">التكلفة الشهرية</span></span>
-                    <span class="comp-them" style="text-align:center">500–1 500 kr</span>
-                    <span class="comp-us" style="text-align:right">0 kr</span>
+                    <span class="comp-them">500–1 500 kr</span>
+                    <span class="comp-us">0 kr</span>
                 </div>
                 <div class="comp-row">
                     <span class="comp-label"><span data-l="sv">Leveranstid</span><span data-l="en">Delivery</span><span data-l="zh">交付时间</span><span data-l="ar">التسليم</span></span>
-                    <span class="comp-them" style="text-align:center">2–4 veckor</span>
-                    <span class="comp-us" style="text-align:right">24–72h</span>
+                    <span class="comp-them">2–4 veckor</span>
+                    <span class="comp-us">24–72h</span>
                 </div>
                 <div class="comp-row">
                     <span class="comp-label"><span data-l="sv">Flerspråkigt</span><span data-l="en">Multilingual</span><span data-l="zh">多语言</span><span data-l="ar">متعدد اللغات</span></span>
-                    <span class="comp-them" style="text-align:center"><span data-l="sv">Extra kostnad</span><span data-l="en">Extra cost</span><span data-l="zh">额外收费</span><span data-l="ar">تكلفة إضافية</span></span>
-                    <span class="comp-us" style="text-align:right"><span data-l="sv">Från 299 kr</span><span data-l="en">From 299 kr</span><span data-l="zh">299克朗起</span><span data-l="ar">من 299 كرونة</span></span>
+                    <span class="comp-them"><span data-l="sv">Extra kostnad</span><span data-l="en">Extra cost</span><span data-l="zh">额外收费</span><span data-l="ar">تكلفة إضافية</span></span>
+                    <span class="comp-us"><span data-l="sv">Från 299 kr</span><span data-l="en">From 299 kr</span><span data-l="zh">299克朗起</span><span data-l="ar">من 299 كرونة</span></span>
                 </div>
                 <div class="comp-row">
                     <span class="comp-label">Hosting</span>
-                    <span class="comp-them" style="text-align:center">100–300 kr/mån</span>
-                    <span class="comp-us" style="text-align:right"><span data-l="sv">Gratis — alltid</span><span data-l="en">Free — always</span><span data-l="zh">永久免费</span><span data-l="ar">مجاني — دائماً</span></span>
+                    <span class="comp-them">100–300 kr/mån</span>
+                    <span class="comp-us"><span data-l="sv">Gratis — alltid</span><span data-l="en">Free — always</span><span data-l="zh">永久免费</span><span data-l="ar">مجاني — دائماً</span></span>
                 </div>
             </div>
             <p class="comp-note"><span data-l="sv">* Baserat på priser från svenska webbbyråer 2026</span><span data-l="en">* Based on prices from Swedish web agencies 2026</span><span data-l="zh">* 基于2026年瑞典建站公司实际报价</span><span data-l="ar">* بناءً على أسعار الوكالات السويدية 2026</span></p>
         </div>
     </section>
 
-    <!-- ════ METRICS ════ -->
+    <!-- Metrics -->
     <section class="metrics">
         <div class="w">
             <div class="met-row rv">
@@ -410,7 +413,7 @@
         </div>
     </section>
 
-    <!-- ════ PRICING ════ -->
+    <!-- Pricing -->
     <section class="pricing" id="pricing">
         <div class="w">
             <div class="ey"><span data-l="sv">Priser</span><span data-l="en">Pricing</span><span data-l="zh">价格</span><span data-l="ar">الأسعار</span></div>
@@ -422,11 +425,11 @@
                 <div class="base-price">999 <span class="cur">kr</span></div>
                 <div class="base-note"><span data-l="sv">Engångsbetalning · Ingen bindning</span><span data-l="en">One-time · No commitment</span><span data-l="zh">一次性付款 · 无绑定</span><span data-l="ar">دفعة واحدة · بدون التزام</span></div>
                 <ul class="price-features">
-                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Professionell ensideshemsida</span><span data-l="en">Professional single-page website</span><span data-l="zh">专业单页网站</span><span data-l="ar">موقع صفحة واحدة احترافي</span></li>
-                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Mobilanpassad design</span><span data-l="en">Mobile-responsive design</span><span data-l="zh">移动端完美适配</span><span data-l="ar">تصميم متوافق مع الجوال</span></li>
-                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Fri domänregistrering (första året)</span><span data-l="en">Free domain registration (first year)</span><span data-l="zh">免费域名注册（首年）</span><span data-l="ar">تسجيل نطاق مجاني (السنة الأولى)</span></li>
-                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">SSL-certifikat &amp; HTTPS</span><span data-l="en">SSL &amp; HTTPS included</span><span data-l="zh">SSL安全证书</span><span data-l="ar">شهادة SSL و HTTPS</span></li>
-                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Gratis hosting — för alltid</span><span data-l="en">Free hosting — forever</span><span data-l="zh">永久免费托管</span><span data-l="ar">استضافة مجانية — للأبد</span></li>
+                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Professionell ensideshemsida</span><span data-l="en">Professional single-page website</span><span data-l="zh">专业单页网站</span><span data-l="ar">موقع صفحة واحدة احترافي</span></li>
+                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Mobilanpassad design</span><span data-l="en">Mobile-responsive design</span><span data-l="zh">移动端完美适配</span><span data-l="ar">تصميم متوافق مع الجوال</span></li>
+                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Fri domänregistrering (första året)</span><span data-l="en">Free domain registration (first year)</span><span data-l="zh">免费域名注册（首年）</span><span data-l="ar">تسجيل نطاق مجاني (السنة الأولى)</span></li>
+                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">SSL-certifikat &amp; HTTPS</span><span data-l="en">SSL &amp; HTTPS included</span><span data-l="zh">SSL安全证书</span><span data-l="ar">شهادة SSL و HTTPS</span></li>
+                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Gratis hosting — för alltid</span><span data-l="en">Free hosting — forever</span><span data-l="zh">永久免费托管</span><span data-l="ar">استضافة مجانية — للأبد</span></li>
                 </ul>
             </div>
 
@@ -463,7 +466,7 @@
         </div>
     </section>
 
-    <!-- ════ WHY US ════ -->
+    <!-- Why Us -->
     <section class="why">
         <div class="w">
             <div class="ey"><span data-l="sv">Varför DinWeb?</span><span data-l="en">Why DinWeb?</span><span data-l="zh">为什么选DinWeb？</span><span data-l="ar">لماذا DinWeb؟</span></div>
@@ -471,17 +474,17 @@
             <p class="ss"><span data-l="sv">Ingen teknisk kunskap krävs. Vi sköter allt.</span><span data-l="en">No technical knowledge needed. We handle everything.</span><span data-l="zh">无需任何技术知识。我们搞定一切。</span><span data-l="ar">لا حاجة لمعرفة تقنية. نحن نتولى كل شيء.</span></p>
             <div class="why-grid rv">
                 <div class="why-card">
-                    <div class="why-icon">⚡</div>
+                    <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
                     <h3><span data-l="sv">Blixtsnabb leverans</span><span data-l="en">Lightning fast</span><span data-l="zh">极速交付</span><span data-l="ar">سريع كالبرق</span></h3>
                     <p><span data-l="sv">De flesta hemsidor är klara inom 24–72 timmar. Du behöver inte vänta veckor.</span><span data-l="en">Most sites are ready within 24–72 hours. No waiting weeks.</span><span data-l="zh">大多数网站24-72小时完成。不用等几周。</span><span data-l="ar">معظم المواقع جاهزة خلال 24-72 ساعة. لا انتظار لأسابيع.</span></p>
                 </div>
                 <div class="why-card">
-                    <div class="why-icon">🌍</div>
+                    <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
                     <h3><span data-l="sv">Fyra språk</span><span data-l="en">Four languages</span><span data-l="zh">四种语言</span><span data-l="ar">أربع لغات</span></h3>
                     <p><span data-l="sv">Svenska, engelska, kinesiska, arabiska. Nå alla dina kunder — oavsett språk.</span><span data-l="en">Swedish, English, Chinese, Arabic. Reach all your customers — regardless of language.</span><span data-l="zh">瑞典语、英语、中文、阿拉伯语。触达所有客户。</span><span data-l="ar">السويدية، الإنجليزية، الصينية، العربية. تواصل مع جميع عملائك.</span></p>
                 </div>
                 <div class="why-card">
-                    <div class="why-icon">🛡️</div>
+                    <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
                     <h3><span data-l="sv">Noll underhåll</span><span data-l="en">Zero maintenance</span><span data-l="zh">零维护</span><span data-l="ar">صيانة صفرية</span></h3>
                     <p><span data-l="sv">Inga plugins att uppdatera. Inga säkerhetshål. Din hemsida bara fungerar — år efter år.</span><span data-l="en">No plugins to update. No security holes. Your site just works — year after year.</span><span data-l="zh">无需更新插件，无安全漏洞。网站就是一直好用。</span><span data-l="ar">لا إضافات للتحديث. لا ثغرات أمنية. موقعك يعمل — سنة بعد سنة.</span></p>
                 </div>
@@ -489,7 +492,7 @@
         </div>
     </section>
 
-    <!-- ════ PROCESS ════ -->
+    <!-- Process -->
     <section class="process" id="how">
         <div class="w">
             <div class="ey">Process</div>
@@ -503,82 +506,113 @@
         </div>
     </section>
 
-    <!-- ════ SHOWCASE ════ -->
+    <!-- Showcase -->
     <section class="port" id="work">
         <div class="w">
-            <div class="ey"><span data-l="sv">Exempeldesign</span><span data-l="en">Design examples</span><span data-l="zh">设计示例</span><span data-l="ar">أمثلة التصميم</span></div>
+            <div class="ey"><span data-l="sv">Vårt arbete</span><span data-l="en">Our work</span><span data-l="zh">案例展示</span><span data-l="ar">أعمالنا</span></div>
             <h2 class="st"><span data-l="sv">Hemsidor vi kan bygga åt dig</span><span data-l="en">Websites we can build for you</span><span data-l="zh">我们能为您打造的网站</span><span data-l="ar">مواقع يمكننا بناؤها لك</span></h2>
             <p class="ss"><span data-l="sv">Varje hemsida är unik — designad efter dina behov och din stil.</span><span data-l="en">Every site is unique — designed for your needs and brand.</span><span data-l="zh">每个网站都独一无二——根据您的需求和风格定制。</span><span data-l="ar">كل موقع فريد — مصمم حسب احتياجاتك وعلامتك.</span></p>
             <div class="port-grid rv">
-                <!-- Mockup 1: Restaurant / Café -->
-                <div class="mockup">
-                    <div class="mockup-bar"><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-url">mittcafe.se</span></div>
-                    <div class="mockup-body mock-warm">
-                        <div class="mock-nav"><span class="mock-nav-logo">☕ Mitt Café</span><div class="mock-nav-links"><span>Meny</span><span>Om oss</span><span>Boka</span></div></div>
-                        <div class="mock-hero">
-                            <div class="mock-img">🥐</div>
-                            <h4>Välkommen till Mitt Café</h4>
-                            <p>Handgjorda bakverk &amp; specialkaffe i hjärtat av Stockholm</p>
-                            <span class="mock-btn">Boka bord</span>
+                <!-- Café — warm cream -->
+                <div class="showcase sc-cafe">
+                    <div class="sc-body">
+                        <div class="sc-tag"><span data-l="sv">Restaurang &amp; kafé</span><span data-l="en">Restaurant &amp; café</span><span data-l="zh">餐厅 &amp; 咖啡馆</span><span data-l="ar">مطعم ومقهى</span></div>
+                        <div class="sc-mockup">
+                            <div class="sc-bar"><span class="sc-dot"></span><span class="sc-dot"></span><span class="sc-dot"></span><span class="sc-url">mittcafe.se</span></div>
+                            <div class="sc-screen">
+                                <h4>Välkommen till Mitt Café</h4>
+                                <p>Handgjorda bakverk &amp; specialkaffe i hjärtat av Stockholm</p>
+                                <span class="sc-btn">Boka bord</span>
+                                <div class="sc-cols" style="margin-top:10px">
+                                    <div class="sc-col"><div class="sc-col-t">Meny</div></div>
+                                    <div class="sc-col"><div class="sc-col-t">Om oss</div></div>
+                                    <div class="sc-col"><div class="sc-col-t">Hitta hit</div></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="mockup-info"><div class="mockup-tag"><span data-l="sv">Restaurang &amp; kafé</span><span data-l="en">Restaurant &amp; café</span><span data-l="zh">餐厅 &amp; 咖啡馆</span><span data-l="ar">مطعم ومقهى</span></div><h3><span data-l="sv">Meny, karta &amp; bokning</span><span data-l="en">Menu, map &amp; booking</span><span data-l="zh">菜单、地图 &amp; 预约</span><span data-l="ar">قائمة، خريطة وحجز</span></h3><p><span data-l="sv">Från 1 697 kr</span><span data-l="en">From 1,697 kr</span><span data-l="zh">1,697克朗起</span><span data-l="ar">من 1,697 كرونة</span></p></div>
+                    <div class="sc-info">
+                        <h3><span data-l="sv">Meny, karta &amp; bokning</span><span data-l="en">Menu, map &amp; booking</span><span data-l="zh">菜单、地图 &amp; 预约</span><span data-l="ar">قائمة، خريطة وحجز</span></h3>
+                        <p><span data-l="sv">Från 1 697 kr</span><span data-l="en">From 1,697 kr</span><span data-l="zh">1,697克朗起</span><span data-l="ar">من 1,697 كرونة</span></p>
+                    </div>
                 </div>
-                <!-- Mockup 2: Business / Consulting -->
-                <div class="mockup">
-                    <div class="mockup-bar"><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-url">nordstrom-consulting.se</span></div>
-                    <div class="mockup-body mock-blue">
-                        <div class="mock-nav"><span class="mock-nav-logo">◆ Nordström</span><div class="mock-nav-links"><span>Tjänster</span><span>Om</span><span>Kontakt</span></div></div>
-                        <div class="mock-hero">
-                            <h4>Strategisk Rådgivning</h4>
-                            <p>Vi hjälper företag att växa — smart och hållbart</p>
-                            <span class="mock-btn">Boka möte</span>
-                        </div>
-                        <div class="mock-grid">
-                            <div class="mock-card"><div class="mock-card-icon">📊</div><div class="mock-card-text">Strategi</div></div>
-                            <div class="mock-card"><div class="mock-card-icon">🚀</div><div class="mock-card-text">Tillväxt</div></div>
-                            <div class="mock-card"><div class="mock-card-icon">🌱</div><div class="mock-card-text">Hållbarhet</div></div>
+
+                <!-- Business — cool slate -->
+                <div class="showcase sc-biz">
+                    <div class="sc-body">
+                        <div class="sc-tag"><span data-l="sv">Företag &amp; konsult</span><span data-l="en">Business &amp; consulting</span><span data-l="zh">企业 &amp; 咨询</span><span data-l="ar">أعمال واستشارات</span></div>
+                        <div class="sc-mockup">
+                            <div class="sc-bar"><span class="sc-dot"></span><span class="sc-dot"></span><span class="sc-dot"></span><span class="sc-url">nordstrom-consulting.se</span></div>
+                            <div class="sc-screen">
+                                <h4>Strategisk Rådgivning</h4>
+                                <p>Vi hjälper företag att växa — smart och hållbart</p>
+                                <span class="sc-btn">Boka möte</span>
+                                <div class="sc-cols" style="margin-top:10px">
+                                    <div class="sc-col"><div class="sc-col-t">Strategi</div></div>
+                                    <div class="sc-col"><div class="sc-col-t">Tillväxt</div></div>
+                                    <div class="sc-col"><div class="sc-col-t">Hållbarhet</div></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="mockup-info"><div class="mockup-tag"><span data-l="sv">Företag &amp; konsult</span><span data-l="en">Business &amp; consulting</span><span data-l="zh">企业 &amp; 咨询</span><span data-l="ar">أعمال واستشارات</span></div><h3><span data-l="sv">Flersidigt med adminpanel</span><span data-l="en">Multi-page with admin panel</span><span data-l="zh">多页面 + 后台管理</span><span data-l="ar">متعدد الصفحات مع لوحة تحكم</span></h3><p><span data-l="sv">Från 3 196 kr</span><span data-l="en">From 3,196 kr</span><span data-l="zh">3,196克朗起</span><span data-l="ar">من 3,196 كرونة</span></p></div>
+                    <div class="sc-info">
+                        <h3><span data-l="sv">Flersidigt med adminpanel</span><span data-l="en">Multi-page with admin panel</span><span data-l="zh">多页面 + 后台管理</span><span data-l="ar">متعدد الصفحات مع لوحة تحكم</span></h3>
+                        <p><span data-l="sv">Från 3 196 kr</span><span data-l="en">From 3,196 kr</span><span data-l="zh">3,196克朗起</span><span data-l="ar">من 3,196 كرونة</span></p>
+                    </div>
                 </div>
-                <!-- Mockup 3: Association / Förening -->
-                <div class="mockup">
-                    <div class="mockup-bar"><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-url">stockholmsforening.se</span></div>
-                    <div class="mockup-body mock-green">
-                        <div class="mock-nav"><span class="mock-nav-logo">🤝 Föreningen</span><div class="mock-nav-links"><span>Om</span><span>Event</span><span>SV</span><span>EN</span></div></div>
-                        <div class="mock-hero">
-                            <h4>Stockholms Kulturförening</h4>
-                            <p>Sammanför människor genom kultur och gemenskap</p>
-                            <span class="mock-btn">Bli medlem</span>
-                        </div>
-                        <div class="mock-cols">
-                            <div class="mock-col"><div class="mock-col-icon">📅</div><div class="mock-col-t">Event</div></div>
-                            <div class="mock-col"><div class="mock-col-icon">📸</div><div class="mock-col-t">Galleri</div></div>
-                            <div class="mock-col"><div class="mock-col-icon">📰</div><div class="mock-col-t">Nyheter</div></div>
+
+                <!-- Association — sage green -->
+                <div class="showcase sc-org">
+                    <div class="sc-body">
+                        <div class="sc-tag"><span data-l="sv">Förening &amp; organisation</span><span data-l="en">Association &amp; org</span><span data-l="zh">协会 &amp; 组织</span><span data-l="ar">جمعية ومنظمة</span></div>
+                        <div class="sc-mockup">
+                            <div class="sc-bar"><span class="sc-dot"></span><span class="sc-dot"></span><span class="sc-dot"></span><span class="sc-url">stockholmsforening.se</span></div>
+                            <div class="sc-screen">
+                                <h4>Stockholms Kulturförening</h4>
+                                <p>Sammanför människor genom kultur och gemenskap</p>
+                                <span class="sc-btn">Bli medlem</span>
+                                <div class="sc-cols" style="margin-top:10px">
+                                    <div class="sc-col"><div class="sc-col-t">Event</div></div>
+                                    <div class="sc-col"><div class="sc-col-t">Galleri</div></div>
+                                    <div class="sc-col"><div class="sc-col-t">Nyheter</div></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="mockup-info"><div class="mockup-tag"><span data-l="sv">Förening &amp; organisation</span><span data-l="en">Association &amp; org</span><span data-l="zh">协会 &amp; 组织</span><span data-l="ar">جمعية ومنظمة</span></div><h3><span data-l="sv">Tvåspråkig med kalender</span><span data-l="en">Bilingual with calendar</span><span data-l="zh">双语 + 日历</span><span data-l="ar">ثنائي اللغة مع تقويم</span></h3><p><span data-l="sv">Från 2 496 kr</span><span data-l="en">From 2,496 kr</span><span data-l="zh">2,496克朗起</span><span data-l="ar">من 2,496 كرونة</span></p></div>
+                    <div class="sc-info">
+                        <h3><span data-l="sv">Tvåspråkig med kalender</span><span data-l="en">Bilingual with calendar</span><span data-l="zh">双语 + 日历</span><span data-l="ar">ثنائي اللغة مع تقويم</span></h3>
+                        <p><span data-l="sv">Från 2 496 kr</span><span data-l="en">From 2,496 kr</span><span data-l="zh">2,496克朗起</span><span data-l="ar">من 2,496 كرونة</span></p>
+                    </div>
                 </div>
-                <!-- Mockup 4: Salon / Service -->
-                <div class="mockup">
-                    <div class="mockup-bar"><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-url">glow-studio.se</span></div>
-                    <div class="mockup-body mock-rose">
-                        <div class="mock-nav"><span class="mock-nav-logo">✨ Glow Studio</span><div class="mock-nav-links"><span>Behandlingar</span><span>Priser</span><span>Boka</span></div></div>
-                        <div class="mock-hero">
-                            <div class="mock-img">💆‍♀️</div>
-                            <h4>Din skönhetsupplevelse</h4>
-                            <p>Ansiktsbehandlingar, naglar &amp; hårvård i Sundbyberg</p>
-                            <span class="mock-btn">Boka online</span>
+
+                <!-- Salon — blush rose -->
+                <div class="showcase sc-salon">
+                    <div class="sc-body">
+                        <div class="sc-tag"><span data-l="sv">Salong &amp; service</span><span data-l="en">Salon &amp; service</span><span data-l="zh">美容 &amp; 服务</span><span data-l="ar">صالون وخدمات</span></div>
+                        <div class="sc-mockup">
+                            <div class="sc-bar"><span class="sc-dot"></span><span class="sc-dot"></span><span class="sc-dot"></span><span class="sc-url">glow-studio.se</span></div>
+                            <div class="sc-screen">
+                                <h4>Din skönhetsupplevelse</h4>
+                                <p>Ansiktsbehandlingar, naglar &amp; hårvård i Sundbyberg</p>
+                                <span class="sc-btn">Boka online</span>
+                                <div class="sc-cols" style="margin-top:10px">
+                                    <div class="sc-col"><div class="sc-col-t">Behandlingar</div></div>
+                                    <div class="sc-col"><div class="sc-col-t">Priser</div></div>
+                                    <div class="sc-col"><div class="sc-col-t">Boka</div></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="mockup-info"><div class="mockup-tag"><span data-l="sv">Salong &amp; service</span><span data-l="en">Salon &amp; service</span><span data-l="zh">美容 &amp; 服务</span><span data-l="ar">صالون وخدمات</span></div><h3><span data-l="sv">Prislista &amp; bokningsformulär</span><span data-l="en">Price list &amp; booking form</span><span data-l="zh">价格表 &amp; 预约表单</span><span data-l="ar">قائمة أسعار ونموذج حجز</span></h3><p><span data-l="sv">Från 2 296 kr</span><span data-l="en">From 2,296 kr</span><span data-l="zh">2,296克朗起</span><span data-l="ar">من 2,296 كرونة</span></p></div>
+                    <div class="sc-info">
+                        <h3><span data-l="sv">Prislista &amp; bokningsformulär</span><span data-l="en">Price list &amp; booking form</span><span data-l="zh">价格表 &amp; 预约表单</span><span data-l="ar">قائمة أسعار ونموذج حجز</span></h3>
+                        <p><span data-l="sv">Från 2 296 kr</span><span data-l="en">From 2,296 kr</span><span data-l="zh">2,296克朗起</span><span data-l="ar">من 2,296 كرونة</span></p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ════ TESTIMONIALS ════ -->
+    <!-- Testimonials -->
     <section class="testi">
         <div class="w">
             <div class="ey"><span data-l="sv">Kundröster</span><span data-l="en">Client feedback</span><span data-l="zh">客户评价</span><span data-l="ar">آراء العملاء</span></div>
@@ -604,20 +638,28 @@
         </div>
     </section>
 
-    <!-- ════ DOMAIN ════ -->
+    <!-- Domain -->
     <section class="domain">
         <div class="w">
             <div class="ey"><span data-l="sv">Domän</span><span data-l="en">Domain</span><span data-l="zh">域名</span><span data-l="ar">النطاق</span></div>
             <h2 class="st"><span data-l="sv">Din domän, dina villkor</span><span data-l="en">Your domain, your rules</span><span data-l="zh">您的域名，您做主</span><span data-l="ar">نطاقك، قواعدك</span></h2>
             <p class="ss"></p>
             <div class="dom-grid rv">
-                <div class="dom-card"><div class="dom-icon">✦</div><h3><span data-l="sv">Ny domän</span><span data-l="en">New domain</span><span data-l="zh">新域名</span><span data-l="ar">نطاق جديد</span></h3><p><span data-l="sv">Vi registrerar den åt dig. Första året gratis.</span><span data-l="en">We register it for you. First year free.</span><span data-l="zh">我们帮您注册。首年免费。</span><span data-l="ar">نسجله لك. السنة الأولى مجاناً.</span></p></div>
-                <div class="dom-card"><div class="dom-icon">⟁</div><h3><span data-l="sv">Befintlig domän</span><span data-l="en">Existing domain</span><span data-l="zh">已有域名</span><span data-l="ar">نطاق موجود</span></h3><p><span data-l="sv">Vi kopplar din befintliga domän. Sömlöst.</span><span data-l="en">We connect your existing domain. Seamlessly.</span><span data-l="zh">无缝接入您现有域名。</span><span data-l="ar">نربط نطاقك الحالي. بسلاسة.</span></p></div>
+                <div class="dom-card">
+                    <div class="dom-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+                    <h3><span data-l="sv">Ny domän</span><span data-l="en">New domain</span><span data-l="zh">新域名</span><span data-l="ar">نطاق جديد</span></h3>
+                    <p><span data-l="sv">Vi registrerar den åt dig. Första året gratis.</span><span data-l="en">We register it for you. First year free.</span><span data-l="zh">我们帮您注册。首年免费。</span><span data-l="ar">نسجله لك. السنة الأولى مجاناً.</span></p>
+                </div>
+                <div class="dom-card">
+                    <div class="dom-icon"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+                    <h3><span data-l="sv">Befintlig domän</span><span data-l="en">Existing domain</span><span data-l="zh">已有域名</span><span data-l="ar">نطاق موجود</span></h3>
+                    <p><span data-l="sv">Vi kopplar din befintliga domän. Sömlöst.</span><span data-l="en">We connect your existing domain. Seamlessly.</span><span data-l="zh">无缝接入您现有域名。</span><span data-l="ar">نربط نطاقك الحالي. بسلاسة.</span></p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ════ FAQ ════ -->
+    <!-- FAQ -->
     <section class="faq" id="faq">
         <div class="w">
             <div class="ey">FAQ</div>
@@ -633,7 +675,7 @@
         </div>
     </section>
 
-    <!-- ════ CTA ════ -->
+    <!-- CTA -->
     <section class="cta" id="contact">
         <div class="w">
             <div class="cta-box rv">
