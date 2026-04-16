@@ -64,11 +64,8 @@
             display:flex;align-items:center;justify-content:space-between;
             height:72px;max-width:1200px;margin:0 auto;padding:0 32px;
         }
-        .nav-logo{display:flex;align-items:center;gap:12px;color:var(--ink);line-height:1}
-        .nav-logo img{height:44px;width:auto;display:block}
-        .nav-logo-wordmark{display:flex;flex-direction:column;gap:3px;padding-left:12px;border-left:1px solid var(--line)}
-        .nav-logo-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:500;letter-spacing:.01em;color:var(--ink)}
-        .nav-logo-tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+        .nav-logo{display:flex;align-items:center;line-height:1}
+        .nav-logo img{height:56px;width:auto;display:block}
         .nav-cta{
             font-size:13px;font-weight:500;letter-spacing:.01em;
             padding:11px 22px;background:var(--ink);color:var(--paper);
@@ -77,10 +74,7 @@
         .nav-cta:hover{background:var(--ink-soft)}
         @media(max-width:640px){
             .nav-inner{height:64px;padding:0 24px}
-            .nav-logo img{height:36px}
-            .nav-logo-wordmark{padding-left:10px;gap:2px}
-            .nav-logo-name{font-size:16px}
-            .nav-logo-tag{font-size:9px;letter-spacing:.12em}
+            .nav-logo img{height:42px}
             .nav-cta{padding:9px 16px;font-size:12px}
         }
 
@@ -346,11 +340,8 @@
             display:flex;justify-content:space-between;align-items:flex-end;
             gap:40px;flex-wrap:wrap;
         }
-        .footer-brand{display:flex;align-items:center;gap:16px}
-        .footer-logo{height:68px;width:auto;display:block}
-        .footer-wordmark{display:flex;flex-direction:column;gap:5px;padding-left:16px;border-left:1px solid var(--line)}
-        .footer-name{font-family:'Playfair Display',serif;font-size:26px;font-weight:500;color:var(--ink);letter-spacing:.01em;line-height:1}
-        .footer-tag{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft)}
+        .footer-brand{display:flex;align-items:center}
+        .footer-logo{height:80px;width:auto;display:block}
         .footer-meta{
             display:flex;flex-direction:column;gap:6px;
             font-size:13px;color:var(--gray);text-align:right;
@@ -378,12 +369,8 @@
     <!-- ========== NAV ========== -->
     <nav class="nav" id="nav">
         <div class="nav-inner">
-            <a href="#" class="nav-logo" aria-label="dinweb.se">
-                <img src="logo-w.svg" alt="">
-                <span class="nav-logo-wordmark">
-                    <span class="nav-logo-name">dinweb.se</span>
-                    <span class="nav-logo-tag">Bygg · Skapa</span>
-                </span>
+            <a href="#" class="nav-logo" aria-label="dinweb.se – Bygg hemsidor. Skapa resultat.">
+                <img src="logo-dinweb-horizontal.png" alt="dinweb.se">
             </a>
             <a href="#kontakt" class="nav-cta">Få offert</a>
         </div>
@@ -539,11 +526,7 @@
         <div class="container">
             <div class="footer-inner">
                 <div class="footer-brand">
-                    <img src="logo-w.svg" alt="" class="footer-logo">
-                    <div class="footer-wordmark">
-                        <span class="footer-name">dinweb.se</span>
-                        <span class="footer-tag">Bygg hemsidor · Skapa resultat</span>
-                    </div>
+                    <img src="logo-dinweb-horizontal.png" alt="dinweb.se" class="footer-logo">
                 </div>
                 <div class="footer-meta">
                     <span>Stockholm, Sverige</span>
