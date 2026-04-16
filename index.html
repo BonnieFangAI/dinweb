@@ -419,6 +419,8 @@
             border-bottom:1px solid var(--rule-soft);
         }
         .calc-group:last-of-type{border-bottom:none;margin-bottom:24px;padding-bottom:0}
+        .calc-group-tight{padding-top:8px}
+        .calc-tier-list + .calc-group-tight{margin-top:28px;padding-top:28px;border-top:1px solid var(--rule-soft)}
         .calc-label{
             font-size:11px;font-weight:500;color:var(--accent);
             letter-spacing:.22em;text-transform:uppercase;
@@ -729,62 +731,50 @@
     <section class="calc-section" id="kalkyl">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-eyebrow">Räkna själv</div>
-                <h2 class="section-title">Ditt pris, <em>direkt</em>.</h2>
-                <p class="section-lead">Välj paket och tillägg – se totalpriset uppdateras medan du klickar.</p>
+                <div class="section-eyebrow">Interaktivt</div>
+                <h2 class="section-title">Klicka runt.</h2>
             </div>
             <div class="calc-card reveal">
-                <div class="calc-group">
-                    <div class="calc-label">Paket</div>
-                    <div class="calc-tier-list">
-                        <label class="calc-tier">
-                            <input type="radio" name="calc-tier" value="1800" checked onchange="calcUpdate()">
-                            <span class="calc-tier-info"><span class="calc-tier-name">Visningssida</span><span class="calc-tier-desc">En sida, ren och elegant</span></span>
-                            <span class="calc-tier-price">1&thinsp;800 kr</span>
-                        </label>
-                        <label class="calc-tier">
-                            <input type="radio" name="calc-tier" value="2800" onchange="calcUpdate()">
-                            <span class="calc-tier-info"><span class="calc-tier-name">Skräddarsydd från grunden</span><span class="calc-tier-desc">Unik design byggd från noll</span></span>
-                            <span class="calc-tier-price">2&thinsp;800 kr</span>
-                        </label>
-                        <label class="calc-tier">
-                            <input type="radio" name="calc-tier" value="3800" onchange="calcUpdate()">
-                            <span class="calc-tier-info"><span class="calc-tier-name">Premium-lösning</span><span class="calc-tier-desc">Adminpanel och integrationer</span></span>
-                            <span class="calc-tier-price">3&thinsp;800 kr</span>
-                        </label>
-                    </div>
+                <div class="calc-tier-list">
+                    <label class="calc-tier">
+                        <input type="radio" name="calc-tier" value="1800" checked onchange="calcUpdate()">
+                        <span class="calc-tier-info"><span class="calc-tier-name">Visningssida</span></span>
+                        <span class="calc-tier-price">1&thinsp;800 kr</span>
+                    </label>
+                    <label class="calc-tier">
+                        <input type="radio" name="calc-tier" value="2800" onchange="calcUpdate()">
+                        <span class="calc-tier-info"><span class="calc-tier-name">Skräddarsydd</span></span>
+                        <span class="calc-tier-price">2&thinsp;800 kr</span>
+                    </label>
+                    <label class="calc-tier">
+                        <input type="radio" name="calc-tier" value="3800" onchange="calcUpdate()">
+                        <span class="calc-tier-info"><span class="calc-tier-name">Premium</span></span>
+                        <span class="calc-tier-price">3&thinsp;800 kr</span>
+                    </label>
                 </div>
 
-                <div class="calc-group">
-                    <div class="calc-label">Omfattning</div>
+                <div class="calc-group calc-group-tight">
                     <div class="calc-row calc-row-plain">
                         <span class="calc-row-name">Extra sidor</span>
                         <select id="calc-pages" onchange="calcUpdate()"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>
-                        <span class="calc-row-price">599 kr/st</span>
+                        <span class="calc-row-price">599 kr</span>
                     </div>
                     <div class="calc-row calc-row-plain">
                         <span class="calc-row-name">Extra språk</span>
                         <select id="calc-langs" onchange="calcUpdate()"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select>
-                        <span class="calc-row-price">299 kr/st</span>
+                        <span class="calc-row-price">299 kr</span>
                     </div>
-                </div>
-
-                <div class="calc-group">
-                    <div class="calc-label">Tillägg</div>
-                    <label class="calc-row calc-check"><input type="checkbox" id="calc-admin" onchange="calcUpdate()"><span class="calc-row-name">Adminpanel</span><span class="calc-row-price">+999 kr</span></label>
-                    <label class="calc-row calc-check"><input type="checkbox" id="calc-prod" onchange="calcUpdate()"><span class="calc-row-name">Produktvisning</span><span class="calc-row-price">+799 kr</span></label>
-                    <label class="calc-row calc-check"><input type="checkbox" id="calc-book" onchange="calcUpdate()"><span class="calc-row-name">Bokningsformulär</span><span class="calc-row-price">+499 kr</span></label>
-                    <label class="calc-row calc-check"><input type="checkbox" id="calc-map" onchange="calcUpdate()"><span class="calc-row-name">Google Maps</span><span class="calc-row-price">+199 kr</span></label>
-                    <label class="calc-row calc-check"><input type="checkbox" id="calc-seo" onchange="calcUpdate()"><span class="calc-row-name">SEO-paket</span><span class="calc-row-price">+499 kr</span></label>
-                    <label class="calc-row calc-check"><input type="checkbox" id="calc-pay" onchange="calcUpdate()"><span class="calc-row-name">Betalning (Stripe · Swish)</span><span class="calc-row-price">+1&thinsp;499 kr</span></label>
+                    <label class="calc-row calc-check"><input type="checkbox" id="calc-admin" onchange="calcUpdate()"><span class="calc-row-name">Adminpanel</span><span class="calc-row-price">+999</span></label>
+                    <label class="calc-row calc-check"><input type="checkbox" id="calc-prod" onchange="calcUpdate()"><span class="calc-row-name">Produktvisning</span><span class="calc-row-price">+799</span></label>
+                    <label class="calc-row calc-check"><input type="checkbox" id="calc-book" onchange="calcUpdate()"><span class="calc-row-name">Bokningsformulär</span><span class="calc-row-price">+499</span></label>
+                    <label class="calc-row calc-check"><input type="checkbox" id="calc-map" onchange="calcUpdate()"><span class="calc-row-name">Google Maps</span><span class="calc-row-price">+199</span></label>
+                    <label class="calc-row calc-check"><input type="checkbox" id="calc-seo" onchange="calcUpdate()"><span class="calc-row-name">SEO-paket</span><span class="calc-row-price">+499</span></label>
+                    <label class="calc-row calc-check"><input type="checkbox" id="calc-pay" onchange="calcUpdate()"><span class="calc-row-name">Betalning</span><span class="calc-row-price">+1&thinsp;499</span></label>
                 </div>
 
                 <div class="calc-total">
                     <span class="calc-total-label">Totalt</span>
                     <span class="calc-total-value"><span id="calc-sum">1&thinsp;800</span> <span class="calc-total-cur">kr</span></span>
-                </div>
-                <div class="calc-cta-wrap">
-                    <a href="#kontakt" class="link-arrow"><span>Begär offert baserat på detta</span> <span class="arrow">→</span></a>
                 </div>
             </div>
         </div>
