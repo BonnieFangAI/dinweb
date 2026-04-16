@@ -23,7 +23,6 @@
         html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--w15) transparent}
         body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
         ::selection{background:var(--accent);color:var(--bg)}
-        [dir="rtl"]{text-align:right}
 
         /* Grain overlay */
         body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.03;
@@ -305,13 +304,12 @@
         <button class="on" onclick="L('sv',this)">Svenska</button>
         <button onclick="L('en',this)">English</button>
         <button onclick="L('zh',this)">中文</button>
-        <button onclick="L('ar',this)">العربية</button>
     </div>
 
     <!-- Nav -->
     <nav class="nav"><div class="nav-in">
         <a href="#" class="logo">Din<span>Web</span></a>
-        <a href="#contact" class="nav-c"><span data-l="sv">Begär offert</span><span data-l="en">Get a quote</span><span data-l="zh">获取报价</span><span data-l="ar">اطلب عرض سعر</span></a>
+        <a href="#contact" class="nav-c"><span data-l="sv">Begär offert</span><span data-l="en">Get a quote</span><span data-l="zh">获取报价</span></a>
     </div></nav>
 
     <!-- Hero -->
@@ -338,39 +336,37 @@
                 <h1>您的事业<br>值得一个<em>惊艳的</em>网站</h1>
                 <p class="hero-p">专业设计，快速交付，省心省力。别的公司收15,000-30,000克朗、要好几周。我们品质一样——价格只是零头。</p>
             </div>
-            <div data-l="ar">
-                <div class="hero-badge"><span class="hero-dot"></span> ستوكهولم · جميع أنحاء السويد</div>
                 <h1>عملك يستحق<br>موقعاً <em>مذهلاً</em></h1>
                 <p class="hero-p">تصميم احترافي، تسليم سريع، بدون تعقيدات. الوكالات الأخرى تتقاضى 15,000-30,000 كرونة وتستغرق أسابيع. نحن نقدم نفس الجودة — بجزء من السعر.</p>
             </div>
             <div class="hero-acts">
-                <a href="#contact" class="btn btn-p"><span data-l="sv">Begär gratis offert</span><span data-l="en">Get a free quote</span><span data-l="zh">免费获取报价</span><span data-l="ar">احصل على عرض مجاني</span> →</a>
-                <a href="#work" class="btn btn-g"><span data-l="sv">Se vad vi bygger</span><span data-l="en">See our work</span><span data-l="zh">查看案例</span><span data-l="ar">شاهد أعمالنا</span></a>
+                <a href="#contact" class="btn btn-p"><span data-l="sv">Begär gratis offert</span><span data-l="en">Get a free quote</span><span data-l="zh">免费获取报价</span> →</a>
+                <a href="#work" class="btn btn-g"><span data-l="sv">Se vad vi bygger</span><span data-l="en">See our work</span><span data-l="zh">查看案例</span></a>
             </div>
-            <p class="hero-sub"><span data-l="sv">Ingen förbetalning · Nöjd-garanti · 0 kr/mån</span><span data-l="en">No upfront payment · Satisfaction guaranteed · 0 SEK/month</span><span data-l="zh">无需预付 · 满意保证 · 零月费</span><span data-l="ar">بدون دفع مقدم · ضمان الرضا · 0 كرونة/شهر</span></p>
+            <p class="hero-sub"><span data-l="sv">Ingen förbetalning · Nöjd-garanti · 0 kr/mån</span><span data-l="en">No upfront payment · Satisfaction guaranteed · 0 SEK/month</span><span data-l="zh">无需预付 · 满意保证 · 零月费</span></p>
         </div>
     </section>
 
     <!-- Pain -->
     <section class="pain sec" id="problem">
         <div class="w" style="text-align:center">
-            <div class="ey"><span data-l="sv">Problemet</span><span data-l="en">The Problem</span><span data-l="zh">痛点</span><span data-l="ar">المشكلة</span></div>
-            <h2 class="sh"><span data-l="sv">Varför har du fortfarande<br>ingen hemsida?</span><span data-l="en">Why don't you have<br>a website yet?</span><span data-l="zh">为什么你还没有<br>自己的网站？</span><span data-l="ar">لماذا لا يوجد لديك<br>موقع بعد؟</span></h2>
+            <div class="ey"><span data-l="sv">Problemet</span><span data-l="en">The Problem</span><span data-l="zh">痛点</span></div>
+            <h2 class="sh"><span data-l="sv">Varför har du fortfarande<br>ingen hemsida?</span><span data-l="en">Why don't you have<br>a website yet?</span><span data-l="zh">为什么你还没有<br>自己的网站？</span></h2>
             <div class="pain-grid rv">
                 <div class="pain-card">
                     <div class="pain-icon">💸</div>
-                    <h3><span data-l="sv">"Alldeles för dyrt"</span><span data-l="en">"Way too expensive"</span><span data-l="zh">"太贵了"</span><span data-l="ar">"مكلف جداً"</span></h3>
-                    <p><span data-l="sv">Webbbyråer vill ha 15 000–30 000 kr plus månadskostnad. Du vill ha en hemsida, inte en andra hyra.</span><span data-l="en">Agencies charge 15,000–30,000 SEK plus monthly fees. You want a website, not a second rent payment.</span><span data-l="zh">建站公司要15,000-30,000克朗还有月费。你想要个网站，不是第二份房租。</span><span data-l="ar">الوكالات تتقاضى 15,000-30,000 كرونة بالإضافة لرسوم شهرية. تريد موقعاً، لا إيجاراً ثانياً.</span></p>
+                    <h3><span data-l="sv">"Alldeles för dyrt"</span><span data-l="en">"Way too expensive"</span><span data-l="zh">"太贵了"</span></h3>
+                    <p><span data-l="sv">Webbbyråer vill ha 15 000–30 000 kr plus månadskostnad. Du vill ha en hemsida, inte en andra hyra.</span><span data-l="en">Agencies charge 15,000–30,000 SEK plus monthly fees. You want a website, not a second rent payment.</span><span data-l="zh">建站公司要15,000-30,000克朗还有月费。你想要个网站，不是第二份房租。</span></p>
                 </div>
                 <div class="pain-card">
                     <div class="pain-icon">⏳</div>
-                    <h3><span data-l="sv">"Tar månader"</span><span data-l="en">"Takes months"</span><span data-l="zh">"要等好几个月"</span><span data-l="ar">"يستغرق أشهراً"</span></h3>
-                    <p><span data-l="sv">2–4 veckors leveranstid. Hela tiden hittar kunder dig inte. Varje dag utan hemsida kostar dig pengar.</span><span data-l="en">2–4 weeks delivery. Customers can't find you. Every day without a website costs you money.</span><span data-l="zh">交付要2-4周。客户搜不到你。没有网站的每一天都在亏钱。</span><span data-l="ar">تسليم خلال 2-4 أسابيع. العملاء لا يجدونك. كل يوم بدون موقع يكلفك مالاً.</span></p>
+                    <h3><span data-l="sv">"Tar månader"</span><span data-l="en">"Takes months"</span><span data-l="zh">"要等好几个月"</span></h3>
+                    <p><span data-l="sv">2–4 veckors leveranstid. Hela tiden hittar kunder dig inte. Varje dag utan hemsida kostar dig pengar.</span><span data-l="en">2–4 weeks delivery. Customers can't find you. Every day without a website costs you money.</span><span data-l="zh">交付要2-4周。客户搜不到你。没有网站的每一天都在亏钱。</span></p>
                 </div>
                 <div class="pain-card">
                     <div class="pain-icon">🤯</div>
-                    <h3><span data-l="sv">"Jag förstår inte tekniken"</span><span data-l="en">"I don't get the tech"</span><span data-l="zh">"我不懂技术"</span><span data-l="ar">"لا أفهم التقنية"</span></h3>
-                    <p><span data-l="sv">WordPress, hosting, DNS, plugins, uppdateringar… Du vill driva ditt företag, inte bli IT-tekniker.</span><span data-l="en">WordPress, hosting, DNS, plugins, updates… You want to run your business, not become an IT admin.</span><span data-l="zh">WordPress、域名、插件、更新……你想做生意，不是当程序员。</span><span data-l="ar">WordPress، استضافة، DNS، إضافات… تريد إدارة عملك، لا أن تصبح مهندس IT.</span></p>
+                    <h3><span data-l="sv">"Jag förstår inte tekniken"</span><span data-l="en">"I don't get the tech"</span><span data-l="zh">"我不懂技术"</span></h3>
+                    <p><span data-l="sv">WordPress, hosting, DNS, plugins, uppdateringar… Du vill driva ditt företag, inte bli IT-tekniker.</span><span data-l="en">WordPress, hosting, DNS, plugins, updates… You want to run your business, not become an IT admin.</span><span data-l="zh">WordPress、域名、插件、更新……你想做生意，不是当程序员。</span></p>
                 </div>
             </div>
         </div>
@@ -379,19 +375,19 @@
     <!-- Comparison -->
     <section class="comp sec-sm">
         <div class="w" style="text-align:center">
-            <div class="ey"><span data-l="sv">Jämförelse</span><span data-l="en">Comparison</span><span data-l="zh">对比</span><span data-l="ar">مقارنة</span></div>
-            <h2 class="sh"><span data-l="sv">Samma kvalitet.<br><em>En bråkdel av priset.</em></span><span data-l="en">Same quality.<br><em>A fraction of the price.</em></span><span data-l="zh">同样的品质。<br><em>一小部分的价格。</em></span><span data-l="ar">نفس الجودة.<br><em>جزء بسيط من السعر.</em></span></h2>
+            <div class="ey"><span data-l="sv">Jämförelse</span><span data-l="en">Comparison</span><span data-l="zh">对比</span></div>
+            <h2 class="sh"><span data-l="sv">Samma kvalitet.<br><em>En bråkdel av priset.</em></span><span data-l="en">Same quality.<br><em>A fraction of the price.</em></span><span data-l="zh">同样的品质。<br><em>一小部分的价格。</em></span></h2>
             <div class="comp-box rv">
                 <div class="comp-head">
                     <span></span>
-                    <span><span data-l="sv">Andra byråer</span><span data-l="en">Other agencies</span><span data-l="zh">其他公司</span><span data-l="ar">وكالات أخرى</span></span>
+                    <span><span data-l="sv">Andra byråer</span><span data-l="en">Other agencies</span><span data-l="zh">其他公司</span></span>
                     <span>DinWeb</span>
                 </div>
-                <div class="comp-row"><span class="comp-label"><span data-l="sv">Pris</span><span data-l="en">Price</span><span data-l="zh">价格</span><span data-l="ar">السعر</span></span><span class="comp-them">7 000–30 000 kr</span><span class="comp-us">999 kr</span></div>
-                <div class="comp-row"><span class="comp-label"><span data-l="sv">Månadskostnad</span><span data-l="en">Monthly</span><span data-l="zh">月费</span><span data-l="ar">شهرياً</span></span><span class="comp-them">500–1 500 kr</span><span class="comp-us">0 kr</span></div>
-                <div class="comp-row"><span class="comp-label"><span data-l="sv">Leveranstid</span><span data-l="en">Delivery</span><span data-l="zh">交付</span><span data-l="ar">التسليم</span></span><span class="comp-them">2–4 veckor</span><span class="comp-us">3–7 dagar</span></div>
-                <div class="comp-row"><span class="comp-label"><span data-l="sv">Flerspråkigt</span><span data-l="en">Multilingual</span><span data-l="zh">多语言</span><span data-l="ar">متعدد اللغات</span></span><span class="comp-them"><span data-l="sv">Extra kr</span><span data-l="en">Extra $$</span><span data-l="zh">额外收费</span><span data-l="ar">تكلفة إضافية</span></span><span class="comp-us"><span data-l="sv">Från 299 kr</span><span data-l="en">From 299 kr</span><span data-l="zh">299kr起</span><span data-l="ar">من 299</span></span></div>
-                <div class="comp-row"><span class="comp-label">Hosting</span><span class="comp-them">100–300 kr/mån</span><span class="comp-us"><span data-l="sv">Gratis — alltid</span><span data-l="en">Free — always</span><span data-l="zh">永久免费</span><span data-l="ar">مجاني — دائماً</span></span></div>
+                <div class="comp-row"><span class="comp-label"><span data-l="sv">Pris</span><span data-l="en">Price</span><span data-l="zh">价格</span></span><span class="comp-them">7 000–30 000 kr</span><span class="comp-us">999 kr</span></div>
+                <div class="comp-row"><span class="comp-label"><span data-l="sv">Månadskostnad</span><span data-l="en">Monthly</span><span data-l="zh">月费</span></span><span class="comp-them">500–1 500 kr</span><span class="comp-us">0 kr</span></div>
+                <div class="comp-row"><span class="comp-label"><span data-l="sv">Leveranstid</span><span data-l="en">Delivery</span><span data-l="zh">交付</span></span><span class="comp-them">2–4 veckor</span><span class="comp-us">3–7 dagar</span></div>
+                <div class="comp-row"><span class="comp-label"><span data-l="sv">Flerspråkigt</span><span data-l="en">Multilingual</span><span data-l="zh">多语言</span></span><span class="comp-them"><span data-l="sv">Extra kr</span><span data-l="en">Extra $$</span><span data-l="zh">额外收费</span></span><span class="comp-us"><span data-l="sv">Från 299 kr</span><span data-l="en">From 299 kr</span><span data-l="zh">299kr起</span></span></div>
+                <div class="comp-row"><span class="comp-label">Hosting</span><span class="comp-them">100–300 kr/mån</span><span class="comp-us"><span data-l="sv">Gratis — alltid</span><span data-l="en">Free — always</span><span data-l="zh">永久免费</span></span></div>
             </div>
         </div>
     </section>
@@ -400,10 +396,10 @@
     <section class="sec-sm">
         <div class="w">
             <div class="met-row rv">
-                <div class="met"><div class="met-v">999 <span style="font-family:Inter;font-size:16px;color:var(--w30)">kr</span></div><div class="met-l"><span data-l="sv">Startpris</span><span data-l="en">Starting at</span><span data-l="zh">起步价</span><span data-l="ar">يبدأ من</span></div></div>
-                <div class="met"><div class="met-v">3-7<span style="font-family:Inter;font-size:16px;color:var(--w30)"> dagar</span></div><div class="met-l"><span data-l="sv">Leverans</span><span data-l="en">Delivery</span><span data-l="zh">交付</span><span data-l="ar">التسليم</span></div></div>
-                <div class="met"><div class="met-v">4</div><div class="met-l"><span data-l="sv">Språk</span><span data-l="en">Languages</span><span data-l="zh">语言</span><span data-l="ar">لغات</span></div></div>
-                <div class="met"><div class="met-v">0 <span style="font-family:Inter;font-size:16px;color:var(--w30)">kr/mån</span></div><div class="met-l"><span data-l="sv">Underhåll</span><span data-l="en">Monthly cost</span><span data-l="zh">月费</span><span data-l="ar">شهرياً</span></div></div>
+                <div class="met"><div class="met-v">999 <span style="font-family:Inter;font-size:16px;color:var(--w30)">kr</span></div><div class="met-l"><span data-l="sv">Startpris</span><span data-l="en">Starting at</span><span data-l="zh">起步价</span></div></div>
+                <div class="met"><div class="met-v">3-7<span style="font-family:Inter;font-size:16px;color:var(--w30)"> dagar</span></div><div class="met-l"><span data-l="sv">Leverans</span><span data-l="en">Delivery</span><span data-l="zh">交付</span></div></div>
+                <div class="met"><div class="met-v">3</div><div class="met-l"><span data-l="sv">Språk</span><span data-l="en">Languages</span><span data-l="zh">语言</span></div></div>
+                <div class="met"><div class="met-v">0 <span style="font-family:Inter;font-size:16px;color:var(--w30)">kr/mån</span></div><div class="met-l"><span data-l="sv">Underhåll</span><span data-l="en">Monthly cost</span><span data-l="zh">月费</span></div></div>
             </div>
         </div>
     </section>
@@ -411,9 +407,9 @@
     <!-- Showcase - What We Build -->
     <section class="port sec" id="work">
         <div class="w" style="text-align:center">
-            <div class="ey"><span data-l="sv">Hemsidor vi bygger</span><span data-l="en">What we build</span><span data-l="zh">我们做什么</span><span data-l="ar">ما نبنيه</span></div>
-            <h2 class="sh"><span data-l="sv">Unika hemsidor.<br><em>Din stil, din bransch.</em></span><span data-l="en">Unique websites.<br><em>Your style, your industry.</em></span><span data-l="zh">独一无二的网站。<br><em>你的风格，你的行业。</em></span><span data-l="ar">مواقع فريدة.<br><em>أسلوبك، مجالك.</em></span></h2>
-            <p class="sp" style="margin:0 auto 0"><span data-l="sv">Varje projekt designas efter dina behov. Inget är en mall.</span><span data-l="en">Every project is custom-designed. Nothing is a template.</span><span data-l="zh">每个项目都是定制的。没有模板。</span><span data-l="ar">كل مشروع مصمم خصيصاً. لا قوالب.</span></p>
+            <div class="ey"><span data-l="sv">Hemsidor vi bygger</span><span data-l="en">What we build</span><span data-l="zh">我们做什么</span></div>
+            <h2 class="sh"><span data-l="sv">Unika hemsidor.<br><em>Din stil, din bransch.</em></span><span data-l="en">Unique websites.<br><em>Your style, your industry.</em></span><span data-l="zh">独一无二的网站。<br><em>你的风格，你的行业。</em></span></h2>
+            <p class="sp" style="margin:0 auto 0"><span data-l="sv">Varje projekt designas efter dina behov. Inget är en mall.</span><span data-l="en">Every project is custom-designed. Nothing is a template.</span><span data-l="zh">每个项目都是定制的。没有模板。</span></p>
             <div class="port-grid">
                 <!-- Café -->
                 <div class="port-card pc-cafe rv">
@@ -433,9 +429,9 @@
                         </div>
                     </div>
                     <div class="port-info">
-                        <span class="port-tag"><span data-l="sv">Restaurang &amp; Kafé</span><span data-l="en">Restaurant &amp; Café</span><span data-l="zh">餐厅咖啡馆</span><span data-l="ar">مطعم ومقهى</span></span>
-                        <h3><span data-l="sv">Meny, karta &amp; bokning</span><span data-l="en">Menu, map &amp; booking</span><span data-l="zh">菜单、地图、预约</span><span data-l="ar">قائمة، خريطة، حجز</span></h3>
-                        <p><span data-l="sv">Från 1 697 kr</span><span data-l="en">From 1,697 kr</span><span data-l="zh">1,697kr起</span><span data-l="ar">من 1,697 كرونة</span></p>
+                        <span class="port-tag"><span data-l="sv">Restaurang &amp; Kafé</span><span data-l="en">Restaurant &amp; Café</span><span data-l="zh">餐厅咖啡馆</span></span>
+                        <h3><span data-l="sv">Meny, karta &amp; bokning</span><span data-l="en">Menu, map &amp; booking</span><span data-l="zh">菜单、地图、预约</span></h3>
+                        <p><span data-l="sv">Från 1 697 kr</span><span data-l="en">From 1,697 kr</span><span data-l="zh">1,697kr起</span></p>
                     </div>
                 </div>
                 <!-- Business -->
@@ -456,9 +452,9 @@
                         </div>
                     </div>
                     <div class="port-info">
-                        <span class="port-tag"><span data-l="sv">Företag &amp; Konsult</span><span data-l="en">Business &amp; Consulting</span><span data-l="zh">企业咨询</span><span data-l="ar">أعمال واستشارات</span></span>
-                        <h3><span data-l="sv">Flersidigt med adminpanel</span><span data-l="en">Multi-page with admin</span><span data-l="zh">多页面+后台管理</span><span data-l="ar">متعدد الصفحات</span></h3>
-                        <p><span data-l="sv">Från 3 196 kr</span><span data-l="en">From 3,196 kr</span><span data-l="zh">3,196kr起</span><span data-l="ar">من 3,196 كرونة</span></p>
+                        <span class="port-tag"><span data-l="sv">Företag &amp; Konsult</span><span data-l="en">Business &amp; Consulting</span><span data-l="zh">企业咨询</span></span>
+                        <h3><span data-l="sv">Flersidigt med adminpanel</span><span data-l="en">Multi-page with admin</span><span data-l="zh">多页面+后台管理</span></h3>
+                        <p><span data-l="sv">Från 3 196 kr</span><span data-l="en">From 3,196 kr</span><span data-l="zh">3,196kr起</span></p>
                     </div>
                 </div>
                 <!-- Association -->
@@ -479,9 +475,9 @@
                         </div>
                     </div>
                     <div class="port-info">
-                        <span class="port-tag"><span data-l="sv">Förening &amp; Organisation</span><span data-l="en">Association &amp; Org</span><span data-l="zh">协会组织</span><span data-l="ar">جمعية ومنظمة</span></span>
-                        <h3><span data-l="sv">Tvåspråkig med kalender</span><span data-l="en">Bilingual with calendar</span><span data-l="zh">双语+日历</span><span data-l="ar">ثنائي اللغة مع تقويم</span></h3>
-                        <p><span data-l="sv">Från 2 496 kr</span><span data-l="en">From 2,496 kr</span><span data-l="zh">2,496kr起</span><span data-l="ar">من 2,496 كرونة</span></p>
+                        <span class="port-tag"><span data-l="sv">Förening &amp; Organisation</span><span data-l="en">Association &amp; Org</span><span data-l="zh">协会组织</span></span>
+                        <h3><span data-l="sv">Tvåspråkig med kalender</span><span data-l="en">Bilingual with calendar</span><span data-l="zh">双语+日历</span></h3>
+                        <p><span data-l="sv">Från 2 496 kr</span><span data-l="en">From 2,496 kr</span><span data-l="zh">2,496kr起</span></p>
                     </div>
                 </div>
                 <!-- Salon -->
@@ -502,9 +498,9 @@
                         </div>
                     </div>
                     <div class="port-info">
-                        <span class="port-tag"><span data-l="sv">Salong &amp; Skönhet</span><span data-l="en">Salon &amp; Beauty</span><span data-l="zh">美容沙龙</span><span data-l="ar">صالون تجميل</span></span>
-                        <h3><span data-l="sv">Prislista &amp; bokningssystem</span><span data-l="en">Price list &amp; booking</span><span data-l="zh">价格表+预约</span><span data-l="ar">قائمة أسعار وحجز</span></h3>
-                        <p><span data-l="sv">Från 2 296 kr</span><span data-l="en">From 2,296 kr</span><span data-l="zh">2,296kr起</span><span data-l="ar">من 2,296 كرونة</span></p>
+                        <span class="port-tag"><span data-l="sv">Salong &amp; Skönhet</span><span data-l="en">Salon &amp; Beauty</span><span data-l="zh">美容沙龙</span></span>
+                        <h3><span data-l="sv">Prislista &amp; bokningssystem</span><span data-l="en">Price list &amp; booking</span><span data-l="zh">价格表+预约</span></h3>
+                        <p><span data-l="sv">Från 2 296 kr</span><span data-l="en">From 2,296 kr</span><span data-l="zh">2,296kr起</span></p>
                     </div>
                 </div>
             </div>
@@ -514,50 +510,50 @@
     <!-- Pricing -->
     <section class="pricing sec" id="pricing">
         <div class="w" style="text-align:center">
-            <div class="ey"><span data-l="sv">Priser</span><span data-l="en">Pricing</span><span data-l="zh">价格</span><span data-l="ar">الأسعار</span></div>
-            <h2 class="sh"><span data-l="sv">Transparent. <em>Inga dolda avgifter.</em></span><span data-l="en">Transparent. <em>No hidden fees.</em></span><span data-l="zh">透明定价。<em>无隐藏费用。</em></span><span data-l="ar">شفاف. <em>بدون رسوم مخفية.</em></span></h2>
+            <div class="ey"><span data-l="sv">Priser</span><span data-l="en">Pricing</span><span data-l="zh">价格</span></div>
+            <h2 class="sh"><span data-l="sv">Transparent. <em>Inga dolda avgifter.</em></span><span data-l="en">Transparent. <em>No hidden fees.</em></span><span data-l="zh">透明定价。<em>无隐藏费用。</em></span></h2>
 
             <div class="base rv">
-                <div class="base-ey"><span data-l="sv">Grundpaket</span><span data-l="en">Base package</span><span data-l="zh">基础包</span><span data-l="ar">الحزمة الأساسية</span></div>
+                <div class="base-ey"><span data-l="sv">Grundpaket</span><span data-l="en">Base package</span><span data-l="zh">基础包</span></div>
                 <div class="base-price">999 <span class="cur">kr</span></div>
-                <div class="base-note"><span data-l="sv">Engångsbetalning · Ingen månadskostnad · Aldrig</span><span data-l="en">One-time · No monthly cost · Ever</span><span data-l="zh">一次性付款 · 永远无月费</span><span data-l="ar">دفعة واحدة · بدون تكلفة شهرية · أبداً</span></div>
+                <div class="base-note"><span data-l="sv">Engångsbetalning · Ingen månadskostnad · Aldrig</span><span data-l="en">One-time · No monthly cost · Ever</span><span data-l="zh">一次性付款 · 永远无月费</span></div>
                 <ul class="price-features">
-                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Professionell ensideshemsida</span><span data-l="en">Professional single-page website</span><span data-l="zh">专业单页网站</span><span data-l="ar">موقع صفحة واحدة احترافي</span></li>
-                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Mobilanpassad design</span><span data-l="en">Mobile-responsive design</span><span data-l="zh">移动端完美适配</span><span data-l="ar">تصميم متوافق مع الجوال</span></li>
-                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Fri domänregistrering (första året)</span><span data-l="en">Free domain registration (first year)</span><span data-l="zh">免费域名注册（首年）</span><span data-l="ar">تسجيل نطاق مجاني (السنة الأولى)</span></li>
-                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">SSL-certifikat &amp; HTTPS</span><span data-l="en">SSL &amp; HTTPS included</span><span data-l="zh">SSL安全证书</span><span data-l="ar">شهادة SSL و HTTPS</span></li>
-                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Gratis hosting — för alltid</span><span data-l="en">Free hosting — forever</span><span data-l="zh">永久免费托管</span><span data-l="ar">استضافة مجانية — للأبد</span></li>
+                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Professionell ensideshemsida</span><span data-l="en">Professional single-page website</span><span data-l="zh">专业单页网站</span></li>
+                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Mobilanpassad design</span><span data-l="en">Mobile-responsive design</span><span data-l="zh">移动端完美适配</span></li>
+                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Fri domänregistrering (första året)</span><span data-l="en">Free domain registration (first year)</span><span data-l="zh">免费域名注册（首年）</span></li>
+                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">SSL-certifikat &amp; HTTPS</span><span data-l="en">SSL &amp; HTTPS included</span><span data-l="zh">SSL安全证书</span></li>
+                    <li><span class="ck"><svg viewBox="0 0 10 8" fill="none"><path d="M1 4L3.5 6.5L9 1" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"/></svg></span><span data-l="sv">Gratis hosting — för alltid</span><span data-l="en">Free hosting — forever</span><span data-l="zh">永久免费托管</span></li>
                 </ul>
             </div>
 
-            <div class="add-label"><span data-l="sv">Tillägg</span><span data-l="en">Add-ons</span><span data-l="zh">增值服务</span><span data-l="ar">الإضافات</span></div>
+            <div class="add-label"><span data-l="sv">Tillägg</span><span data-l="en">Add-ons</span><span data-l="zh">增值服务</span></div>
             <div class="add-grid rv rv-d1">
-                <div class="addon"><div><div class="addon-n"><span data-l="sv">Extra sida</span><span data-l="en">Extra page</span><span data-l="zh">额外页面</span><span data-l="ar">صفحة إضافية</span></div><div class="addon-d"><span data-l="sv">Om oss, Tjänster, Galleri…</span><span data-l="en">About, Services, Gallery…</span><span data-l="zh">关于、服务、相册…</span><span data-l="ar">من نحن، خدمات…</span></div></div><div class="addon-p">+599 kr</div></div>
-                <div class="addon"><div><div class="addon-n"><span data-l="sv">Extra språk</span><span data-l="en">Extra language</span><span data-l="zh">额外语言</span><span data-l="ar">لغة إضافية</span></div><div class="addon-d">SV · EN · 中文 · العربية</div></div><div class="addon-p">+299 kr</div></div>
-                <div class="addon"><div><div class="addon-n"><span data-l="sv">Adminpanel</span><span data-l="en">Admin panel</span><span data-l="zh">后台管理</span><span data-l="ar">لوحة التحكم</span></div><div class="addon-d"><span data-l="sv">Redigera text &amp; bilder själv</span><span data-l="en">Edit content yourself</span><span data-l="zh">自己修改内容</span><span data-l="ar">عدّل المحتوى بنفسك</span></div></div><div class="addon-p">+999 kr</div></div>
-                <div class="addon"><div><div class="addon-n"><span data-l="sv">Produktvisning</span><span data-l="en">Product showcase</span><span data-l="zh">产品展示</span><span data-l="ar">عرض المنتجات</span></div><div class="addon-d"><span data-l="sv">Katalog med bilder</span><span data-l="en">Visual catalog</span><span data-l="zh">图片目录</span><span data-l="ar">كتالوج بالصور</span></div></div><div class="addon-p">+799 kr</div></div>
-                <div class="addon"><div><div class="addon-n"><span data-l="sv">Bokningsformulär</span><span data-l="en">Booking form</span><span data-l="zh">预约表单</span><span data-l="ar">نموذج حجز</span></div><div class="addon-d"><span data-l="sv">Kontakt- eller bokningssystem</span><span data-l="en">Contact or booking</span><span data-l="zh">联系/预约系统</span><span data-l="ar">نظام اتصال أو حجز</span></div></div><div class="addon-p">+499 kr</div></div>
-                <div class="addon"><div><div class="addon-n">Google Maps</div><div class="addon-d"><span data-l="sv">Karta &amp; vägbeskrivning</span><span data-l="en">Map &amp; directions</span><span data-l="zh">地图导航</span><span data-l="ar">خريطة واتجاهات</span></div></div><div class="addon-p">+199 kr</div></div>
-                <div class="addon"><div><div class="addon-n">SEO</div><div class="addon-d"><span data-l="sv">Synlighet på Google</span><span data-l="en">Google visibility</span><span data-l="zh">Google排名优化</span><span data-l="ar">ظهور في جوجل</span></div></div><div class="addon-p">+499 kr</div></div>
-                <div class="addon"><div><div class="addon-n"><span data-l="sv">Betalning</span><span data-l="en">Payments</span><span data-l="zh">在线支付</span><span data-l="ar">المدفوعات</span></div><div class="addon-d">Stripe · Swish</div></div><div class="addon-p">+1 499 kr</div></div>
+                <div class="addon"><div><div class="addon-n"><span data-l="sv">Extra sida</span><span data-l="en">Extra page</span><span data-l="zh">额外页面</span></div><div class="addon-d"><span data-l="sv">Om oss, Tjänster, Galleri…</span><span data-l="en">About, Services, Gallery…</span><span data-l="zh">关于、服务、相册…</span></div></div><div class="addon-p">+599 kr</div></div>
+                <div class="addon"><div><div class="addon-n"><span data-l="sv">Extra språk</span><span data-l="en">Extra language</span><span data-l="zh">额外语言</span></div><div class="addon-d">SV · EN · 中文</div></div><div class="addon-p">+299 kr</div></div>
+                <div class="addon"><div><div class="addon-n"><span data-l="sv">Adminpanel</span><span data-l="en">Admin panel</span><span data-l="zh">后台管理</span></div><div class="addon-d"><span data-l="sv">Redigera text &amp; bilder själv</span><span data-l="en">Edit content yourself</span><span data-l="zh">自己修改内容</span></div></div><div class="addon-p">+999 kr</div></div>
+                <div class="addon"><div><div class="addon-n"><span data-l="sv">Produktvisning</span><span data-l="en">Product showcase</span><span data-l="zh">产品展示</span></div><div class="addon-d"><span data-l="sv">Katalog med bilder</span><span data-l="en">Visual catalog</span><span data-l="zh">图片目录</span></div></div><div class="addon-p">+799 kr</div></div>
+                <div class="addon"><div><div class="addon-n"><span data-l="sv">Bokningsformulär</span><span data-l="en">Booking form</span><span data-l="zh">预约表单</span></div><div class="addon-d"><span data-l="sv">Kontakt- eller bokningssystem</span><span data-l="en">Contact or booking</span><span data-l="zh">联系/预约系统</span></div></div><div class="addon-p">+499 kr</div></div>
+                <div class="addon"><div><div class="addon-n">Google Maps</div><div class="addon-d"><span data-l="sv">Karta &amp; vägbeskrivning</span><span data-l="en">Map &amp; directions</span><span data-l="zh">地图导航</span></div></div><div class="addon-p">+199 kr</div></div>
+                <div class="addon"><div><div class="addon-n">SEO</div><div class="addon-d"><span data-l="sv">Synlighet på Google</span><span data-l="en">Google visibility</span><span data-l="zh">Google排名优化</span></div></div><div class="addon-p">+499 kr</div></div>
+                <div class="addon"><div><div class="addon-n"><span data-l="sv">Betalning</span><span data-l="en">Payments</span><span data-l="zh">在线支付</span></div><div class="addon-d">Stripe · Swish</div></div><div class="addon-p">+1 499 kr</div></div>
             </div>
 
             <!-- Calculator -->
             <div class="calc rv rv-d2">
-                <h3 class="calc-t"><span data-l="sv">Räkna ut ditt pris</span><span data-l="en">Calculate your price</span><span data-l="zh">计算您的价格</span><span data-l="ar">احسب سعرك</span></h3>
-                <p class="calc-s"><span data-l="sv">Interaktiv — se ditt pris ändras i realtid</span><span data-l="en">Interactive — see your price change in real time</span><span data-l="zh">互动式——实时查看价格变化</span><span data-l="ar">تفاعلي — شاهد سعرك يتغير فوراً</span></p>
+                <h3 class="calc-t"><span data-l="sv">Räkna ut ditt pris</span><span data-l="en">Calculate your price</span><span data-l="zh">计算您的价格</span></h3>
+                <p class="calc-s"><span data-l="sv">Interaktiv — se ditt pris ändras i realtid</span><span data-l="en">Interactive — see your price change in real time</span><span data-l="zh">互动式——实时查看价格变化</span></p>
                 <div class="calc-box">
-                    <div class="cr" style="padding-bottom:14px;margin-bottom:4px"><label style="color:var(--w90);font-weight:500;cursor:default"><span data-l="sv">Grundpaket (1 sida)</span><span data-l="en">Base (1 page)</span><span data-l="zh">基础包</span><span data-l="ar">الأساسية</span></label><span class="cr-p" style="color:var(--accent)">999 kr</span></div>
-                    <div class="cr"><label><span data-l="sv">Extra sidor</span><span data-l="en">Extra pages</span><span data-l="zh">额外页面</span><span data-l="ar">صفحات إضافية</span></label><select id="cp" onchange="C()"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select><span class="cr-p" id="cpp">0 kr</span></div>
-                    <div class="cr"><label><span data-l="sv">Extra språk</span><span data-l="en">Languages</span><span data-l="zh">语言</span><span data-l="ar">لغات</span></label><select id="cl" onchange="C()"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select><span class="cr-p" id="clp">0 kr</span></div>
-                    <div class="cr"><label><input type="checkbox" id="ca" onchange="C()"><span data-l="sv">Adminpanel</span><span data-l="en">Admin panel</span><span data-l="zh">后台管理</span><span data-l="ar">لوحة التحكم</span></label><span class="cr-p">+999</span></div>
-                    <div class="cr"><label><input type="checkbox" id="cd" onchange="C()"><span data-l="sv">Produktvisning</span><span data-l="en">Products</span><span data-l="zh">产品展示</span><span data-l="ar">المنتجات</span></label><span class="cr-p">+799</span></div>
-                    <div class="cr"><label><input type="checkbox" id="cf" onchange="C()"><span data-l="sv">Bokningsformulär</span><span data-l="en">Booking</span><span data-l="zh">预约</span><span data-l="ar">الحجز</span></label><span class="cr-p">+499</span></div>
+                    <div class="cr" style="padding-bottom:14px;margin-bottom:4px"><label style="color:var(--w90);font-weight:500;cursor:default"><span data-l="sv">Grundpaket (1 sida)</span><span data-l="en">Base (1 page)</span><span data-l="zh">基础包</span></label><span class="cr-p" style="color:var(--accent)">999 kr</span></div>
+                    <div class="cr"><label><span data-l="sv">Extra sidor</span><span data-l="en">Extra pages</span><span data-l="zh">额外页面</span></label><select id="cp" onchange="C()"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select><span class="cr-p" id="cpp">0 kr</span></div>
+                    <div class="cr"><label><span data-l="sv">Extra språk</span><span data-l="en">Languages</span><span data-l="zh">语言</span></label><select id="cl" onchange="C()"><option value="0">0</option><option value="1">1</option><option value="2">2</option></select><span class="cr-p" id="clp">0 kr</span></div>
+                    <div class="cr"><label><input type="checkbox" id="ca" onchange="C()"><span data-l="sv">Adminpanel</span><span data-l="en">Admin panel</span><span data-l="zh">后台管理</span></label><span class="cr-p">+999</span></div>
+                    <div class="cr"><label><input type="checkbox" id="cd" onchange="C()"><span data-l="sv">Produktvisning</span><span data-l="en">Products</span><span data-l="zh">产品展示</span></label><span class="cr-p">+799</span></div>
+                    <div class="cr"><label><input type="checkbox" id="cf" onchange="C()"><span data-l="sv">Bokningsformulär</span><span data-l="en">Booking</span><span data-l="zh">预约</span></label><span class="cr-p">+499</span></div>
                     <div class="cr"><label><input type="checkbox" id="cm" onchange="C()">Google Maps</label><span class="cr-p">+199</span></div>
                     <div class="cr"><label><input type="checkbox" id="cs" onchange="C()">SEO</label><span class="cr-p">+499</span></div>
-                    <div class="cr"><label><input type="checkbox" id="cy" onchange="C()"><span data-l="sv">Betalning</span><span data-l="en">Payments</span><span data-l="zh">支付</span><span data-l="ar">المدفوعات</span></label><span class="cr-p">+1 499</span></div>
-                    <div class="calc-total"><span class="calc-tl"><span data-l="sv">Totalt</span><span data-l="en">Total</span><span data-l="zh">总计</span><span data-l="ar">الإجمالي</span></span><span class="calc-tv" id="csum">999 <span class="sm">kr</span></span></div>
-                    <div class="calc-btn"><a href="#contact" class="btn btn-p" style="font-size:15px"><span data-l="sv">Beställ till detta pris</span><span data-l="en">Order at this price</span><span data-l="zh">按此价格下单</span><span data-l="ar">اطلب بهذا السعر</span> →</a></div>
+                    <div class="cr"><label><input type="checkbox" id="cy" onchange="C()"><span data-l="sv">Betalning</span><span data-l="en">Payments</span><span data-l="zh">支付</span></label><span class="cr-p">+1 499</span></div>
+                    <div class="calc-total"><span class="calc-tl"><span data-l="sv">Totalt</span><span data-l="en">Total</span><span data-l="zh">总计</span></span><span class="calc-tv" id="csum">999 <span class="sm">kr</span></span></div>
+                    <div class="calc-btn"><a href="#contact" class="btn btn-p" style="font-size:15px"><span data-l="sv">Beställ till detta pris</span><span data-l="en">Order at this price</span><span data-l="zh">按此价格下单</span> →</a></div>
                 </div>
             </div>
         </div>
@@ -566,23 +562,23 @@
     <!-- Why Us -->
     <section class="why sec">
         <div class="w" style="text-align:center">
-            <div class="ey"><span data-l="sv">Varför DinWeb?</span><span data-l="en">Why DinWeb?</span><span data-l="zh">为什么选DinWeb？</span><span data-l="ar">لماذا DinWeb؟</span></div>
-            <h2 class="sh"><span data-l="sv">Vi tar bort allt <em>krångel</em></span><span data-l="en">We remove all the <em>hassle</em></span><span data-l="zh">我们帮你搞定<em>一切</em></span><span data-l="ar">نزيل كل <em>التعقيدات</em></span></h2>
+            <div class="ey"><span data-l="sv">Varför DinWeb?</span><span data-l="en">Why DinWeb?</span><span data-l="zh">为什么选DinWeb？</span></div>
+            <h2 class="sh"><span data-l="sv">Vi tar bort allt <em>krångel</em></span><span data-l="en">We remove all the <em>hassle</em></span><span data-l="zh">我们帮你搞定<em>一切</em></span></h2>
             <div class="why-grid rv">
                 <div class="why-card">
                     <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-                    <h3><span data-l="sv">Snabb leverans, 3–7 dagar</span><span data-l="en">Fast delivery, 3–7 days</span><span data-l="zh">快速交付，3-7天</span><span data-l="ar">تسليم سريع، 3-7 أيام</span></h3>
-                    <p><span data-l="sv">Medan andra byråer fortfarande diskuterar färger i vecka tre har du redan en live hemsida. Express-leverans (72h) möjlig vid behov.</span><span data-l="en">While other agencies are still debating colors in week three, you already have a live site. Express delivery (72h) available on request.</span><span data-l="zh">别人三周后还在讨论方案，你的网站已经上线。如有急需，可加急72小时交付。</span><span data-l="ar">بينما الوكالات الأخرى لا تزال تناقش الألوان في الأسبوع الثالث، لديك بالفعل موقع مباشر. التسليم السريع (72 ساعة) متاح عند الطلب.</span></p>
+                    <h3><span data-l="sv">Snabb leverans, 3–7 dagar</span><span data-l="en">Fast delivery, 3–7 days</span><span data-l="zh">快速交付，3-7天</span></h3>
+                    <p><span data-l="sv">Medan andra byråer fortfarande diskuterar färger i vecka tre har du redan en live hemsida. Express-leverans (72h) möjlig vid behov.</span><span data-l="en">While other agencies are still debating colors in week three, you already have a live site. Express delivery (72h) available on request.</span><span data-l="zh">别人三周后还在讨论方案，你的网站已经上线。如有急需，可加急72小时交付。</span></p>
                 </div>
                 <div class="why-card">
                     <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-                    <h3><span data-l="sv">Fyra språk</span><span data-l="en">Four languages</span><span data-l="zh">四种语言</span><span data-l="ar">أربع لغات</span></h3>
-                    <p><span data-l="sv">Svenska, engelska, kinesiska, arabiska. Nå alla dina kunder — oavsett modersmål.</span><span data-l="en">Swedish, English, Chinese, Arabic. Reach all customers — whatever their language.</span><span data-l="zh">瑞典语、英语、中文、阿拉伯语。覆盖所有客户。</span><span data-l="ar">السويدية، الإنجليزية، الصينية، العربية. تواصل مع جميع عملائك.</span></p>
+                    <h3><span data-l="sv">Tre språk</span><span data-l="en">Three languages</span><span data-l="zh">三种语言</span></h3>
+                    <p><span data-l="sv">Svenska, engelska och kinesiska. Nå alla dina kunder — oavsett modersmål.</span><span data-l="en">Swedish, English, and Chinese. Reach all customers — whatever their language.</span><span data-l="zh">瑞典语、英语、中文。覆盖你所有的客户。</span></p>
                 </div>
                 <div class="why-card">
                     <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-                    <h3><span data-l="sv">Noll underhåll, noll risk</span><span data-l="en">Zero maintenance, zero risk</span><span data-l="zh">零维护，零风险</span><span data-l="ar">صيانة صفرية، خطر صفري</span></h3>
-                    <p><span data-l="sv">Inga plugins, inga uppdateringar, inga hackare. Säkrare och snabbare än WordPress. Alltid.</span><span data-l="en">No plugins, no updates, no hackers. Safer and faster than WordPress. Always.</span><span data-l="zh">无插件、无更新、无黑客。比WordPress更安全更快。永远。</span><span data-l="ar">لا إضافات، لا تحديثات، لا قرصنة. أكثر أماناً وأسرع من WordPress. دائماً.</span></p>
+                    <h3><span data-l="sv">Noll underhåll, noll risk</span><span data-l="en">Zero maintenance, zero risk</span><span data-l="zh">零维护，零风险</span></h3>
+                    <p><span data-l="sv">Inga plugins, inga uppdateringar, inga hackare. Säkrare och snabbare än WordPress. Alltid.</span><span data-l="en">No plugins, no updates, no hackers. Safer and faster than WordPress. Always.</span><span data-l="zh">无插件、无更新、无黑客。比WordPress更安全更快。永远。</span></p>
                 </div>
             </div>
         </div>
@@ -592,11 +588,11 @@
     <section class="process sec">
         <div class="w" style="text-align:center">
             <div class="ey">Process</div>
-            <h2 class="sh"><span data-l="sv">Tre steg till <em>din hemsida</em></span><span data-l="en">Three steps to <em>your site</em></span><span data-l="zh">三步拥有<em>你的网站</em></span><span data-l="ar">ثلاث خطوات إلى <em>موقعك</em></span></h2>
+            <h2 class="sh"><span data-l="sv">Tre steg till <em>din hemsida</em></span><span data-l="en">Three steps to <em>your site</em></span><span data-l="zh">三步拥有<em>你的网站</em></span></h2>
             <div class="steps">
-                <div class="step-card rv"><div class="step-n">01</div><h3><span data-l="sv">Berätta</span><span data-l="en">Tell us</span><span data-l="zh">告诉我们</span><span data-l="ar">أخبرنا</span></h3><p><span data-l="sv">Skicka ett meddelande: vad du gör, din stil, dina bilder. Vi sköter resten.</span><span data-l="en">Send a message: what you do, your style, your images. We handle the rest.</span><span data-l="zh">发消息：你做什么、风格偏好、现有素材。剩下交给我们。</span><span data-l="ar">أرسل رسالة: ماذا تفعل، أسلوبك، صورك. نحن نتولى الباقي.</span></p></div>
-                <div class="step-card rv rv-d1"><div class="step-n">02</div><h3><span data-l="sv">Granska</span><span data-l="en">Review</span><span data-l="zh">审核</span><span data-l="ar">راجع</span></h3><p><span data-l="sv">Du får en förhandsvisning. Ge feedback — vi justerar tills du är 100% nöjd. Gratis.</span><span data-l="en">You get a preview. Give feedback — we adjust until you're 100% happy. Free.</span><span data-l="zh">收到预览后给反馈——免费修改到100%满意。</span><span data-l="ar">تحصل على معاينة. أعطنا ملاحظاتك — نعدّل حتى ترضى 100%. مجاناً.</span></p></div>
-                <div class="step-card rv rv-d2"><div class="step-n">03</div><h3>Live 🚀</h3><p><span data-l="sv">Din hemsida publiceras med domän, SSL och allt. Du behöver inte göra något.</span><span data-l="en">Your site goes live with domain, SSL, everything. You don't lift a finger.</span><span data-l="zh">网站上线——域名、SSL全配好。你什么都不用做。</span><span data-l="ar">موقعك يصبح حياً مع النطاق و SSL وكل شيء. لا تحتاج لفعل أي شيء.</span></p></div>
+                <div class="step-card rv"><div class="step-n">01</div><h3><span data-l="sv">Berätta</span><span data-l="en">Tell us</span><span data-l="zh">告诉我们</span></h3><p><span data-l="sv">Skicka ett meddelande: vad du gör, din stil, dina bilder. Vi sköter resten.</span><span data-l="en">Send a message: what you do, your style, your images. We handle the rest.</span><span data-l="zh">发消息：你做什么、风格偏好、现有素材。剩下交给我们。</span></p></div>
+                <div class="step-card rv rv-d1"><div class="step-n">02</div><h3><span data-l="sv">Granska</span><span data-l="en">Review</span><span data-l="zh">审核</span></h3><p><span data-l="sv">Du får en förhandsvisning. Ge feedback — vi justerar tills du är 100% nöjd. Gratis.</span><span data-l="en">You get a preview. Give feedback — we adjust until you're 100% happy. Free.</span><span data-l="zh">收到预览后给反馈——免费修改到100%满意。</span></p></div>
+                <div class="step-card rv rv-d2"><div class="step-n">03</div><h3>Live 🚀</h3><p><span data-l="sv">Din hemsida publiceras med domän, SSL och allt. Du behöver inte göra något.</span><span data-l="en">Your site goes live with domain, SSL, everything. You don't lift a finger.</span><span data-l="zh">网站上线——域名、SSL全配好。你什么都不用做。</span></p></div>
             </div>
         </div>
     </section>
@@ -604,15 +600,15 @@
     <!-- About Us -->
     <section class="about sec" id="about">
         <div class="w" style="text-align:center">
-            <div class="ey"><span data-l="sv">Vilka är vi</span><span data-l="en">Who we are</span><span data-l="zh">关于我们</span><span data-l="ar">من نحن</span></div>
-            <h2 class="sh"><span data-l="sv">Ett litet team. <em>Stora ambitioner.</em></span><span data-l="en">A small team. <em>Big ambitions.</em></span><span data-l="zh">小团队。<em>大野心。</em></span><span data-l="ar">فريق صغير. <em>طموحات كبيرة.</em></span></h2>
+            <div class="ey"><span data-l="sv">Vilka är vi</span><span data-l="en">Who we are</span><span data-l="zh">关于我们</span></div>
+            <h2 class="sh"><span data-l="sv">Ett litet team. <em>Stora ambitioner.</em></span><span data-l="en">A small team. <em>Big ambitions.</em></span><span data-l="zh">小团队。<em>大野心。</em></span></h2>
             <div class="about-box rv">
-                <p class="about-p"><span data-l="sv">DinWeb drivs av ett svensk-kinesiskt team i Stockholm. Karl är ingenjör med bakgrund inom AI och teknik. Bonnie är seriell entreprenör med över tio års erfarenhet av att bygga företag i Kina och Norden.</span><span data-l="en">DinWeb is run by a Swedish-Chinese team in Stockholm. Karl is an engineer with a background in AI and technology. Bonnie is a serial entrepreneur with over ten years of experience building companies across China and the Nordics.</span><span data-l="zh">DinWeb 是斯德哥尔摩的瑞中团队。Karl 是 AI 和技术背景的工程师。Bonnie 是连续创业者，在中国和北欧积累了十多年创业经验。</span><span data-l="ar">DinWeb يديره فريق سويدي-صيني في ستوكهولم. كارل مهندس بخلفية في الذكاء الاصطناعي والتكنولوجيا. بوني رائدة أعمال متسلسلة بخبرة تزيد عن عشر سنوات.</span></p>
-                <p class="about-p"><span data-l="sv">Vi byggde DinWeb för att vi själva sett hur dyra och långsamma traditionella webbyråer är. Med modern teknik kan vi leverera samma kvalitet — snabbare och till en bråkdel av priset. Inga mellanhänder. Inga dolda avgifter. Bara hemsidor som fungerar.</span><span data-l="en">We built DinWeb because we saw firsthand how expensive and slow traditional web agencies are. With modern technology, we deliver the same quality — faster and at a fraction of the price. No middlemen. No hidden fees. Just websites that work.</span><span data-l="zh">我们做 DinWeb，是因为亲眼见过传统建站公司有多贵多慢。用现代技术，我们能交付同等品质——更快、更便宜。没有中间商，没有隐藏费用。只有真正能用的网站。</span><span data-l="ar">أنشأنا DinWeb لأننا رأينا بأنفسنا كيف أن وكالات الويب التقليدية مكلفة وبطيئة. بتقنية حديثة، نقدم نفس الجودة — أسرع وبجزء من السعر.</span></p>
+                <p class="about-p"><span data-l="sv">DinWeb drivs av ett svensk-kinesiskt team i Stockholm. Karl är ingenjör med bakgrund inom AI och teknik. Bonnie är seriell entreprenör med över tio års erfarenhet av att bygga företag i Kina och Norden.</span><span data-l="en">DinWeb is run by a Swedish-Chinese team in Stockholm. Karl is an engineer with a background in AI and technology. Bonnie is a serial entrepreneur with over ten years of experience building companies across China and the Nordics.</span><span data-l="zh">DinWeb 是斯德哥尔摩的瑞中团队。Karl 是 AI 和技术背景的工程师。Bonnie 是连续创业者，在中国和北欧积累了十多年创业经验。</span></p>
+                <p class="about-p"><span data-l="sv">Vi byggde DinWeb för att vi själva sett hur dyra och långsamma traditionella webbyråer är. Med modern teknik kan vi leverera samma kvalitet — snabbare och till en bråkdel av priset. Inga mellanhänder. Inga dolda avgifter. Bara hemsidor som fungerar.</span><span data-l="en">We built DinWeb because we saw firsthand how expensive and slow traditional web agencies are. With modern technology, we deliver the same quality — faster and at a fraction of the price. No middlemen. No hidden fees. Just websites that work.</span><span data-l="zh">我们做 DinWeb，是因为亲眼见过传统建站公司有多贵多慢。用现代技术，我们能交付同等品质——更快、更便宜。没有中间商，没有隐藏费用。只有真正能用的网站。</span></p>
                 <div class="about-tags">
                     <span class="about-tag">🇸🇪 Stockholm-baserade</span>
-                    <span class="about-tag">🤝 <span data-l="sv">Personlig kontakt</span><span data-l="en">Personal contact</span><span data-l="zh">一对一服务</span><span data-l="ar">تواصل شخصي</span></span>
-                    <span class="about-tag">🌐 <span data-l="sv">Internationell erfarenhet</span><span data-l="en">International experience</span><span data-l="zh">国际化经验</span><span data-l="ar">خبرة دولية</span></span>
+                    <span class="about-tag">🤝 <span data-l="sv">Personlig kontakt</span><span data-l="en">Personal contact</span><span data-l="zh">一对一服务</span></span>
+                    <span class="about-tag">🌐 <span data-l="sv">Internationell erfarenhet</span><span data-l="en">International experience</span><span data-l="zh">国际化经验</span></span>
                 </div>
             </div>
         </div>
@@ -622,15 +618,15 @@
     <section class="faq sec" id="faq">
         <div class="w" style="text-align:center">
             <div class="ey">FAQ</div>
-            <h2 class="sh"><span data-l="sv">Vanliga <em>frågor</em></span><span data-l="en">Common <em>questions</em></span><span data-l="zh">常见<em>问题</em></span><span data-l="ar"><em>أسئلة</em> شائعة</span></h2>
+            <h2 class="sh"><span data-l="sv">Vanliga <em>frågor</em></span><span data-l="en">Common <em>questions</em></span><span data-l="zh">常见<em>问题</em></span></h2>
             <div class="faq-list rv">
-                <div class="faq-item"><button class="faq-q" onclick="F(this)"><span><span data-l="sv">Kostar det verkligen 0 kr/mån?</span><span data-l="en">Is it really 0 kr/month?</span><span data-l="zh">真的不收月费吗？</span><span data-l="ar">هل الشهرية صفر فعلاً؟</span></span><span>+</span></button><div class="faq-a"><p><span data-l="sv">Ja. Hosting är gratis. Den enda löpande kostnaden är domänförnyelse (~100–150 kr/år) som du betalar direkt till registret.</span><span data-l="en">Yes. Hosting is free. The only recurring cost is domain renewal (~100–150 kr/year) paid directly to the registry.</span><span data-l="zh">是的。托管免费。唯一的持续费用是域名续费（约100-150克朗/年），直接付给注册局。</span><span data-l="ar">نعم. الاستضافة مجانية. التكلفة الوحيدة هي تجديد النطاق (~100-150 كرونة/سنة).</span></p></div></div>
-                <div class="faq-item"><button class="faq-q" onclick="F(this)"><span><span data-l="sv">Kan jag uppdatera hemsidan själv?</span><span data-l="en">Can I update the site myself?</span><span data-l="zh">我能自己更新吗？</span><span data-l="ar">هل يمكنني التحديث بنفسي؟</span></span><span>+</span></button><div class="faq-a"><p><span data-l="sv">Med Adminpanel-tillägget (+999 kr) får du ett enkelt gränssnitt att ändra text och bilder — ingen teknisk kunskap krävs.</span><span data-l="en">With the Admin panel add-on (+999 kr), you get a simple interface to change text and images — no tech skills needed.</span><span data-l="zh">选择后台管理服务（+999克朗），您会得到一个简单界面来修改内容——无需技术知识。</span><span data-l="ar">مع إضافة لوحة التحكم (+999 كرونة)، تحصل على واجهة بسيطة لتغيير النصوص والصور.</span></p></div></div>
-                <div class="faq-item"><button class="faq-q" onclick="F(this)"><span><span data-l="sv">Vad händer om jag inte är nöjd?</span><span data-l="en">What if I'm not satisfied?</span><span data-l="zh">不满意怎么办？</span><span data-l="ar">ماذا لو لم أكن راضياً؟</span></span><span>+</span></button><div class="faq-a"><p><span data-l="sv">Vi justerar tills du är helt nöjd. Obegränsade korrigeringsrundor ingår — utan extra kostnad.</span><span data-l="en">We adjust until you're fully satisfied. Unlimited revision rounds included — no extra charge.</span><span data-l="zh">我们会免费修改到您完全满意。包含无限次修改。</span><span data-l="ar">نعدّل حتى ترضى تماماً. جولات تعديل غير محدودة — بدون تكلفة إضافية.</span></p></div></div>
-                <div class="faq-item"><button class="faq-q" onclick="F(this)"><span><span data-l="sv">Hur kan ni vara så billiga?</span><span data-l="en">How can you be so affordable?</span><span data-l="zh">怎么能这么便宜？</span><span data-l="ar">كيف يمكنكم أن تكونوا بهذا السعر؟</span></span><span>+</span></button><div class="faq-a"><p><span data-l="sv">Vi använder modern teknik som eliminerar dyra servrar och WordPress-underhåll. Inga mellanhänder, inget overhead. Din besparing — inte vår.</span><span data-l="en">We use modern tech that eliminates expensive servers and WordPress maintenance. No middlemen, no overhead. Your savings — not ours.</span><span data-l="zh">我们用现代技术消除了昂贵的服务器和WordPress维护成本。没有中间商，没有额外开支。省下的钱是你的。</span><span data-l="ar">نستخدم تقنية حديثة تلغي الخوادم المكلفة وصيانة WordPress. بدون وسطاء. التوفير لك.</span></p></div></div>
-                <div class="faq-item"><button class="faq-q" onclick="F(this)"><span><span data-l="sv">Vilka språk erbjuder ni?</span><span data-l="en">What languages do you offer?</span><span data-l="zh">支持哪些语言？</span><span data-l="ar">ما اللغات المتاحة؟</span></span><span>+</span></button><div class="faq-a"><p><span data-l="sv">Svenska, engelska, kinesiska och arabiska. Andra språk kan ordnas — kontakta oss.</span><span data-l="en">Swedish, English, Chinese, and Arabic. Other languages available — contact us.</span><span data-l="zh">瑞典语、英语、中文和阿拉伯语。其他语言可按需提供。</span><span data-l="ar">السويدية، الإنجليزية، الصينية والعربية. لغات أخرى متاحة — تواصل معنا.</span></p></div></div>
-                <div class="faq-item"><button class="faq-q" onclick="F(this)"><span><span data-l="sv">Måste jag skriva texten själv?</span><span data-l="en">Do I have to write the text myself?</span><span data-l="zh">文案需要我自己写吗？</span><span data-l="ar">هل يجب أن أكتب النص بنفسي؟</span></span><span>+</span></button><div class="faq-a"><p><span data-l="sv">Nej. Skicka oss bara nyckelinformation om ditt företag — vi skriver utkastet åt dig. Du granskar och godkänner. Behöver du översättning till andra språk är det inkluderat.</span><span data-l="en">No. Just send us the key information about your business — we'll write the draft for you. You review and approve. Translation to other languages is included.</span><span data-l="zh">不需要。把生意核心信息告诉我们就行——文案我们写，您审核确认。翻译到其他语言也包含在内。</span><span data-l="ar">لا. فقط أرسل لنا المعلومات الرئيسية عن عملك — سنكتب المسودة لك. أنت تراجع وتوافق. الترجمة إلى لغات أخرى مشمولة.</span></p></div></div>
-                <div class="faq-item"><button class="faq-q" onclick="F(this)"><span><span data-l="sv">Vad gäller bilderna — har ni licenser?</span><span data-l="en">What about images — do you handle licensing?</span><span data-l="zh">图片版权怎么办？</span><span data-l="ar">ماذا عن الصور — هل تتعاملون مع التراخيص؟</span></span><span>+</span></button><div class="faq-a"><p><span data-l="sv">Ja. Om du har egna bilder använder vi dem. Annars väljer vi högkvalitativa, licensfria bilder från Unsplash/Pexels — alla får användas kommersiellt utan extra kostnad.</span><span data-l="en">Yes. If you have your own images, we use them. Otherwise we select high-quality, royalty-free images from Unsplash/Pexels — all licensed for commercial use, no extra cost.</span><span data-l="zh">我们会处理。您有自己的图片就用您的，没有的话我们从 Unsplash/Pexels 选高质量免版权图——商用合法，不另收费。</span><span data-l="ar">نعم. إذا كانت لديك صورك الخاصة، نستخدمها. وإلا نختار صوراً عالية الجودة وخالية من حقوق الملكية — مرخصة للاستخدام التجاري، بدون تكلفة إضافية.</span></p></div></div>
+                <div class="faq-item"><button class="faq-q" onclick="F(this)"><span><span data-l="sv">Kostar det verkligen 0 kr/mån?</span><span data-l="en">Is it really 0 kr/month?</span><span data-l="zh">真的不收月费吗？</span></span><span>+</span></button><div class="faq-a"><p><span data-l="sv">Ja. Hosting är gratis. Den enda löpande kostnaden är domänförnyelse (~100–150 kr/år) som du betalar direkt till registret.</span><span data-l="en">Yes. Hosting is free. The only recurring cost is domain renewal (~100–150 kr/year) paid directly to the registry.</span><span data-l="zh">是的。托管免费。唯一的持续费用是域名续费（约100-150克朗/年），直接付给注册局。</span></p></div></div>
+                <div class="faq-item"><button class="faq-q" onclick="F(this)"><span><span data-l="sv">Kan jag uppdatera hemsidan själv?</span><span data-l="en">Can I update the site myself?</span><span data-l="zh">我能自己更新吗？</span></span><span>+</span></button><div class="faq-a"><p><span data-l="sv">Med Adminpanel-tillägget (+999 kr) får du ett enkelt gränssnitt att ändra text och bilder — ingen teknisk kunskap krävs.</span><span data-l="en">With the Admin panel add-on (+999 kr), you get a simple interface to change text and images — no tech skills needed.</span><span data-l="zh">选择后台管理服务（+999克朗），您会得到一个简单界面来修改内容——无需技术知识。</span></p></div></div>
+                <div class="faq-item"><button class="faq-q" onclick="F(this)"><span><span data-l="sv">Vad händer om jag inte är nöjd?</span><span data-l="en">What if I'm not satisfied?</span><span data-l="zh">不满意怎么办？</span></span><span>+</span></button><div class="faq-a"><p><span data-l="sv">Vi justerar tills du är helt nöjd. Obegränsade korrigeringsrundor ingår — utan extra kostnad.</span><span data-l="en">We adjust until you're fully satisfied. Unlimited revision rounds included — no extra charge.</span><span data-l="zh">我们会免费修改到您完全满意。包含无限次修改。</span></p></div></div>
+                <div class="faq-item"><button class="faq-q" onclick="F(this)"><span><span data-l="sv">Hur kan ni vara så billiga?</span><span data-l="en">How can you be so affordable?</span><span data-l="zh">怎么能这么便宜？</span></span><span>+</span></button><div class="faq-a"><p><span data-l="sv">Vi använder modern teknik som eliminerar dyra servrar och WordPress-underhåll. Inga mellanhänder, inget overhead. Din besparing — inte vår.</span><span data-l="en">We use modern tech that eliminates expensive servers and WordPress maintenance. No middlemen, no overhead. Your savings — not ours.</span><span data-l="zh">我们用现代技术消除了昂贵的服务器和WordPress维护成本。没有中间商，没有额外开支。省下的钱是你的。</span></p></div></div>
+                <div class="faq-item"><button class="faq-q" onclick="F(this)"><span><span data-l="sv">Vilka språk erbjuder ni?</span><span data-l="en">What languages do you offer?</span><span data-l="zh">支持哪些语言？</span></span><span>+</span></button><div class="faq-a"><p><span data-l="sv">Svenska, engelska och kinesiska. Andra språk kan ordnas — kontakta oss.</span><span data-l="en">Swedish, English, and Chinese. Other languages available — contact us.</span><span data-l="zh">瑞典语、英语和中文。其他语言可按需提供，欢迎联系我们。</span></p></div></div>
+                <div class="faq-item"><button class="faq-q" onclick="F(this)"><span><span data-l="sv">Måste jag skriva texten själv?</span><span data-l="en">Do I have to write the text myself?</span><span data-l="zh">文案需要我自己写吗？</span></span><span>+</span></button><div class="faq-a"><p><span data-l="sv">Nej. Skicka oss bara nyckelinformation om ditt företag — vi skriver utkastet åt dig. Du granskar och godkänner. Behöver du översättning till andra språk är det inkluderat.</span><span data-l="en">No. Just send us the key information about your business — we'll write the draft for you. You review and approve. Translation to other languages is included.</span><span data-l="zh">不需要。把生意核心信息告诉我们就行——文案我们写，您审核确认。翻译到其他语言也包含在内。</span></p></div></div>
+                <div class="faq-item"><button class="faq-q" onclick="F(this)"><span><span data-l="sv">Vad gäller bilderna — har ni licenser?</span><span data-l="en">What about images — do you handle licensing?</span><span data-l="zh">图片版权怎么办？</span></span><span>+</span></button><div class="faq-a"><p><span data-l="sv">Ja. Om du har egna bilder använder vi dem. Annars väljer vi högkvalitativa, licensfria bilder från Unsplash/Pexels — alla får användas kommersiellt utan extra kostnad.</span><span data-l="en">Yes. If you have your own images, we use them. Otherwise we select high-quality, royalty-free images from Unsplash/Pexels — all licensed for commercial use, no extra cost.</span><span data-l="zh">我们会处理。您有自己的图片就用您的，没有的话我们从 Unsplash/Pexels 选高质量免版权图——商用合法，不另收费。</span></p></div></div>
             </div>
         </div>
     </section>
@@ -639,9 +635,9 @@
     <section class="cta" id="contact">
         <div class="w">
             <div class="cta-box rv">
-                <div class="ey"><span data-l="sv">Redo?</span><span data-l="en">Ready?</span><span data-l="zh">准备好了？</span><span data-l="ar">جاهز؟</span></div>
-                <h2><span data-l="sv">Låt oss bygga <em>din hemsida</em></span><span data-l="en">Let us build <em>your website</em></span><span data-l="zh">让我们打造<em>你的网站</em></span><span data-l="ar">دعنا نبني <em>موقعك</em></span></h2>
-                <p><span data-l="sv">Beskriv ditt projekt. Vi svarar med en offert inom några timmar — helt gratis, inga förpliktelser. Inga säljsamtal, ingen press. Bara ärlig rådgivning.</span><span data-l="en">Describe your project. We'll reply with a quote within hours — free, no strings, no sales calls. Just honest advice.</span><span data-l="zh">描述您的项目。几小时内免费回复报价——无附加条件，无销售电话，只有诚实建议。</span><span data-l="ar">صف مشروعك. سنرد بعرض سعر خلال ساعات — مجاناً، بدون التزامات، بدون مكالمات مبيعات. فقط نصيحة صادقة.</span></p>
+                <div class="ey"><span data-l="sv">Redo?</span><span data-l="en">Ready?</span><span data-l="zh">准备好了？</span></div>
+                <h2><span data-l="sv">Låt oss bygga <em>din hemsida</em></span><span data-l="en">Let us build <em>your website</em></span><span data-l="zh">让我们打造<em>你的网站</em></span></h2>
+                <p><span data-l="sv">Beskriv ditt projekt. Vi svarar med en offert inom några timmar — helt gratis, inga förpliktelser. Inga säljsamtal, ingen press. Bara ärlig rådgivning.</span><span data-l="en">Describe your project. We'll reply with a quote within hours — free, no strings, no sales calls. Just honest advice.</span><span data-l="zh">描述您的项目。几小时内免费回复报价——无附加条件，无销售电话，只有诚实建议。</span></p>
                 <div class="cta-btns">
                     <a href="mailto:info@dinweb.se" class="btn btn-p">info@dinweb.se</a>
                     <a href="https://t.me/ClawAINordic" class="btn btn-g" target="_blank">Telegram →</a>
@@ -653,8 +649,8 @@
     <footer><div class="w"><p>© 2026 DinWeb · Stockholm, Sweden · <a href="mailto:info@dinweb.se">info@dinweb.se</a></p></div></footer>
 
     <script>
-    function L(l,b){document.querySelectorAll('[data-l]').forEach(e=>{const t=e.tagName,i=['SPAN','A','EM','STRONG','BUTTON'].includes(t),f=e.classList.contains('hero-badge');e.style.display=e.dataset.l===l?(f?'inline-flex':(i?'inline':'block')):'none'});document.querySelectorAll('.lb button').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.body.dir=l==='ar'?'rtl':'ltr';localStorage.setItem('dw-l',l)}
-    (function(){const s=localStorage.getItem('dw-l');if(s&&s!=='sv'){const m={en:'English',zh:'中文',ar:'العربية'};document.querySelectorAll('.lb button').forEach(b=>{if(b.textContent.trim()===m[s])b.click()})}})();
+    function L(l,b){document.querySelectorAll('[data-l]').forEach(e=>{const t=e.tagName,i=['SPAN','A','EM','STRONG','BUTTON'].includes(t),f=e.classList.contains('hero-badge');e.style.display=e.dataset.l===l?(f?'inline-flex':(i?'inline':'block')):'none'});document.querySelectorAll('.lb button').forEach(x=>x.classList.remove('on'));b.classList.add('on');localStorage.setItem('dw-l',l)}
+    (function(){const s=localStorage.getItem('dw-l');if(s&&s!=='sv'){const m={en:'English',zh:'中文'};document.querySelectorAll('.lb button').forEach(b=>{if(b.textContent.trim()===m[s])b.click()})}})();
     function C(){const p=+document.getElementById('cp').value,l=+document.getElementById('cl').value;document.getElementById('cpp').textContent=p?'+'+p*599+' kr':'0 kr';document.getElementById('clp').textContent=l?'+'+l*299+' kr':'0 kr';let t=999+p*599+l*299;['ca','cd','cf','cm','cs','cy'].forEach((id,i)=>{if(document.getElementById(id).checked)t+=[999,799,499,199,499,1499][i]});document.getElementById('csum').innerHTML=t.toLocaleString('sv-SE')+' <span class="sm">kr</span>'}
     function F(b){b.parentElement.classList.toggle('open')}
     const O=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('v');O.unobserve(x.target)}})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.rv').forEach(e=>O.observe(e));
