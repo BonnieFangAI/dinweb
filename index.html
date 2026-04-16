@@ -66,6 +66,20 @@
         }
         .nav-logo{display:flex;align-items:center;line-height:1}
         .nav-logo img{height:56px;width:auto;display:block}
+        .nav-right{display:flex;align-items:center;gap:18px}
+        .lang-toggle{
+            display:inline-flex;align-items:center;gap:6px;
+            font-size:12px;font-weight:500;letter-spacing:.08em;
+            color:var(--gray);
+        }
+        .lang-toggle button{
+            background:none;border:0;padding:4px 6px;cursor:pointer;
+            font:inherit;letter-spacing:inherit;color:var(--gray);
+            transition:color .2s;border-radius:4px;
+        }
+        .lang-toggle button:hover{color:var(--ink)}
+        .lang-toggle button.active{color:var(--ink);font-weight:600}
+        .lang-toggle .sep{color:var(--line)}
         .nav-cta{
             font-size:13px;font-weight:500;letter-spacing:.01em;
             padding:11px 22px;background:var(--ink);color:var(--paper);
@@ -75,7 +89,9 @@
         @media(max-width:640px){
             .nav-inner{height:64px;padding:0 24px}
             .nav-logo img{height:42px}
+            .nav-right{gap:12px}
             .nav-cta{padding:9px 16px;font-size:12px}
+            .lang-toggle{font-size:11px}
         }
 
         /* ========== HERO ========== */
@@ -369,10 +385,17 @@
     <!-- ========== NAV ========== -->
     <nav class="nav" id="nav">
         <div class="nav-inner">
-            <a href="#" class="nav-logo" aria-label="dinweb.se – Bygg hemsidor. Skapa resultat.">
+            <a href="#" class="nav-logo" aria-label="dinweb.se">
                 <img src="logo-dinweb-horizontal.png" alt="dinweb.se">
             </a>
-            <a href="#kontakt" class="nav-cta">Få offert</a>
+            <div class="nav-right">
+                <div class="lang-toggle" role="group" aria-label="Language">
+                    <button type="button" data-lang="sv" class="active">SV</button>
+                    <span class="sep">·</span>
+                    <button type="button" data-lang="en">EN</button>
+                </div>
+                <a href="#kontakt" class="nav-cta" data-en="Get a quote">Få offert</a>
+            </div>
         </div>
     </nav>
 
@@ -381,10 +404,10 @@
         <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-eyebrow">Webbdesign · Norden</div>
-            <h1>Snygga hemsidor för företag som vill växa.</h1>
-            <p>Vi hjälper småföretag att se professionella ut online – enkelt och effektivt.</p>
-            <a href="#kontakt" class="btn btn-primary">Få offert <span class="arrow">→</span></a>
+            <div class="hero-eyebrow" data-en="Web design · Nordics">Webbdesign · Norden</div>
+            <h1 data-en="Beautiful websites for companies that want to grow.">Snygga hemsidor för företag som vill växa.</h1>
+            <p data-en="We help small businesses look professional online — simple and effective.">Vi hjälper småföretag att se professionella ut online – enkelt och effektivt.</p>
+            <a href="#kontakt" class="btn btn-primary"><span data-en="Get a quote">Få offert</span> <span class="arrow">→</span></a>
         </div>
     </section>
 
@@ -392,10 +415,10 @@
     <section class="trust">
         <div class="container">
             <div class="trust-grid">
-                <div class="trust-item"><span class="dot"></span>Modern design</div>
-                <div class="trust-item"><span class="dot"></span>Snabb leverans</div>
-                <div class="trust-item"><span class="dot"></span>Personlig service</div>
-                <div class="trust-item"><span class="dot"></span>Anpassat för din verksamhet</div>
+                <div class="trust-item"><span class="dot"></span><span data-en="Modern design">Modern design</span></div>
+                <div class="trust-item"><span class="dot"></span><span data-en="Fast delivery">Snabb leverans</span></div>
+                <div class="trust-item"><span class="dot"></span><span data-en="Personal service">Personlig service</span></div>
+                <div class="trust-item"><span class="dot"></span><span data-en="Tailored to your business">Anpassat för din verksamhet</span></div>
             </div>
         </div>
     </section>
@@ -404,25 +427,25 @@
     <section class="services" id="tjanster">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-eyebrow">Vad vi gör</div>
-                <h2 class="section-title">Tre saker. Gjorda ordentligt.</h2>
-                <p class="section-lead">Vi skräddarsyr stilen på din webbplats efter ditt företag – för det är just stilen som avgör vilken karaktär och känsla ditt varumärke utstrålar.</p>
+                <div class="section-eyebrow" data-en="What we do">Vad vi gör</div>
+                <h2 class="section-title" data-en="Three things. Done right.">Tre saker. Gjorda ordentligt.</h2>
+                <p class="section-lead" data-en="We tailor your website's style to your company — because style is what defines the character and feel your brand projects.">Vi skräddarsyr stilen på din webbplats efter ditt företag – för det är just stilen som avgör vilken karaktär och känsla ditt varumärke utstrålar.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card reveal">
-                    <div class="service-num">01 — Hemsidor</div>
-                    <h3>Hemsidor</h3>
-                    <p>Snygga, snabba och anpassade efter ditt företag. Inga mallar – bara genuin design.</p>
+                    <div class="service-num" data-en="01 — Websites">01 — Hemsidor</div>
+                    <h3 data-en="Websites">Hemsidor</h3>
+                    <p data-en="Beautiful, fast, and tailored to your company. No templates — just genuine design.">Snygga, snabba och anpassade efter ditt företag. Inga mallar – bara genuin design.</p>
                 </div>
                 <div class="service-card reveal">
-                    <div class="service-num">02 — Design</div>
-                    <h3>Design</h3>
-                    <p>Skräddarsydd stil – färg, form och typografi som speglar just ditt företags karaktär.</p>
+                    <div class="service-num" data-en="02 — Design">02 — Design</div>
+                    <h3 data-en="Design">Design</h3>
+                    <p data-en="Bespoke style — color, form, and typography that mirror your company's character.">Skräddarsydd stil – färg, form och typografi som speglar just ditt företags karaktär.</p>
                 </div>
                 <div class="service-card reveal">
-                    <div class="service-num">03 — Resultat</div>
-                    <h3>Resultat</h3>
-                    <p>En hemsida som hjälper besökare att hitta dig, förstå dig och kontakta dig.</p>
+                    <div class="service-num" data-en="03 — Results">03 — Resultat</div>
+                    <h3 data-en="Results">Resultat</h3>
+                    <p data-en="A website that helps visitors find you, understand you, and contact you.">En hemsida som hjälper besökare att hitta dig, förstå dig och kontakta dig.</p>
                 </div>
             </div>
         </div>
@@ -432,30 +455,30 @@
     <section class="cases" id="case">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-eyebrow">Utvalda projekt</div>
-                <h2 class="section-title">Hemsidor som gör skillnad.</h2>
-                <p class="section-lead">Ett urval av vad vi byggt – från restauranger till konsultbyråer.</p>
+                <div class="section-eyebrow" data-en="Selected projects">Utvalda projekt</div>
+                <h2 class="section-title" data-en="Websites that make a difference.">Hemsidor som gör skillnad.</h2>
+                <p class="section-lead" data-en="A selection of what we've built — from restaurants to consultancies.">Ett urval av vad vi byggt – från restauranger till konsultbyråer.</p>
             </div>
             <div class="cases-grid">
                 <div class="case-card reveal">
                     <div class="case-img" style="background-image:url('https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=1400&q=85&auto=format&fit=crop')"></div>
                     <div class="case-body">
-                        <div class="case-tag">Restaurang</div>
-                        <h3>Fler bordsbokningar genom ett tydligt, inbjudande första intryck.</h3>
+                        <div class="case-tag" data-en="Restaurant">Restaurang</div>
+                        <h3 data-en="More table bookings through a clear, inviting first impression.">Fler bordsbokningar genom ett tydligt, inbjudande första intryck.</h3>
                     </div>
                 </div>
                 <div class="case-card reveal">
                     <div class="case-img" style="background-image:url('https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=1400&q=85&auto=format&fit=crop')"></div>
                     <div class="case-body">
-                        <div class="case-tag">Skönhet</div>
-                        <h3>En lugn, elegant närvaro online som matchar salongens egen känsla.</h3>
+                        <div class="case-tag" data-en="Beauty">Skönhet</div>
+                        <h3 data-en="A calm, elegant online presence that matches the salon's own feel.">En lugn, elegant närvaro online som matchar salongens egen känsla.</h3>
                     </div>
                 </div>
                 <div class="case-card reveal">
                     <div class="case-img" style="background-image:url('case-konsult.jpg')"></div>
                     <div class="case-body">
-                        <div class="case-tag">Konsult</div>
-                        <h3>Ett professionellt ansikte utåt som lyfter trovärdigheten direkt.</h3>
+                        <div class="case-tag" data-en="Consultancy">Konsult</div>
+                        <h3 data-en="A professional public face that lifts credibility instantly.">Ett professionellt ansikte utåt som lyfter trovärdigheten direkt.</h3>
                     </div>
                 </div>
             </div>
@@ -466,15 +489,15 @@
     <section class="pain">
         <div class="container">
             <div class="section-header center reveal">
-                <div class="section-eyebrow" style="color:var(--beige)">Känner du igen dig?</div>
-                <h2 class="section-title">Det är dags för något bättre.</h2>
+                <div class="section-eyebrow" style="color:var(--beige)" data-en="Sound familiar?">Känner du igen dig?</div>
+                <h2 class="section-title" data-en="Time for something better.">Det är dags för något bättre.</h2>
             </div>
             <div class="pain-list">
-                <div class="pain-item reveal">Din hemsida ser gammal ut?</div>
-                <div class="pain-item reveal">Du får inga kunder?</div>
-                <div class="pain-item reveal">Det känns svårt att fixa själv?</div>
+                <div class="pain-item reveal" data-en="Your website looks dated?">Din hemsida ser gammal ut?</div>
+                <div class="pain-item reveal" data-en="Not getting any customers?">Du får inga kunder?</div>
+                <div class="pain-item reveal" data-en="Too hard to fix yourself?">Det känns svårt att fixa själv?</div>
             </div>
-            <div class="pain-solution reveal">Vi löser det åt dig.</div>
+            <div class="pain-solution reveal" data-en="We'll handle it for you.">Vi löser det åt dig.</div>
         </div>
     </section>
 
@@ -482,31 +505,31 @@
     <section class="pricing" id="priser">
         <div class="container">
             <div class="section-header reveal">
-                <div class="section-eyebrow">Priser</div>
-                <h2 class="section-title">Tydligt. Ärligt. Inga överraskningar.</h2>
-                <p class="section-lead">Vi anpassar lösningen efter din verksamhet – men priset säger vi alltid i förväg.</p>
+                <div class="section-eyebrow" data-en="Pricing">Priser</div>
+                <h2 class="section-title" data-en="Clear. Honest. No surprises.">Tydligt. Ärligt. Inga överraskningar.</h2>
+                <p class="section-lead" data-en="We tailor the solution to your business — but we always state the price upfront.">Vi anpassar lösningen efter din verksamhet – men priset säger vi alltid i förväg.</p>
             </div>
             <div class="pricing-list">
                 <div class="price-row reveal">
                     <div class="price-info">
-                        <h3>Visningssida</h3>
-                        <p>Ren och elegant presentationssida – perfekt för att synas online direkt.</p>
+                        <h3 data-en="Showcase site">Visningssida</h3>
+                        <p data-en="Clean, elegant presentation page — perfect to get online instantly.">Ren och elegant presentationssida – perfekt för att synas online direkt.</p>
                     </div>
-                    <div class="price-tag"><span class="from">Från</span>1 800 kr</div>
+                    <div class="price-tag"><span class="from" data-en="From">Från</span>1 800 kr</div>
                 </div>
                 <div class="price-row reveal">
                     <div class="price-info">
-                        <h3>Skräddarsydd från grunden</h3>
-                        <p>Helt unik design och struktur, byggd från noll efter dina behov.</p>
+                        <h3 data-en="Custom-built from scratch">Skräddarsydd från grunden</h3>
+                        <p data-en="Fully unique design and structure, built from zero to your needs.">Helt unik design och struktur, byggd från noll efter dina behov.</p>
                     </div>
-                    <div class="price-tag"><span class="from">Från</span>2 800 kr</div>
+                    <div class="price-tag"><span class="from" data-en="From">Från</span>2 800 kr</div>
                 </div>
                 <div class="price-row reveal">
                     <div class="price-info">
-                        <h3>Premium-lösning</h3>
-                        <p>Avancerad webbplats med admin-panel, betalningssystem och integrationer.</p>
+                        <h3 data-en="Premium solution">Premium-lösning</h3>
+                        <p data-en="Advanced site with admin panel, payment system, and integrations.">Avancerad webbplats med admin-panel, betalningssystem och integrationer.</p>
                     </div>
-                    <div class="price-tag"><span class="from">Från</span>3 800 kr</div>
+                    <div class="price-tag"><span class="from" data-en="From">Från</span>3 800 kr</div>
                 </div>
             </div>
         </div>
@@ -515,9 +538,9 @@
     <!-- ========== FINAL CTA ========== -->
     <section class="cta-final" id="kontakt">
         <div class="container reveal">
-            <h2>Redo att ta nästa steg?</h2>
-            <p>Kontakta oss idag – vi svarar snabbt.</p>
-            <a href="mailto:info@dinweb.se" class="btn btn-dark">Kontakta oss <span class="arrow">→</span></a>
+            <h2 data-en="Ready for the next step?">Redo att ta nästa steg?</h2>
+            <p data-en="Contact us today — we reply fast.">Kontakta oss idag – vi svarar snabbt.</p>
+            <a href="mailto:info@dinweb.se" class="btn btn-dark"><span data-en="Contact us">Kontakta oss</span> <span class="arrow">→</span></a>
         </div>
     </section>
 
@@ -529,16 +552,43 @@
                     <img src="logo-dinweb-horizontal.png" alt="dinweb.se" class="footer-logo">
                 </div>
                 <div class="footer-meta">
-                    <span>Stockholm, Sverige</span>
+                    <span data-en="Stockholm, Sweden">Stockholm, Sverige</span>
                     <a href="mailto:info@dinweb.se">info@dinweb.se</a>
                 </div>
             </div>
-            <div class="footer-bottom">© 2026 dinweb.se · Bygg hemsidor. Skapa resultat.</div>
+            <div class="footer-bottom" data-en="© 2026 dinweb.se · Build websites. Create results.">© 2026 dinweb.se · Bygg hemsidor. Skapa resultat.</div>
         </div>
     </footer>
 
     <script>
-        // Nav scroll state
+        // ===== Language toggle (SV / EN) =====
+        const TITLES = {
+            sv: 'dinweb.se — Snygga hemsidor för företag som vill växa',
+            en: 'dinweb.se — Beautiful websites for companies that want to grow'
+        };
+        const setLang = (lang) => {
+            document.documentElement.lang = lang;
+            document.querySelectorAll('[data-en]').forEach(el => {
+                if (!el.dataset.sv) el.dataset.sv = el.innerHTML.trim();
+                el.innerHTML = lang === 'en' ? el.dataset.en : el.dataset.sv;
+            });
+            document.title = TITLES[lang] || TITLES.sv;
+            document.querySelectorAll('.lang-toggle button').forEach(b => {
+                b.classList.toggle('active', b.dataset.lang === lang);
+            });
+            try { localStorage.setItem('dinweb-lang', lang); } catch(e){}
+        };
+        const initialLang = (() => {
+            try { return localStorage.getItem('dinweb-lang') || 'sv'; }
+            catch(e){ return 'sv'; }
+        })();
+        setLang(initialLang);
+        document.querySelector('.lang-toggle').addEventListener('click', e => {
+            const lang = e.target?.dataset?.lang;
+            if (lang) setLang(lang);
+        });
+
+        // ===== Nav scroll state =====
         const nav = document.getElementById('nav');
         const onScroll = () => {
             if (window.scrollY > 12) nav.classList.add('scrolled');
@@ -547,7 +597,7 @@
         window.addEventListener('scroll', onScroll, {passive:true});
         onScroll();
 
-        // Scroll reveal
+        // ===== Scroll reveal =====
         const io = new IntersectionObserver((entries) => {
             entries.forEach(e => {
                 if (e.isIntersecting) {
