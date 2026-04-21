@@ -125,11 +125,13 @@
             display:grid;
             grid-template-columns:1fr;
             gap:60px;align-items:end;
+            text-align:center;
         }
         .hero-eyebrow{
             display:inline-flex;align-items:center;gap:14px;
             font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
             color:rgba(247,243,233,.72);margin-bottom:48px;
+            justify-content:center;
         }
         .hero-eyebrow::before{
             content:"";width:32px;height:1px;background:rgba(247,243,233,.5);
@@ -143,7 +145,8 @@
             letter-spacing:-.035em;
             color:#fff;
             margin-bottom:36px;
-            max-width:13ch;
+            max-width:none;
+            margin-left:auto;margin-right:auto;
         }
         .hero h1 em{
             font-style:italic;font-weight:300;
